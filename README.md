@@ -4,6 +4,8 @@ PHP client for Factom blockchain
 
 Example-
 [
+    // add class refrence 
+    
     require_once __DIR__ . '/../vendor/autoload.php';
     require_once __DIR__ . '/../config.php';
     use FactomApi\FactomAddress;
