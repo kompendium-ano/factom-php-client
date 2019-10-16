@@ -17,49 +17,62 @@ namespace FactomApi;
 
 use PhpJsonRpc\Client;
 
-class FactomAddress
+class FactomWalletd
 {
-    /* address */
-    public static function address($address){
+
+    /* get-height */
+
+    public static function getHeight()
+    {
         $client = new Client(walletHost);
-        $result = $client->call('address',["address" => $address]);
+        $result = $client->call('get-height', []);
         print_r($result);
     }
 
-    /* all addresses */
+    /* import-koinify */
 
-    public static function allAddresses()
+    public static function importKoinify($words)
     {
         $client = new Client(walletHost);
-        $result = $client->call('all-addresses',['']);
-        print_r($result);
-    } 
-
-     /* generateEcAddress */
-    public static function generateEcAddress()
-    {
-        $client = new Client(walletHost);
-        $result = $client->call('generate-ec-address',[]);
-        print_r($result);
-
-    }
-
-    /* generateFactoidAddress */
-
-    public static function generateFactoidAddress()
-    {
-        $client = new Client(walletHost);
-        $result = $client->call('generate-ec-address',[]);
+        $result = $client->call('import-koinify',["words" => $words]);
         print_r($result);
     }
 
-    /* import-addresses */
+    /* properties */
 
-    public static function importAddresses($secret)
+    public static function properties()
     {
         $client = new Client(walletHost);
-        $result = $client->call('generate-ec-address',["addresses" => ["secret" => $secret]]);
+        $result = $client->call('properties',[]);
+        print_r($result);
+    }
+
+    /* wallet-backup */
+
+    public static function walletBackup()
+    {
+        $client = new Client(walletHost);
+        $result = $client->call('wallet-backup',[]);
+        print_r($result);
+    }
+
+    /* wallet-balances */
+
+    public static function walletBalances()
+    {
+        $client = new Client(walletHost);
+        $result = $client->call('wallet-balances',[]);
+        print_r($result);
+    }
+
+    /* errors */
+
+    public static function errors()
+    {
+        $client = new Client(walletHost);
+        $result = $client->call('bad',[]);
         print_r($result);
     }
     
+
 }
