@@ -1,5 +1,5 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
 
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\RequestBuilder\BuilderContainer;
@@ -13,12 +13,13 @@ use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 
-class Pending
+class Minute
 {
-    /* pending-entries */
+    /* current-minute */
 
-    public static function pendingEntries()
+    public static function currentMinute()
     {
+
         $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
@@ -28,25 +29,9 @@ class Pending
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('pending-entries', []);
-        return $result;
-    }
-
-    /* pending-transactions */
-
-    public static function pendingTransactions($address)
-    {
-       
-        $client = new Client(host);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('pending-transactions', ["address" => $address]);
-        return $result;
+        $result = $client->call('current-minute',['']);
+        return json_encode($result);
     }
 }
+
+?>

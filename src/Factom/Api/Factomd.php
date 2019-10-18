@@ -1,5 +1,5 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
 
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\RequestBuilder\BuilderContainer;
@@ -13,14 +13,14 @@ use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 
-class FactomWalletd
+class Factomd
 {
+     /* heights */
 
-    /* get-height */
-
-    public static function getHeight()
-    {
-        $client = new Client(walletHost);
+     public static function heights()
+     {
+        
+        $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -29,15 +29,86 @@ class FactomWalletd
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('get-height', []);
-        return $result;
+        $result = $client->call('heights', []);
+        return json_encode($result);
+         
+     }
+
+     
+     /* multiple-ec-balances */
+
+     public static function multipleEcBalances($addr1,$addr2)
+     {
+        $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('multiple-ec-balances', ["addresses" => [$addr1,$addr2]]);
+        return json_encode($result);
+     }
+
+     /* multiple-fct-balances */
+
+     public static function multipleFctBalances($addr1,$addr2)
+     {
+        $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('multiple-fct-balances', ["addresses" => [$addr1,$addr2]]);
+        return json_encode($result);
+     }
+
+     /* properties */
+
+     public static function properties()
+     {
+        $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('properties', []);
+        return json_encode($result);
+     }
+
+     /* raw-data */
+
+     public static function rawData($hash)
+     {
+        $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('raw-data', ["hash"=> $hash]);
+        return json_encode($result);
     }
+     
 
-    /* import-koinify */
+     /* receipt */
 
-    public static function importKoinify($words)
-    {
-        $client = new Client(walletHost);
+     public static function receipt($hash)
+     {         
+        $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -46,78 +117,8 @@ class FactomWalletd
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('import-koinify',["words" => $words]);
-        return $result;
+        $result = $client->call('receipt', ["hash"=> $hash]);
+        return json_encode($result);
     }
-
-    /* properties */
-
-    public static function properties()
-    {
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('properties',[]);
-        return $result;
-    }
-
-    /* wallet-backup */
-
-    public static function walletBackup()
-    {
-
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('wallet-backup',[]);
-        return $result;
-    } 
-    
-
-    /* wallet-balances */
-
-    public static function walletBalances()
-    {
-
-            $client = new Client(walletHost);
-            $client->getResponseParser()->onPreParse()
-            ->add(Interceptor::createWith(function (ParserContainer $container) {
-                $response = $container->getValue();
-                $result = $response['result'];
-                $response['result'] = $response;
-                
-                return new ParserContainer($container->getParser(), $response);
-            }));
-            $result = $client->call('wallet-balances',[]);
-            return $result;
-    }
-
-    /* errors */
-
-    public static function errors()
-    {
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('bad',[]);
-        return $result;
-    } 
 }
+?>

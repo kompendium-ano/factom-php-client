@@ -1,5 +1,5 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
 
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\RequestBuilder\BuilderContainer;
@@ -13,13 +13,11 @@ use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 
-class Debug
+class Transaction
 {
-    /* holding-queue */
-
-    public static function holdingQueue()
-    {
-        $client = new Client(debugHost);
+    public static function transaction($hash){
+        
+        $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -28,16 +26,34 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('holding-queue',[]);
-        return $result;
+        $result = $client->call('transaction', ["hash"=>$hash]);
+        return json_encode($result);
     }
+
+    /* add-ec-output */
+
+    public static function addEcOutput($txname,$address,$amount)
+    {
+
+        $client = new Client(walletHost);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('add-ec-output', ["tx-name"=> $txname , "address"=>$address , "amount" => $amount]);
+        return json_encode($result);
     
+    }
 
-    /* network-info */
+    /* add-fee */
 
-    public static function networkInfo()
+    public static function addFee($txname,$address)
     {
-        $client = new Client(debugHost);
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -46,15 +62,15 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('network-info',[]);
-        return $result;
+        $result = $client->call('add-fee', ["tx-name"=> $txname , "address"=>$address]);
+        return json_encode($result);
     }
 
-    /* predictive-fer */
+    /* add-input */
 
-    public static function predictiveFer()
+    public static function addInput($txname,$address,$amount)
     {
-        $client = new Client(debugHost);
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -63,16 +79,16 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('predictive-fer',[]);
-        return $result;
+        $result = $client->call('add-input', ["tx-name"=> $txname , "address"=>$address , "amount"=> $amount]);
+        return json_encode($result);
     }
 
-    /* audit-servers */
+    /* add-output */
 
-    public static function auditServers()
+    public static function addOutput($txname,$address,$amount)
     {
         
-        $client = new Client(debugHost);
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -81,15 +97,15 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('audit-servers',[]);
-        return $result;
+        $result = $client->call('add-output', ["tx-name"=> $txname , "address"=>$address , "amount"=> $amount]);
+        return json_encode($result);
     }
 
-    /* federated-servers */
+    /* compose-transaction */
     
-    public static function federatedServers()
+    public static function composeTransaction($txname)
     {
-        $client = new Client(debugHost);
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -98,15 +114,16 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('federated-servers',[]);
-        return $result;
+        $result = $client->call('compose-transaction', ["tx-name"=> $txname]);
+        return json_encode($result);
     }
 
-    /* configuration */
-    
-    public static function configuration()
+    /* delete-transaction */
+
+    public static function deleteTransaction($txname)
     {
-        $client = new Client(debugHost);
+   
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -115,15 +132,16 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('configuration',[]);
-        return $result;        
+        $result = $client->call('delete-transaction', ["tx-name"=> $txname]);
+        return json_encode($result);
+
     }
 
-     /* process-list */
-    
-     public static function processList()
-     {
-        $client = new Client(debugHost);
+    /* new-transaction */
+
+    public static function newTransaction($txname){
+
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -132,15 +150,16 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('process-list',[]);
-        return $result; 
-     }
+        $result = $client->call('new-transaction', ["tx-name"=> $txname]);
+        return json_encode($result);
 
-     /* authorities */
-    
-     public static function authorities()
-     {
-        $client = new Client(debugHost);
+    }
+
+    /* sign-transaction */
+
+    public static function signTransaction($txname){
+
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -149,16 +168,16 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('authorities',[]);
-        return $result; 
-     }
+        $result = $client->call('sign-transaction', ["tx-name"=> $txname]);
+        return json_encode($result);
 
-    
-     /* reload-configuration */
+    }
 
-     public static function reloadConfiguration()
-     {
-         $client = new Client(debugHost);
+    /* sub-fee */
+
+    public static function subFee($txname,$address){
+
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -167,17 +186,17 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('reload-configuration',[]);
-        return $result; 
+        $result = $client->call('sub-fee',  ["tx-name"=> $txname , "address"=>$address]);
+        return json_encode($result);
 
-        
-     }
 
-     /* drop-rate */
+    }
 
-     public static function dropRate()
-     {
-        $client = new Client(debugHost);
+    /* tmp-transactions */
+
+    public static function tmpTransactions(){
+
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -186,15 +205,17 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('drop-rate',[]);
-        return $result; 
-     }
+        $result = $client->call('tmp-transactions',  []);
+        return json_encode($result);
 
-     /* set-drop-rate */
+    }
 
-     public static function setDropRate($droprate)
-     {
-        $client = new Client(debugHost);
+    /* transactions (Retrieving) */
+
+    public static function transactionsRetrieving($start,$end){
+
+
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -203,15 +224,15 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('set-drop-rate',[]);
-        return $result; 
-     }
+        $result = $client->call('transactions',  [ "range" => [ "start" => $start , "end" => $end ] ]);
+        return json_encode($result);
 
-     /* delay */
 
-     public static function delay()
-     {
-        $client = new Client(debugHost);
+    }
+
+    public static function transactionsRetrievingByTxid($txid){
+
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -220,15 +241,14 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('delay',[]);
-        return $result;
-     }
+        $result = $client->call('transactions',  [ "txid" => $txid ]);
+        return json_encode($result);
 
-     /* set-delay */
+    }
 
-     public static function setDelay($delay)
-     {
-        $client = new Client(debugHost);
+    public static function transactionsRetrievingByAddress($address){
+
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -237,15 +257,16 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('set-delay',["Delay" => $delay]);
-        return $result;
-     }
+        $result = $client->call('transactions',  [ "address" => $address ]);
+        return json_encode($result);
 
-     /* summary */
+    }
 
-     public static function summary()
-     {
-        $client = new Client(debugHost);
+    /* All Transactions */
+
+    public static function AllTransactions(){
+
+        $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -254,77 +275,9 @@ class Debug
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('summary',[]);
-        return $result;
-     }
+        $result = $client->call('transactions',[]);
+        return json_encode($result);
 
-     /* messages */
-
-     public static function messages()
-     {
-        $client = new Client(debugHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('messages',[]);
-        return $result;
-     }
-
-     /* security Encrypted Connections */
-
-     public static function securityEncryptedConnections()
-     {
-         $client = new Client(debugHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('properties',[]);
-        return $result;         
-     }
-
-     /* security Password Protection */
-
-     public static function securityPasswordProtection()
-     {
-
-         $client = new Client(debugHost);
-         $client->getResponseParser()->onPreParse()
-         ->add(Interceptor::createWith(function (ParserContainer $container) {
-             $response = $container->getValue();
-             $result = $response['result'];
-             $response['result'] = $response;
-             
-             return new ParserContainer($container->getParser(), $response);
-         }));
-         $result = $client->call('properties',[]);
-         return $result;
-     }
-
-     /* security ‌Combined Password and Encryption */
-
-     public static function security‌CombinedPasswordAndEncryption()
-     {         
-        $client = new Client(debugHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('properties',[]);
-        return $result;
-
-     }
-}    
+    }
+  
+}

@@ -1,5 +1,5 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
 
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\ResponseParser\ParserContainer;
@@ -21,7 +21,7 @@ class Blocks
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('ablock-by-height', ["height"=> 1]);
-        return $result;
+        return json_encode($result);
     }
     
     /* ack */
@@ -38,7 +38,7 @@ class Blocks
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('ack', ["hash"=>$hash, "chainid"=>$chainid, "fulltransaction"=>""]);
-        return $result;
+        return json_encode($result);
     } 
 
     /* admin block */
@@ -56,7 +56,7 @@ class Blocks
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('admin-block', ["keymr"=>$keymr]);
-        return $result;
+        return json_encode($result);
     }
 
     /* dblock by height */
@@ -74,7 +74,7 @@ class Blocks
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('dblock-by-height', ["height"=>$height]);
-        return $result;
+        return json_encode($result);
     }
 
     /* directoryBlock  */
@@ -93,7 +93,7 @@ class Blocks
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('directory-block', ["keymr"=>$keymr]);
-        return $result;
+        return json_encode($result);
     }
 
     /* directory block head */
@@ -110,7 +110,7 @@ class Blocks
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('directory-block-head',['']);
-        return $result;
+        return json_encode($result);
     }
 
     /* ecblock by height */
@@ -127,7 +127,7 @@ class Blocks
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('ecblock-by-height',["height" => 10000]);
-        return $result;
+        return json_encode($result);
     }
 
     /* entry block */
@@ -144,7 +144,7 @@ class Blocks
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('entry-block',["keymr" => $keymr]);
-        return $result;
+        return json_encode($result);
     }
 
     /* entry credit block */
@@ -161,7 +161,7 @@ class Blocks
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('entrycredit-block',["keymr" => $keymr]);
-        return $result;
+        return json_encode($result);
     }
 
     /* factoid block */
@@ -178,12 +178,12 @@ class Blocks
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('factoid-block',["keymr" => $keymr]);
-        return $result;
+        return json_encode($result);
     }
 
     /* fblock by height */
 
-    public static function fblockByHeight()
+    public static function fblockByHeight($height)
     {
         $client = new Client(host);
         $client->getResponseParser()->onPreParse()
@@ -194,8 +194,8 @@ class Blocks
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('fblock-by-height', ["height"=> 1]);
-        return $result;
+        $result = $client->call('fblock-by-height', ["height"=> $height]);
+        return json_encode($result);
     }
 
 }

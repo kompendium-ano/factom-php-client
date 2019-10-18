@@ -1,5 +1,5 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
 
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\RequestBuilder\BuilderContainer;
@@ -13,12 +13,14 @@ use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 
-class FactomAddress
-{
-    /* address */
-    public static function address($address){
-        
-        $client = new Client(walletHost);
+class Factoid
+{ 
+
+     /* factoid-ack */
+
+     public static function factoidAck($txid)
+     {        
+        $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -27,75 +29,61 @@ class FactomAddress
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('address',["address" => $address]);
-        return $result;
-    }
-
-    /* all addresses */
-
-    public static function allAddresses()
-    {
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('all-addresses',['']);
-        return $result;
-    } 
-
-     /* generateEcAddress */
-    public static function generateEcAddress()
-    {
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('generate-ec-address',[]);
-        return $result;
-    }
-
-    /* generateFactoidAddress */
-
-    public static function generateFactoidAddress()
-    {
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('generate-ec-address',[]);
-        return $result;
-    }
-
-    /* import-addresses */
-
-    public static function importAddresses($secret)
-    {
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('generate-ec-address',["addresses" => ["secret" => $secret]]);
-        return $result;
+        $result = $client->call('factoid-ack',["txid"=>$txid]);
+        return json_encode($result);
     }
     
+     /* factoid-balance */
+
+     public static function factoidBalance($address)
+     {        
+        $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('factoid-balance',["address"=>$address]);
+        return json_encode($result);
+         
+     }
+
+     /* factoid-block */
+
+     public static function factoidBlock($keymr)
+     {      
+        $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('factoid-block',["keymr"=>$keymr]);
+        return json_encode($result);
+         
+     }
+
+     /* factoid-submit */
+
+     public static function factoidSubmit($transaction)
+     {      
+        $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('factoid-submit',["transaction"=>$transaction]);
+        return json_encode($result);
+         
+     }
 }

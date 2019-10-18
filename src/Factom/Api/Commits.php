@@ -1,5 +1,5 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
 
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\RequestBuilder\BuilderContainer;
@@ -29,7 +29,7 @@ class Commits
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('commit-entry', ["message"=> $message]);
-        return $result;
+        return json_encode($result);
     }
 }
 
