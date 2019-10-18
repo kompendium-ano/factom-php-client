@@ -232,7 +232,7 @@ print_r($ablock);
 
 // compose Entry
 
-// $composeEntry = Entry::composeEntry();
+// $composeEntry = Entry::composeEntry("48e0c94d00bf14d89ab10044075a370e1f55bcb28b2ff16206d865e192827645","EC2DKSYyRcNWf7RS963VFYgMExo1824HVeCfQ9PGPmNzwrcmgm2r");
 // print_r($composeEntry);
 
 /* Factoid */

@@ -139,7 +139,7 @@ class Entry
 
      /* compose-entry */
 
-     public static function composeEntry()
+     public static function composeEntry($chainId,$ecpub)
      {        
          $client = new Client(walletHost);
          $client->getResponseParser()->onPreParse()
