@@ -2,6 +2,9 @@
 namespace FactomApi;
 
 use PhpJsonRpc\Client;
+use PhpJsonRpc\Client\ResponseParser\ParserContainer;
+use PhpJsonRpc\Common\Interceptor\Interceptor;
+
 
 class Chains
 {
@@ -11,8 +14,16 @@ class Chains
     {
        // echo $chainid;
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('chain-head', ["chainid"=> $chainid]);
-        print_r($result);
+        return $result;
     }
 
     /* commit-chain */
@@ -21,8 +32,16 @@ class Chains
     {
         
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('commit-chain', ["message"=> $message]);
-        print_r($result);
+        return $result;
     }
 
     /* reveal-chain */
@@ -31,42 +50,60 @@ class Chains
     {
         
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('reveal-chain', ["entry"=> $entry]);
-        print_r($result);
+        return $result;
     }
 
     /* compose-chain */
 
-    public static function composeChain()
+    public static function composeChain($ecpub, $extids)
     {
         
         $client = new Client(walletHost);
-        $result = $client->call('compose-chain', [ "chains" => 
-        [
-            "firstentry" => 
-            [
-                "extids" =>
-                [
-                    "61626364",
-                    "31323334"
-                ],
-                "content" => [
-                    "3132333461626364"
-                ]
-            ]
-        ]
-        ]);        
-        print_r($result);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $content=array_shift( unpack('H*', $extids) );
+        $str = array_shift( unpack('H*', $str) );
+        $middle=strlen($str)/2;
+        $first=substr($str,0,$middle);
+        $last=substr($str,$middle);
+        $obj = '{"chain": {"firstentry": {"extids":["'.$last.'", "'.$first.'"], "content":"'.$first.$last.'"}},  "ecpub":"'.$ecpub.'"}';
+        $obj = json_decode($obj, true);
+        print_r($myObj);
+        $result = $client->call('compose-chain', $obj);
+        return $result;
     }
 
    // send-raw-message
 
    public static function sendRawMessage($message)
     {
-        
+
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('send-raw-message',["message" => $message]);
-        print_r($result);
+        return $result;
     }
 }
 
