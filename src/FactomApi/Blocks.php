@@ -2,17 +2,26 @@
 namespace FactomApi;
 
 use PhpJsonRpc\Client;
+use PhpJsonRpc\Client\ResponseParser\ParserContainer;
+use PhpJsonRpc\Common\Interceptor\Interceptor;
 
 class Blocks
 {
-
     /* ablock by height */
 
     public static function ablockByHeight()
     {
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('ablock-by-height', ["height"=> 1]);
-        print_r($result);
+        return $result;
     }
     
     /* ack */
@@ -20,8 +29,16 @@ class Blocks
     public static function ack($hash,$chainid)
     {
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('ack', ["hash"=>$hash, "chainid"=>$chainid, "fulltransaction"=>""]);
-        print_r($result);
+        return $result;
     } 
 
     /* admin block */
@@ -30,8 +47,16 @@ class Blocks
     {
         //echo $keymr;
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('admin-block', ["keymr"=>$keymr]);
-        print_r($result);
+        return $result;
     }
 
     /* dblock by height */
@@ -40,8 +65,16 @@ class Blocks
     {
        //echo $height;
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('dblock-by-height', ["height"=>$height]);
-        print_r($result);
+        return $result;
     }
 
     /* directoryBlock  */
@@ -50,8 +83,17 @@ class Blocks
     {
         
         $client = new Client(host);
+        
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('directory-block', ["keymr"=>$keymr]);
-        print_r($result);
+        return $result;
     }
 
     /* directory block head */
@@ -59,8 +101,16 @@ class Blocks
     public static function directoryBlockHead()
     {
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('directory-block-head',['']);
-        print_r($result);
+        return $result;
     }
 
     /* ecblock by height */
@@ -68,8 +118,16 @@ class Blocks
     public static function ecblockByHeight()
     {
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('ecblock-by-height',["height" => 10000]);
-        print_r($result);
+        return $result;
     }
 
     /* entry block */
@@ -77,8 +135,16 @@ class Blocks
     public static function entryBlock($keymr)
     {
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('entry-block',["keymr" => $keymr]);
-        print_r($result);
+        return $result;
     }
 
     /* entry credit block */
@@ -86,8 +152,16 @@ class Blocks
     public static function entryCreditBlock($keymr)
     {
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('entrycredit-block',["keymr" => $keymr]);
-        print_r($result);
+        return $result;
     }
 
     /* factoid block */
@@ -95,8 +169,16 @@ class Blocks
     public static function factoidBlock($keymr)
     {
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('factoid-block',["keymr" => $keymr]);
-        print_r($result);
+        return $result;
     }
 
     /* fblock by height */
@@ -104,8 +186,16 @@ class Blocks
     public static function fblockByHeight()
     {
         $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
         $result = $client->call('fblock-by-height', ["height"=> 1]);
-        print_r($result);
+        return $result;
     }
 
 }
