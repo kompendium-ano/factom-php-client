@@ -1,22 +1,71 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
 
 use PhpJsonRpc\Client;
-use PhpJsonRpc\Client\RequestBuilder\BuilderContainer;
 use PhpJsonRpc\Client\ResponseParser\ParserContainer;
-use PhpJsonRpc\Client\Transport\TransportContainer;
 use PhpJsonRpc\Common\Interceptor\Interceptor;
-use PhpJsonRpc\Core\Invoke\Invoke;
-use PhpJsonRpc\Error\BaseClientException;
-use PhpJsonRpc\Error\InvalidResponseException;
-use PhpJsonRpc\Error\MethodNotFoundException;
-use PhpJsonRpc\Tests\Mock\IdGenerator;
-use PhpJsonRpc\Tests\Mock\Transport;
 
-class FactomAddress
+
+class Chains
 {
-    /* address */
-    public static function address($address){
+    /* chain-head */
+
+    public static function chainHead($chainid)
+    {
+       // echo $chainid;
+        $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('chain-head', ["chainid"=> $chainid]);
+        return $result;
+    }
+
+    /* commit-chain */
+
+    public static function commitChain($message)
+    {
+        
+        $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('commit-chain', ["message"=> $message]);
+        return $result;
+    }
+
+    /* reveal-chain */
+
+    public static function revealChain($entry)
+    {
+        
+        $client = new Client(host);
+        $client->getResponseParser()->onPreParse()
+        ->add(Interceptor::createWith(function (ParserContainer $container) {
+            $response = $container->getValue();
+            $result = $response['result'];
+            $response['result'] = $response;
+            
+            return new ParserContainer($container->getParser(), $response);
+        }));
+        $result = $client->call('reveal-chain', ["entry"=> $entry]);
+        return $result;
+    }
+
+    /* compose-chain */
+
+    public static function composeChain($ecpub, $extids)
+    {
         
         $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
@@ -27,15 +76,24 @@ class FactomAddress
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('address',["address" => $address]);
+        $content=array_shift( unpack('H*', $extids) );
+        $str = array_shift( unpack('H*', $str) );
+        $middle=strlen($str)/2;
+        $first=substr($str,0,$middle);
+        $last=substr($str,$middle);
+        $obj = '{"chain": {"firstentry": {"extids":["'.$last.'", "'.$first.'"], "content":"'.$first.$last.'"}},  "ecpub":"'.$ecpub.'"}';
+        $obj = json_decode($obj, true);
+        print_r($myObj);
+        $result = $client->call('compose-chain', $obj);
         return $result;
     }
 
-    /* all addresses */
+   // send-raw-message
 
-    public static function allAddresses()
+   public static function sendRawMessage($message)
     {
-        $client = new Client(walletHost);
+
+        $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
@@ -44,58 +102,9 @@ class FactomAddress
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('all-addresses',['']);
-        return $result;
-    } 
-
-     /* generateEcAddress */
-    public static function generateEcAddress()
-    {
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('generate-ec-address',[]);
+        $result = $client->call('send-raw-message',["message" => $message]);
         return $result;
     }
-
-    /* generateFactoidAddress */
-
-    public static function generateFactoidAddress()
-    {
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('generate-ec-address',[]);
-        return $result;
-    }
-
-    /* import-addresses */
-
-    public static function importAddresses($secret)
-    {
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('generate-ec-address',["addresses" => ["secret" => $secret]]);
-        return $result;
-    }
-    
 }
+
+?>

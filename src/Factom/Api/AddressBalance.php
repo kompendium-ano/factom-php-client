@@ -1,5 +1,6 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
+
 class AddressBalance
 {
     // Get Factoid Address Balance

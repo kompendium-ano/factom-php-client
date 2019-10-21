@@ -1,5 +1,5 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
 
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\RequestBuilder\BuilderContainer;
@@ -267,7 +267,7 @@ class Debug
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
             $result = $response['result'];
-            $response['result'] = $response;
+            $response['result'] = $response; 
             
             return new ParserContainer($container->getParser(), $response);
         }));

@@ -1,5 +1,5 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
 
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\RequestBuilder\BuilderContainer;
@@ -13,12 +13,13 @@ use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 
-class Commits
+class Minute
 {
-    /* commit-entry */
+    /* current-minute */
 
-    public static function commitEntry($message)
+    public static function currentMinute()
     {
+
         $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
@@ -28,7 +29,7 @@ class Commits
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('commit-entry', ["message"=> $message]);
+        $result = $client->call('current-minute',['']);
         return $result;
     }
 }

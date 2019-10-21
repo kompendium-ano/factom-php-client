@@ -181,18 +181,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "bcbb52f6f8b28de44b7515519e3d2d9c640d40ab"
+                "reference": "2b1dfedd8d59a521832c0837be045b83cd746fa0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/bcbb52f6f8b28de44b7515519e3d2d9c640d40ab",
-                "reference": "bcbb52f6f8b28de44b7515519e3d2d9c640d40ab",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/2b1dfedd8d59a521832c0837be045b83cd746fa0",
+                "reference": "2b1dfedd8d59a521832c0837be045b83cd746fa0",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.4",
+                "guzzlehttp/psr7": "^1.6.1",
                 "php": ">=5.5"
             },
             "require-dev": {
@@ -239,7 +239,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-10-14 09:23:25"
+            "time": "2019-10-18 12:00:04"
         },
         {
             "name": "guzzlehttp/promises",
@@ -555,16 +555,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.25.1",
+            "version": "2.25.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "d59c6cea9c4a3547bb6c0dfec451319abdaa4fb1"
+                "reference": "d07636581795383e2fea2d711212d30f941f2039"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d59c6cea9c4a3547bb6c0dfec451319abdaa4fb1",
-                "reference": "d59c6cea9c4a3547bb6c0dfec451319abdaa4fb1",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d07636581795383e2fea2d711212d30f941f2039",
+                "reference": "d07636581795383e2fea2d711212d30f941f2039",
                 "shasum": ""
             },
             "require": {
@@ -618,7 +618,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-10-05T15:52:23+00:00"
+            "time": "2019-10-20T11:05:44+00:00"
         },
         {
             "name": "psr/container",
@@ -872,12 +872,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "303707623ca2368ea8c47c3f43daf21879e922a7"
+                "reference": "01a25cb05214a272addbdb5fe5b724b9a4b578ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/303707623ca2368ea8c47c3f43daf21879e922a7",
-                "reference": "303707623ca2368ea8c47c3f43daf21879e922a7",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/01a25cb05214a272addbdb5fe5b724b9a4b578ab",
+                "reference": "01a25cb05214a272addbdb5fe5b724b9a4b578ab",
                 "shasum": ""
             },
             "require": {
@@ -940,7 +940,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-10-03 11:24:03"
+            "time": "2019-10-17 12:23:42"
         },
         {
             "name": "symfony/translation-contracts",

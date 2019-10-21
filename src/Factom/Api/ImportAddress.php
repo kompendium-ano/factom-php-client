@@ -1,5 +1,6 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
+
 class ImportAddress
 {
     // Import a Private Key

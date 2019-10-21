@@ -1,18 +1,25 @@
 <?php 
-namespace FactomApi;
+namespace Factom\Api;
 
 use PhpJsonRpc\Client;
+use PhpJsonRpc\Client\RequestBuilder\BuilderContainer;
 use PhpJsonRpc\Client\ResponseParser\ParserContainer;
+use PhpJsonRpc\Client\Transport\TransportContainer;
 use PhpJsonRpc\Common\Interceptor\Interceptor;
+use PhpJsonRpc\Core\Invoke\Invoke;
+use PhpJsonRpc\Error\BaseClientException;
+use PhpJsonRpc\Error\InvalidResponseException;
+use PhpJsonRpc\Error\MethodNotFoundException;
+use PhpJsonRpc\Tests\Mock\IdGenerator;
+use PhpJsonRpc\Tests\Mock\Transport;
 
+class Factoid
+{ 
 
-class Chains
-{
-    /* chain-head */
+     /* factoid-ack */
 
-    public static function chainHead($chainid)
-    {
-       // echo $chainid;
+     public static function factoidAck($txid)
+     {        
         $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
@@ -22,15 +29,14 @@ class Chains
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('chain-head', ["chainid"=> $chainid]);
+        $result = $client->call('factoid-ack',["txid"=>$txid]);
         return $result;
     }
+    
+     /* factoid-balance */
 
-    /* commit-chain */
-
-    public static function commitChain($message)
-    {
-        
+     public static function factoidBalance($address)
+     {        
         $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
@@ -40,15 +46,15 @@ class Chains
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('commit-chain', ["message"=> $message]);
+        $result = $client->call('factoid-balance',["address"=>$address]);
         return $result;
-    }
+         
+     }
 
-    /* reveal-chain */
+     /* factoid-block */
 
-    public static function revealChain($entry)
-    {
-        
+     public static function factoidBlock($keymr)
+     {      
         $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
@@ -58,41 +64,15 @@ class Chains
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('reveal-chain', ["entry"=> $entry]);
+        $result = $client->call('factoid-block',["keymr"=>$keymr]);
         return $result;
-    }
+         
+     }
 
-    /* compose-chain */
+     /* factoid-submit */
 
-    public static function composeChain($ecpub, $extids)
-    {
-        
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $content=array_shift( unpack('H*', $extids) );
-        $str = array_shift( unpack('H*', $str) );
-        $middle=strlen($str)/2;
-        $first=substr($str,0,$middle);
-        $last=substr($str,$middle);
-        $obj = '{"chain": {"firstentry": {"extids":["'.$last.'", "'.$first.'"], "content":"'.$first.$last.'"}},  "ecpub":"'.$ecpub.'"}';
-        $obj = json_decode($obj, true);
-        print_r($myObj);
-        $result = $client->call('compose-chain', $obj);
-        return $result;
-    }
-
-   // send-raw-message
-
-   public static function sendRawMessage($message)
-    {
-
+     public static function factoidSubmit($transaction)
+     {      
         $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
@@ -102,9 +82,8 @@ class Chains
             
             return new ParserContainer($container->getParser(), $response);
         }));
-        $result = $client->call('send-raw-message',["message" => $message]);
+        $result = $client->call('factoid-submit',["transaction"=>$transaction]);
         return $result;
-    }
+         
+     }
 }
-
-?>

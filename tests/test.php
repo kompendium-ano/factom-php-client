@@ -1,29 +1,29 @@
 <?php 
 require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../config.php';
-use FactomApi\FactomAddress;
-use FactomApi\AddressBalance;
-use FactomApi\CreateFactomChain;
-use FactomApi\ReadFactomChain;
-use FactomApi\ImportAddress;
-use FactomApi\Transaction;
-use FactomApi\Blocks;
-use FactomApi\Chains;
-use FactomApi\Commits;
-use FactomApi\Minute;
-use FactomApi\Entry;
-use FactomApi\Factoid;
-use FactomApi\Pending;
-use FactomApi\Factomd;
-use FactomApi\FactomWalletd;
-use FactomApi\Debug;
+use Factom\Api\FactomAddress;
+use Factom\Api\AddressBalance;
+use Factom\Api\CreateFactomChain;
+use Factom\Api\ReadFactomChain;
+use Factom\Api\ImportAddress;
+use Factom\Api\Transaction;
+use Factom\Api\Blocks;
+use Factom\Api\Chains;
+use Factom\Api\Commits;
+use Factom\Api\Minute;
+use Factom\Api\Entry;
+use Factom\Api\Factoid;
+use Factom\Api\Pending;
+use Factom\Api\Factomd;
+use Factom\Api\FactomWalletd;
+use Factom\Api\Debug;
 
 
 /* Block */
 
 // get ablock by height
-$ablock = Blocks::ablockByHeight();
-print_r($ablock);
+// $ablock = Blocks::ablockByHeight();
+// print_r($ablock);
 
 // ack
 // $ack = Blocks::ack("e96cca381bf25f6dd4dfdf9f7009ff84ee6edaa3f47f9ccf06d2787482438f4b","f9164cd66af9d5773b4523a510b5eefb9a5e626480feeb6671ef2d17510ca300");
@@ -79,8 +79,8 @@ print_r($ablock);
 
 //commit chain
 
-// $chainHead = Chains::commitChain("00015507b2f70bd0165d9fa19a28cfaafb6bc82f538955a98c7b7e60d79fbf92655c1bff1c76466cb3bc3f3cc68d8b2c111f4f24c88d9c031b4124395c940e5e2c5ea496e8aaa2f5c956749fc3eba4acc60fd485fb100e601070a44fcce54ff358d606698547340b3b6a27bcceb6a42d62a3a8d02a6f0d73653215771de243a63ac048a18b59da2946c901273e616bdbb166c535b26d0d446bc69b22c887c534297c7d01b2ac120237086112b5ef34fc6474e5e941d60aa054b465d4d770d7f850169170ef39150b");
-// print_r($chainHead);
+// $commitChain = Chains::commitChain("00015507b2f70bd0165d9fa19a28cfaafb6bc82f538955a98c7b7e60d79fbf92655c1bff1c76466cb3bc3f3cc68d8b2c111f4f24c88d9c031b4124395c940e5e2c5ea496e8aaa2f5c956749fc3eba4acc60fd485fb100e601070a44fcce54ff358d606698547340b3b6a27bcceb6a42d62a3a8d02a6f0d73653215771de243a63ac048a18b59da2946c901273e616bdbb166c535b26d0d446bc69b22c887c534297c7d01b2ac120237086112b5ef34fc6474e5e941d60aa054b465d4d770d7f850169170ef39150b");
+// print_r($commitChain);
 
 
 // reveal chain
@@ -99,8 +99,8 @@ print_r($ablock);
 
 
 /* Commits */
-//$commitEntry = Commits::commitEntry("00015507C1024BF5C956749FC3EBA4ACC60FD485FB100E601070A44FCCE54FF358D60669854734013B6A27BCCEB6A42D62A3A8D02A6F0D73653215771DE243A63AC048A18B59DA29F4CBD953E6EBE684D693FDCA270CE231783E8ECC62D630F983CD59E559C6253F84D1F54C8E8D8665D493F7B4A4C1864751E3CDEC885A64C2144E0938BF648A00");
-//print_r($commitEntry);
+// $commitEntry = Commits::commitEntry("00015507C1024BF5C956749FC3EBA4ACC60FD485FB100E601070A44FCCE54FF358D60669854734013B6A27BCCEB6A42D62A3A8D02A6F0D73653215771DE243A63AC048A18B59DA29F4CBD953E6EBE684D693FDCA270CE231783E8ECC62D630F983CD59E559C6253F84D1F54C8E8D8665D493F7B4A4C1864751E3CDEC885A64C2144E0938BF648A00");
+// print_r($commitEntry);
 
 /* Debug */
 // holdingQueue
@@ -342,7 +342,7 @@ print_r($ablock);
 
 /* Pending */
 
-// pending entries
+//pending entries
 // $pendingEntries = Pending::pendingEntries();
 // print_r($pendingEntries);
 
