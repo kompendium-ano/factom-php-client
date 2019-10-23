@@ -23,7 +23,7 @@ class Chains
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('chain-head', ["chainid"=> $chainid]);
-        return $result;
+        return json_encode($result);
     }
 
     /* commit-chain */
@@ -41,7 +41,7 @@ class Chains
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('commit-chain', ["message"=> $message]);
-        return $result;
+        return json_encode($result);
     }
 
     /* reveal-chain */
@@ -59,7 +59,7 @@ class Chains
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('reveal-chain', ["entry"=> $entry]);
-        return $result;
+        return json_encode($result);
     }
 
     /* compose-chain */
@@ -85,7 +85,7 @@ class Chains
         $obj = json_decode($obj, true);
         print_r($myObj);
         $result = $client->call('compose-chain', $obj);
-        return $result;
+        return json_encode($result);
     }
 
    // send-raw-message
@@ -103,7 +103,7 @@ class Chains
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('send-raw-message',["message" => $message]);
-        return $result;
+        return json_encode($result);
     }
 }
 

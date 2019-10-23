@@ -28,7 +28,7 @@ class FactomAddress
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('address',["address" => $address]);
-        return $result;
+        return json_encode($result);
     }
 
     /* all addresses */
@@ -45,7 +45,7 @@ class FactomAddress
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('all-addresses',['']);
-        return $result;
+        return json_encode($result);
     } 
 
      /* generateEcAddress */
@@ -61,7 +61,7 @@ class FactomAddress
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('generate-ec-address',[]);
-        return $result;
+        return json_encode($result);
     }
 
     /* generateFactoidAddress */
@@ -78,7 +78,7 @@ class FactomAddress
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('generate-ec-address',[]);
-        return $result;
+        return json_encode($result);
     }
 
     /* import-addresses */
@@ -95,7 +95,7 @@ class FactomAddress
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('generate-ec-address',["addresses" => ["secret" => $secret]]);
-        return $result;
+        return json_encode($result);
     }
     
 }

@@ -30,7 +30,7 @@ class Minute
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('current-minute',['']);
-        return $result;
+        return json_encode($result);
     }
 }
 

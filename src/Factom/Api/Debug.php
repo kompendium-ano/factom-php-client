@@ -29,7 +29,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('holding-queue',[]);
-        return $result;
+        return json_encode($result);
     }
     
 
@@ -47,7 +47,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('network-info',[]);
-        return $result;
+        return json_encode($result);
     }
 
     /* predictive-fer */
@@ -64,7 +64,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('predictive-fer',[]);
-        return $result;
+        return json_encode($result);
     }
 
     /* audit-servers */
@@ -82,7 +82,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('audit-servers',[]);
-        return $result;
+        return json_encode($result);
     }
 
     /* federated-servers */
@@ -99,7 +99,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('federated-servers',[]);
-        return $result;
+        return json_encode($result);
     }
 
     /* configuration */
@@ -116,7 +116,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('configuration',[]);
-        return $result;        
+        return json_encode($result);        
     }
 
      /* process-list */
@@ -133,7 +133,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('process-list',[]);
-        return $result; 
+        return json_encode($result); 
      }
 
      /* authorities */
@@ -150,7 +150,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('authorities',[]);
-        return $result; 
+        return json_encode($result);
      }
 
     
@@ -168,9 +168,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('reload-configuration',[]);
-        return $result; 
-
-        
+        return json_encode($result);        
      }
 
      /* drop-rate */
@@ -187,7 +185,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('drop-rate',[]);
-        return $result; 
+        return json_encode($result);
      }
 
      /* set-drop-rate */
@@ -204,7 +202,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('set-drop-rate',[]);
-        return $result; 
+        return json_encode($result);
      }
 
      /* delay */
@@ -221,7 +219,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('delay',[]);
-        return $result;
+        return json_encode($result);
      }
 
      /* set-delay */
@@ -238,7 +236,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('set-delay',["Delay" => $delay]);
-        return $result;
+        return json_encode($result);
      }
 
      /* summary */
@@ -255,7 +253,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('summary',[]);
-        return $result;
+        return json_encode($result);
      }
 
      /* messages */
@@ -272,7 +270,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('messages',[]);
-        return $result;
+        return json_encode($result);
      }
 
      /* security Encrypted Connections */
@@ -289,7 +287,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('properties',[]);
-        return $result;         
+        return json_encode($result);        
      }
 
      /* security Password Protection */
@@ -307,7 +305,7 @@ class Debug
              return new ParserContainer($container->getParser(), $response);
          }));
          $result = $client->call('properties',[]);
-         return $result;
+         return json_encode($result);
      }
 
      /* security ‌Combined Password and Encryption */
@@ -324,7 +322,7 @@ class Debug
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('properties',[]);
-        return $result;
+        return json_encode($result);
 
      }
 }    

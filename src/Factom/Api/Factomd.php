@@ -30,7 +30,7 @@ class Factomd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('heights', []);
-        return $result;
+        return json_encode($result);
          
      }
 
@@ -49,7 +49,7 @@ class Factomd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('multiple-ec-balances', ["addresses" => [$addr1,$addr2]]);
-        return $result;
+        return json_encode($result);
      }
 
      /* multiple-fct-balances */
@@ -66,7 +66,7 @@ class Factomd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('multiple-fct-balances', ["addresses" => [$addr1,$addr2]]);
-        return $result;
+        return json_encode($result);
      }
 
      /* properties */
@@ -83,7 +83,7 @@ class Factomd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('properties', []);
-        return $result;
+        return json_encode($result);
      }
 
      /* raw-data */
@@ -100,7 +100,7 @@ class Factomd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('raw-data', ["hash"=> $hash]);
-        return $result;
+        return json_encode($result);
     }
      
 
@@ -118,7 +118,7 @@ class Factomd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('receipt', ["hash"=> $hash]);
-        return $result;
+        return json_encode($result);
     }
 }
 ?>

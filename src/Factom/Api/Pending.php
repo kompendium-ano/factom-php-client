@@ -29,7 +29,7 @@ class Pending
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('pending-entries', []);
-        return $result;
+        return json_encode($result);
     }
 
     /* pending-transactions */
@@ -47,6 +47,6 @@ class Pending
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('pending-transactions', ["address" => $address]);
-        return $result;
+        return json_encode($result);
     }
 }

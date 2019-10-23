@@ -30,7 +30,7 @@ class FactomWalletd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('get-height', []);
-        return $result;
+        return json_encode($result);
     }
 
     /* import-koinify */
@@ -47,7 +47,7 @@ class FactomWalletd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('import-koinify',["words" => $words]);
-        return $result;
+        return json_encode($result);
     }
 
     /* properties */
@@ -64,7 +64,7 @@ class FactomWalletd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('properties',[]);
-        return $result;
+        return json_encode($result);
     }
 
     /* wallet-backup */
@@ -82,7 +82,7 @@ class FactomWalletd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('wallet-backup',[]);
-        return $result;
+        return json_encode($result);
     } 
     
 
@@ -101,7 +101,7 @@ class FactomWalletd
                 return new ParserContainer($container->getParser(), $response);
             }));
             $result = $client->call('wallet-balances',[]);
-            return $result;
+            return json_encode($result);
     }
 
     /* errors */
@@ -118,6 +118,6 @@ class FactomWalletd
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('bad',[]);
-        return $result;
+        return json_encode($result);
     } 
 }

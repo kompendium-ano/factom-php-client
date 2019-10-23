@@ -30,7 +30,7 @@ class Entry
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('entry',["hash"=>$hash]);
-        return $result;
+        return json_encode($result);
     }
 
     /* entry-ack */
@@ -47,7 +47,7 @@ class Entry
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('entry-ack',["txid"=>$txid]);
-        return $result;
+        return json_encode($result);
     }  
 
     /* entry-block */
@@ -64,7 +64,7 @@ class Entry
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('entry-block',["keymr"=>$keymr]);
-        return $result;echo $e->getMessage();
+        return json_encode($result);
         
     }  
 
@@ -82,7 +82,7 @@ class Entry
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('entry-credit-balance',["address"=>$address]);
-        return $result;echo $e->getMessage();
+        return json_encode($result);
      }
 
      /* entrycredit-block */
@@ -100,7 +100,7 @@ class Entry
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('entrycredit-block',["keymr"=>$keymr]);
-        return $result;echo $e->getMessage();
+        return json_encode($result);
      }
 
      /* entry-credit-rate*/
@@ -117,7 +117,7 @@ class Entry
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('entry-credit-rate',[]);
-        return $result;echo $e->getMessage();
+        return json_encode($result);
      }
      
      /* reveal-entry */
@@ -134,7 +134,7 @@ class Entry
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('reveal-entry',["entry" => $entry]);
-        return $result;echo $e->getMessage();
+        return json_encode($result);
      }
 
      /* compose-entry */
@@ -153,7 +153,7 @@ class Entry
          $data = '{ "entry":  {"chainid":"'.$chainId.'",  "extids":["cd90", "90cd"], "content":"abcdef"}, "ecpub":"'.$ecpub.'"}';
          $data = json_decode($data, true);
          $result = $client->call('compose-entry', $data);
-         return $result;
+         return json_encode($result);
      }
 }
 

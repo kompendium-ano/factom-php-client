@@ -22,15 +22,15 @@ use Factom\Api\Debug;
 /* Block */
 
 // get ablock by height
-// $ablock = Blocks::ablockByHeight();
-// print_r($ablock);
+$ablock = Blocks::ablockByHeight();
+echo $ablock;
 
 // ack
 // $ack = Blocks::ack("e96cca381bf25f6dd4dfdf9f7009ff84ee6edaa3f47f9ccf06d2787482438f4b","f9164cd66af9d5773b4523a510b5eefb9a5e626480feeb6671ef2d17510ca300");
 // print_r($ack);
 
 // admin block
-// $adminblock = Blocks::adminBlock('ca207283880a5e58856a70cb8723d7b0f28051ec51ebc1c45642678228aed384');
+// $adminblock = Blocks::adminBlock('32ca53bbcee1c741bee9a9bfa722bebed70f7ee5d4286c7774d9a359e5bbe8f2');
 // print_r($adminblock);
 
 // dblock By Height
@@ -38,7 +38,7 @@ use Factom\Api\Debug;
 // print_r($dblockbyheight);
 
 // directory block
-// $dirblock = Blocks::directoryBlock("73f310bfc2e1b2206417d84db7f75f76f9cb9ff4aa3fdd1301172d5156c9807e");
+// $dirblock = Blocks::directoryBlock("9d6160f657d336aa6b637e2a32406ff29549a9ce23ccdfe097279cb1c7b9a468");
 // print_r($dirblock);
 
 //directory Block Head
@@ -69,7 +69,7 @@ use Factom\Api\Debug;
 
 // fblock by height
 
-// $fblockByHeight = Blocks::fblockByHeight();
+// $fblockByHeight = Blocks::fblockByHeight(101994);
 // print_r($fblockByHeight);
 
 // chain id
@@ -94,7 +94,7 @@ use Factom\Api\Debug;
 // print_r($composeChain);
 
 // send raw message
-// $sendRawMessage = Chains::sendRawMessage("00015fc6dbeaccfab82063af4a2890f89c243a9a3db2cce041e9352a1df32731d302917c38b229985e890c7d0d4c76e84a283011ba165ccee3524dd91fb417c2550c6d1c42d3bd23af5f7c05a89c0097eed7378c60b8bcc89a284094a81da85fb8faab7b2972470cb64dfb9c542844a0724222d53b86c85baa6fe49cc01fb5e8d26e08ce4690b0e3933bf1f6c5c15b28a33eb504f87c07f7bb51691b90cb3326d62b4b97802db3c6dccc9b0108f2c06cac0b7968e9f1f6aabb126f9aa58bc8eae21f2383729cb703");
+// $sendRawMessage = Chains::sendRawMessage("00016dcfa2434846e5259a21586d887816878126d2e1dd28d446a11d6ab7987f4dc78f2e4e5c17d763ad62244461094efc15bd4f1b2a899e01037416545862d9990806e17e5fe246310ceacb573703b7a8e7f59e11351a23ad48bc22062ff28246748e90231e980bfe58514d89325855ba189f585c259aaaa4b7a420b3c6704fe692cdd49cc4a9628f2383a36a95fe1ae2bc2314a5011605601ecf7858fbbbf8eb2388787d2cd680d8d90961f5760f94397733462e21cbaf1867ef85a68c671cc14e4bc4694cc102");
 // print_r($sendRawMessage);
 
 
@@ -197,7 +197,7 @@ use Factom\Api\Debug;
 
 
 // entry
-// $entry = Entry::entry("24674e6bc3094eb773297de955ee095a05830e431da13a37382dcdc89d73c7d7");
+// $entry = Entry::entry("61b3d3175f211f3b23b455bb8710fdbcf545cb40da397d9e20b26eca31c389a6");
 // print_r($entry);
 
 // entry ack
@@ -207,7 +207,7 @@ use Factom\Api\Debug;
 
 // entry block
 
-// $entryBlock = Entry::entryBlock("041c3fed14469a3d0f1a022e3d5321583065e691edb9223605c86766ff881883");
+// $entryBlock = Entry::entryBlock("437a95c19c839b2889e1879cc4d55b2c6acca35764fd88b33cfb8291d20c7d98");
 // print_r($entryBlock);
 
 // entry credit balance
@@ -217,7 +217,7 @@ use Factom\Api\Debug;
 
 // entry credit block
 
-// $entryCreditBlock = Entry::entryCreditBlock("2050b16701f29238d6b99bcf3fb0ca55d6d884139601f06691fc370cda659d60");
+// $entryCreditBlock = Entry::entryCreditBlock("bfbc36b6dc5a50f81a78e5d3117a5671a9b8e04a09db68e96941f7f1f6a41db6");
 // print_r($entryCreditBlock);
 
 //enter credit rate
@@ -249,7 +249,7 @@ use Factom\Api\Debug;
 
 //factoid block
 
-// $factoidBlock = Factoid::factoidBlock("1df843ee64f4b139047617a2df1007ea4470fabd097ddf87acabc39813f71480");
+// $factoidBlock = Factoid::factoidBlock("49d3d0f02415a24c1397201d5b1839da47eb3b68db8b15a19f7fe4df8d76ad47");
 // print_r($factoidBlock);
 
 // factoid submit 
@@ -278,7 +278,7 @@ use Factom\Api\Debug;
 
 /* Factomd */
 
-// properties
+// heights
 // $heights = Factomd::heights();
 // print_r($heights);
 
@@ -295,11 +295,11 @@ use Factom\Api\Debug;
 // print_r($properties);
 
 // raw data
-// $rawData = Factomd::rawData("914d6d8fdd758e171219abcfb77eda494b1c89c2f4775a33f3035ed1e9f87208");
+// $rawData = Factomd::rawData("44cd4e8da0981891c979512a0186addf60c3d982df25966c76d72fb474444c96");
 // print_r($rawData);
 
 // receipt  
-// $receipt = Factomd::receipt("0ae2ab2cf543eed52a13a5a405bded712444cc8f8b6724a00602e1c8550a4ec2");
+// $receipt = Factomd::receipt("2413a0f67e7dd988728f77020905829eef62ad06c0b7bf8e52a7e1455d5f3fb6");
 // print_r($receipt);
 
 /* FactomWalletd */

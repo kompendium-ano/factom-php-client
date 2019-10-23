@@ -30,7 +30,7 @@ class Factoid
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('factoid-ack',["txid"=>$txid]);
-        return $result;
+        return json_encode($result);
     }
     
      /* factoid-balance */
@@ -47,7 +47,7 @@ class Factoid
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('factoid-balance',["address"=>$address]);
-        return $result;
+        return json_encode($result);
          
      }
 
@@ -65,7 +65,7 @@ class Factoid
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('factoid-block',["keymr"=>$keymr]);
-        return $result;
+        return json_encode($result);
          
      }
 
@@ -83,7 +83,7 @@ class Factoid
             return new ParserContainer($container->getParser(), $response);
         }));
         $result = $client->call('factoid-submit',["transaction"=>$transaction]);
-        return $result;
+        return json_encode($result);
          
      }
 }
