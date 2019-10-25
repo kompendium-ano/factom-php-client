@@ -24,10 +24,18 @@ class Entry
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+           if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "entry");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('entry',["hash"=>$hash]);
         return json_encode($result);
@@ -41,10 +49,18 @@ class Entry
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "entry-ack");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('entry-ack',["txid"=>$txid]);
         return json_encode($result);
@@ -58,10 +74,18 @@ class Entry
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+             if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "entry-block");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('entry-block',["keymr"=>$keymr]);
         return json_encode($result);
@@ -76,10 +100,18 @@ class Entry
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "entry-credit-balance");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('entry-credit-balance',["address"=>$address]);
         return json_encode($result);
@@ -94,10 +126,18 @@ class Entry
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "entrycredit-block");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('entrycredit-block',["keymr"=>$keymr]);
         return json_encode($result);
@@ -111,10 +151,18 @@ class Entry
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "entry-credit-rate");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('entry-credit-rate',[]);
         return json_encode($result);
@@ -128,10 +176,18 @@ class Entry
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "reveal-entry");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('reveal-entry',["entry" => $entry]);
         return json_encode($result);
@@ -145,10 +201,18 @@ class Entry
          $client->getResponseParser()->onPreParse()
          ->add(Interceptor::createWith(function (ParserContainer $container) {
              $response = $container->getValue();
-             $result = $response['result'];
-             $response['result'] = $response;
-             
-             return new ParserContainer($container->getParser(), $response);
+             if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "compose-entry");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
          }));
          $data = '{ "entry":  {"chainid":"'.$chainId.'",  "extids":["cd90", "90cd"], "content":"abcdef"}, "ecpub":"'.$ecpub.'"}';
          $data = json_decode($data, true);

@@ -50,8 +50,8 @@
     <member refid="classFactom_1_1Api_1_1Entry_1a4e6edcaf5422946a91a18a53eed57950" kind="function"><name>revealEntry</name></member>
     <member refid="classFactom_1_1Api_1_1Entry_1a42abb618667c014be4aa0a4ee74639e5" kind="function"><name>composeEntry</name></member>
   </compound>
-  <compound refid="classFactom_1_1Api_1_1errorHandling" kind="class"><name>Factom::Api::errorHandling</name>
-    <member refid="classFactom_1_1Api_1_1errorHandling_1ae4e9513dfe4bab9ec8d270cdf0474b4b" kind="function"><name>checkError</name></member>
+  <compound refid="classFactom_1_1Api_1_1Errorhandling" kind="class"><name>Factom::Api::Errorhandling</name>
+    <member refid="classFactom_1_1Api_1_1Errorhandling_1a222ff365960807193d2c309f9254cecb" kind="function"><name>checkError</name></member>
   </compound>
   <compound refid="classFactom_1_1Api_1_1Factoid" kind="class"><name>Factom::Api::Factoid</name>
     <member refid="classFactom_1_1Api_1_1Factoid_1aeba86eb5636d009fca97261c0f2c1a49" kind="function"><name>factoidAck</name></member>
@@ -137,7 +137,7 @@
   </compound>
   <compound refid="namespaceFactom_1_1Api" kind="namespace"><name>Factom::Api</name>
   </compound>
-  <compound refid="namespaceFactom_1_1Api_1_1errorHandling" kind="namespace"><name>Factom::Api::errorHandling</name>
+  <compound refid="namespaceFactom_1_1Api_1_1Errorhandling" kind="namespace"><name>Factom::Api::Errorhandling</name>
   </compound>
   <compound refid="namespaceFactom_1_1Api_1_1Factoid" kind="namespace"><name>Factom::Api::Factoid</name>
   </compound>
@@ -173,7 +173,7 @@
   </compound>
   <compound refid="Entry_8php" kind="file"><name>Entry.php</name>
   </compound>
-  <compound refid="errorHandling_8php" kind="file"><name>errorHandling.php</name>
+  <compound refid="Errorhandling_8php" kind="file"><name>Errorhandling.php</name>
   </compound>
   <compound refid="Factoid_8php" kind="file"><name>Factoid.php</name>
   </compound>

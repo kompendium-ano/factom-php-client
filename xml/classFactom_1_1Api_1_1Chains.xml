@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Chains.php" line="13" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="13" bodyend="27"/>
+        <location file="src/Factom/Api/Chains.php" line="13" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="13" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Chains_1a9a166dd2ea06f78f2fc24f7b640c66f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Chains.php" line="31" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="31" bodyend="45"/>
+        <location file="src/Factom/Api/Chains.php" line="39" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="39" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Chains_1afd4dd17b43d53c760851c3216b787bac" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Chains.php" line="49" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="49" bodyend="63"/>
+        <location file="src/Factom/Api/Chains.php" line="65" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="65" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Chains_1afa23e3d810bd13c68b5857f1ea37c9df" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Chains.php" line="67" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="67" bodyend="89"/>
+        <location file="src/Factom/Api/Chains.php" line="91" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="91" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Chains_1a83e4fcfe75a0e420e992beebb2df7138" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -84,14 +84,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Chains.php" line="93" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="93" bodyend="107"/>
+        <location file="src/Factom/Api/Chains.php" line="125" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="125" bodyend="147"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Factom/Api/Chains.php" line="10" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="9" bodyend="108"/>
+    <location file="src/Factom/Api/Chains.php" line="10" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="9" bodyend="148"/>
     <listofallmembers>
       <member refid="classFactom_1_1Api_1_1Chains_1aaa19d0d6c63ff303501e4109c0228a21" prot="public" virt="non-virtual"><scope>Factom::Api::Chains</scope><name>chainHead</name></member>
       <member refid="classFactom_1_1Api_1_1Chains_1a9a166dd2ea06f78f2fc24f7b640c66f1" prot="public" virt="non-virtual"><scope>Factom::Api::Chains</scope><name>commitChain</name></member>

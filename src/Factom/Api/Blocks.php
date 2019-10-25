@@ -15,10 +15,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+           if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "ablock-by-height");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('ablock-by-height', ["height"=> 1]);
         return json_encode($result);
@@ -32,10 +40,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "ack");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('ack', ["hash"=>$hash, "chainid"=>$chainid, "fulltransaction"=>""]);
         return json_encode($result);
@@ -50,10 +66,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "admin-block");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('admin-block', ["keymr"=>$keymr]);
         return json_encode($result);
@@ -68,10 +92,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "dblock-by-height");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('dblock-by-height', ["height"=>$height]);
         return json_encode($result);
@@ -87,10 +119,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "directory-block");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('directory-block', ["keymr"=>$keymr]);
         return json_encode($result);
@@ -104,10 +144,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "directory-block-head");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('directory-block-head',['']);
         return json_encode($result);
@@ -121,10 +169,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "ecblock-by-height");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('ecblock-by-height',["height" => 10000]);
         return json_encode($result);
@@ -138,10 +194,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "entry-block");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('entry-block',["keymr" => $keymr]);
         return json_encode($result);
@@ -155,10 +219,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "entrycredit-block");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('entrycredit-block',["keymr" => $keymr]);
         return json_encode($result);
@@ -172,10 +244,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "factoid-block");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('factoid-block',["keymr" => $keymr]);
         return json_encode($result);
@@ -189,10 +269,18 @@ class Blocks
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "fblock-by-height");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('fblock-by-height', ["height"=> $height]);
         return json_encode($result);

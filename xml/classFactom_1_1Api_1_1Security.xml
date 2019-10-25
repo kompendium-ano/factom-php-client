@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Security.php" line="21" column="1" bodyfile="src/Factom/Api/Security.php" bodystart="21" bodyend="34"/>
+        <location file="src/Factom/Api/Security.php" line="21" column="1" bodyfile="src/Factom/Api/Security.php" bodystart="21" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Security_1a17361b4739e533147ef1320a05b3c022" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Security.php" line="38" column="1" bodyfile="src/Factom/Api/Security.php" bodystart="38" bodyend="52"/>
+        <location file="src/Factom/Api/Security.php" line="46" column="1" bodyfile="src/Factom/Api/Security.php" bodystart="46" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Security_1af3858a4961d04fa6161a084e481fe0bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -40,14 +40,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Security.php" line="56" column="1" bodyfile="src/Factom/Api/Security.php" bodystart="56" bodyend="70"/>
+        <location file="src/Factom/Api/Security.php" line="72" column="1" bodyfile="src/Factom/Api/Security.php" bodystart="72" bodyend="94"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Factom/Api/Security.php" line="17" column="1" bodyfile="src/Factom/Api/Security.php" bodystart="16" bodyend="71"/>
+    <location file="src/Factom/Api/Security.php" line="17" column="1" bodyfile="src/Factom/Api/Security.php" bodystart="16" bodyend="95"/>
     <listofallmembers>
       <member refid="classFactom_1_1Api_1_1Security_1aea2430268ad53ed26dd96d42147a2a92" prot="public" virt="non-virtual"><scope>Factom::Api::Security</scope><name>securityEncryptedConnections</name></member>
       <member refid="classFactom_1_1Api_1_1Security_1a17361b4739e533147ef1320a05b3c022" prot="public" virt="non-virtual"><scope>Factom::Api::Security</scope><name>securityPasswordProtection</name></member>

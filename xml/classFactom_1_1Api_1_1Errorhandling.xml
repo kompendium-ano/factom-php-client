@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classFactom_1_1Api_1_1Errorhandling" kind="class" language="PHP" prot="public">
+    <compoundname>Factom::Api::Errorhandling</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Errorhandling_1a222ff365960807193d2c309f9254cecb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Errorhandling::checkError</definition>
+        <argsstring>($err, $name)</argsstring>
+        <name>checkError</name>
+        <param>
+          <declname>$err</declname>
+        </param>
+        <param>
+          <declname>$name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Errorhandling.php" line="9" column="1" bodyfile="src/Factom/Api/Errorhandling.php" bodystart="9" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Factom/Api/Errorhandling.php" line="5" column="1" bodyfile="src/Factom/Api/Errorhandling.php" bodystart="4" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classFactom_1_1Api_1_1Errorhandling_1a222ff365960807193d2c309f9254cecb" prot="public" virt="non-virtual"><scope>Factom::Api::Errorhandling</scope><name>checkError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

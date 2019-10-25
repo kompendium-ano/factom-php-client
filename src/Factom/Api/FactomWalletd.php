@@ -26,10 +26,18 @@ class FactomWalletd
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "get-height");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('get-height', []);
         return json_encode($result);
@@ -43,10 +51,18 @@ class FactomWalletd
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "import-koinify");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('import-koinify',["words" => $words]);
         return json_encode($result);
@@ -60,10 +76,18 @@ class FactomWalletd
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "properties");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('properties',[]);
         return json_encode($result);
@@ -78,10 +102,18 @@ class FactomWalletd
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "wallet-backup");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('wallet-backup',[]);
         return json_encode($result);
@@ -97,10 +129,18 @@ class FactomWalletd
             $client->getResponseParser()->onPreParse()
             ->add(Interceptor::createWith(function (ParserContainer $container) {
                 $response = $container->getValue();
+                if(isset($response['result'])){
                 $result = $response['result'];
-                $response['result'] = $response;
-                
+                $response['result'] = $response;                
                 return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "wallet-balances");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
             }));
             $result = $client->call('wallet-balances',[]);
             return json_encode($result);
@@ -134,12 +174,24 @@ class FactomWalletd
          $client->getResponseParser()->onPreParse()
          ->add(Interceptor::createWith(function (ParserContainer $container) {
              $response = $container->getValue();
+              if(isset($response['result'])){
                 $result = $response['result'];
                 $response['result'] = $response;                
-                return new ParserContainer($container->getParser(), $response);             
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "bad");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
+             
          }));
          $result = $client->call('bad', []);         
-         return json_encode($result);
+         return json_encode($result);     
+         
+                  
     } 
 
      /* active-identity-keys */
@@ -150,10 +202,18 @@ class FactomWalletd
          $client->getResponseParser()->onPreParse()
          ->add(Interceptor::createWith(function (ParserContainer $container) {
              $response = $container->getValue();
-             $result = $response['result'];
-             $response['result'] = $response;
-             
-             return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "active-identity-keys");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
          }));
          $result = $client->call('active-identity-keys', ["chainid"=>$chainid, "height"=> $height]);
          return json_encode($result);
@@ -167,10 +227,18 @@ class FactomWalletd
          $client->getResponseParser()->onPreParse()
          ->add(Interceptor::createWith(function (ParserContainer $container) {
              $response = $container->getValue();
-             $result = $response['result'];
-             $response['result'] = $response;
-             
-             return new ParserContainer($container->getParser(), $response);
+             if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "all-identity-keys");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
          }));
          $result = $client->call('all-identity-keys', []);
          return json_encode($result);
@@ -184,10 +252,18 @@ class FactomWalletd
          $client->getResponseParser()->onPreParse()
          ->add(Interceptor::createWith(function (ParserContainer $container) {
              $response = $container->getValue();
-             $result = $response['result'];
-             $response['result'] = $response;
-             
-             return new ParserContainer($container->getParser(), $response);
+             if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "compose-identity-attribute");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
          }));
          $result = $client->call('compose-identity-attribute', ["receiver-chainid"=>$receiverchainid,"destination-chainid"=>$destinationchainid,"attributes"=>$attributes,"signerkey"=>$signerkey,"signer-chainid"=>$signerchainid,"ecpub"=>$ecpub,"force"=>$force]);
          return json_encode($result);
@@ -201,10 +277,18 @@ class FactomWalletd
          $client->getResponseParser()->onPreParse()
          ->add(Interceptor::createWith(function (ParserContainer $container) {
              $response = $container->getValue();
-             $result = $response['result'];
-             $response['result'] = $response;
-             
-             return new ParserContainer($container->getParser(), $response);
+             if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "compose-identity-attribute-endorsement");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
          }));
          $result = $client->call('compose-identity-attribute-endorsement', ["destination-chainid"=>$destinationchainid,"entry-hash"=>$entryhash,"signerkey"=>$signerkey,"signer-chainid"=>$signerchainid,"ecpub"=>$ecpub,"force"=>$force]);
          return json_encode($result);
@@ -218,10 +302,18 @@ class FactomWalletd
          $client->getResponseParser()->onPreParse()
          ->add(Interceptor::createWith(function (ParserContainer $container) {
              $response = $container->getValue();
-             $result = $response['result'];
-             $response['result'] = $response;
-             
-             return new ParserContainer($container->getParser(), $response);
+             if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "compose-identity-key-replacement");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
          }));
          $result = $client->call('compose-identity-key-replacement', ["chainid"=>$chainid,"oldkey"=>$oldkey,"newkey"=>$newkey,"signerkey"=>$signerkey,"ecpub"=>$ecpub,"force"=>$force]);
          return json_encode($result);
@@ -235,10 +327,18 @@ class FactomWalletd
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "import-identity-keys");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('import-identity-keys', ["secret"=>$secretone,
         "secret"=>$secrettwo]);
@@ -253,10 +353,18 @@ class FactomWalletd
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "remove-address");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('remove-address', ["address"=>$address]);
         return json_encode($result);
@@ -270,10 +378,18 @@ class FactomWalletd
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "remove-identity-key");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('remove-identity-key', ["public"=>$public]);
         return json_encode($result);
@@ -287,10 +403,18 @@ class FactomWalletd
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "sign-data");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('sign-data', ["signer"=>$signer]);
         return json_encode($result);
@@ -304,10 +428,18 @@ class FactomWalletd
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "unlock-wallet");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('unlock-wallet', ["passphrase"=>$passphrase,"timeout"=>$timeout]);
         return json_encode($result);

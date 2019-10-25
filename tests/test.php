@@ -22,8 +22,8 @@ use Factom\Api\Security;
 /* Block */
 
 // get ablock by height
-// $ablock = Blocks::ablockByHeight();
-// echo $ablock;
+$ablock = Blocks::ablockByHeight();
+echo $ablock;
 
 // ack
 // $ack = Blocks::ack("e96cca381bf25f6dd4dfdf9f7009ff84ee6edaa3f47f9ccf06d2787482438f4b","f9164cd66af9d5773b4523a510b5eefb9a5e626480feeb6671ef2d17510ca300");
@@ -37,7 +37,7 @@ use Factom\Api\Security;
 // $dblockbyheight = Blocks::dblockByHeight(14460);
 // print_r($dblockbyheight);
 
-// directory block
+//directory block
 // $dirblock = Blocks::directoryBlock("9d6160f657d336aa6b637e2a32406ff29549a9ce23ccdfe097279cb1c7b9a468");
 // print_r($dirblock);
 
@@ -392,8 +392,8 @@ use Factom\Api\Security;
 
 // errrors
 
-$errors = FactomWalletd::errors();
-print_r($errors);
+// $errors = FactomWalletd::errors();
+// print_r($errors);
 
 // minute
 

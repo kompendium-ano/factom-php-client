@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Factoid.php" line="21" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="21" bodyend="34"/>
+        <location file="src/Factom/Api/Factoid.php" line="21" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="21" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Factoid_1a6470cf1995b51e9fc5df6bb93a0709a5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Factoid.php" line="38" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="38" bodyend="52"/>
+        <location file="src/Factom/Api/Factoid.php" line="46" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="46" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Factoid_1af6a5f5c5fefa6311f7b99f5b5c2bd18c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Factoid.php" line="56" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="56" bodyend="70"/>
+        <location file="src/Factom/Api/Factoid.php" line="72" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="72" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Factoid_1a5854afdcba62a1c16451f1dc0ca5b553" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -65,14 +65,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Factoid.php" line="74" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="74" bodyend="88"/>
+        <location file="src/Factom/Api/Factoid.php" line="98" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="98" bodyend="120"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Factom/Api/Factoid.php" line="17" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="16" bodyend="89"/>
+    <location file="src/Factom/Api/Factoid.php" line="17" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="16" bodyend="121"/>
     <listofallmembers>
       <member refid="classFactom_1_1Api_1_1Factoid_1aeba86eb5636d009fca97261c0f2c1a49" prot="public" virt="non-virtual"><scope>Factom::Api::Factoid</scope><name>factoidAck</name></member>
       <member refid="classFactom_1_1Api_1_1Factoid_1a6470cf1995b51e9fc5df6bb93a0709a5" prot="public" virt="non-virtual"><scope>Factom::Api::Factoid</scope><name>factoidBalance</name></member>

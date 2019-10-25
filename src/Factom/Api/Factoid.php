@@ -24,10 +24,18 @@ class Factoid
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "factoid-ack");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('factoid-ack',["txid"=>$txid]);
         return json_encode($result);
@@ -41,10 +49,18 @@ class Factoid
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "factoid-balance");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('factoid-balance',["address"=>$address]);
         return json_encode($result);
@@ -59,10 +75,18 @@ class Factoid
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+           if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "factoid-block");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('factoid-block',["keymr"=>$keymr]);
         return json_encode($result);
@@ -77,10 +101,18 @@ class Factoid
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
             $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
-            
-            return new ParserContainer($container->getParser(), $response);
+            if(isset($response['result'])){
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);
+             }else{
+                $err = Errorhandling::checkError($response['error']['message'], "factoid-submit");
+                $response['error']['message'] = $err;
+                $response['result'] = $response;
+                // print_r($response);
+                return new ParserContainer($container->getParser(), $response);               
+               
+             }
         }));
         $result = $client->call('factoid-submit',["transaction"=>$transaction]);
         return json_encode($result);
