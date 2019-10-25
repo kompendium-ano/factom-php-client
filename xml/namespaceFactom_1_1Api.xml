@@ -7,7 +7,7 @@
     <innerclass refid="classFactom_1_1Api_1_1Commits" prot="public">Factom::Api::Commits</innerclass>
     <innerclass refid="classFactom_1_1Api_1_1Debug" prot="public">Factom::Api::Debug</innerclass>
     <innerclass refid="classFactom_1_1Api_1_1Entry" prot="public">Factom::Api::Entry</innerclass>
-    <innerclass refid="classFactom_1_1Api_1_1errorHandling" prot="public">Factom::Api::errorHandling</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Errorhandling" prot="public">Factom::Api::Errorhandling</innerclass>
     <innerclass refid="classFactom_1_1Api_1_1Factoid" prot="public">Factom::Api::Factoid</innerclass>
     <innerclass refid="classFactom_1_1Api_1_1FactomAddress" prot="public">Factom::Api::FactomAddress</innerclass>
     <innerclass refid="classFactom_1_1Api_1_1Factomd" prot="public">Factom::Api::Factomd</innerclass>

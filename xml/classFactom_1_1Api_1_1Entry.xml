@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Entry.php" line="21" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="21" bodyend="34"/>
+        <location file="src/Factom/Api/Entry.php" line="21" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="21" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a488a849a0976a65b30f17ec06e565a60" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Entry.php" line="38" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="38" bodyend="51"/>
+        <location file="src/Factom/Api/Entry.php" line="46" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="46" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a8cc7459e88f4326724848f04454c42a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Entry.php" line="55" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="55" bodyend="69"/>
+        <location file="src/Factom/Api/Entry.php" line="71" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="71" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1aee8b6faed1e97ab500595feb30875a8e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Entry.php" line="73" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="73" bodyend="86"/>
+        <location file="src/Factom/Api/Entry.php" line="97" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="97" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a548e6d54e42aecb468ed0d856776f573" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Entry.php" line="90" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="90" bodyend="104"/>
+        <location file="src/Factom/Api/Entry.php" line="122" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="122" bodyend="144"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a0d2c5c0884bc2a860c9563914b116d4f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Entry.php" line="108" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="108" bodyend="121"/>
+        <location file="src/Factom/Api/Entry.php" line="148" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="148" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a4e6edcaf5422946a91a18a53eed57950" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Entry.php" line="125" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="125" bodyend="138"/>
+        <location file="src/Factom/Api/Entry.php" line="173" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="173" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a42abb618667c014be4aa0a4ee74639e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -129,14 +129,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Entry.php" line="142" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="142" bodyend="157"/>
+        <location file="src/Factom/Api/Entry.php" line="198" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="198" bodyend="221"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Factom/Api/Entry.php" line="18" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="17" bodyend="158"/>
+    <location file="src/Factom/Api/Entry.php" line="18" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="17" bodyend="222"/>
     <listofallmembers>
       <member refid="classFactom_1_1Api_1_1Entry_1a42abb618667c014be4aa0a4ee74639e5" prot="public" virt="non-virtual"><scope>Factom::Api::Entry</scope><name>composeEntry</name></member>
       <member refid="classFactom_1_1Api_1_1Entry_1ada71b45a906a9ce728b90b17936668af" prot="public" virt="non-virtual"><scope>Factom::Api::Entry</scope><name>entry</name></member>

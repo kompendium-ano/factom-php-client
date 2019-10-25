@@ -7,7 +7,7 @@
     <innerfile refid="Commits_8php">Commits.php</innerfile>
     <innerfile refid="Debug_8php">Debug.php</innerfile>
     <innerfile refid="Entry_8php">Entry.php</innerfile>
-    <innerfile refid="errorHandling_8php">errorHandling.php</innerfile>
+    <innerfile refid="Errorhandling_8php">Errorhandling.php</innerfile>
     <innerfile refid="Factoid_8php">Factoid.php</innerfile>
     <innerfile refid="FactomAddress_8php">FactomAddress.php</innerfile>
     <innerfile refid="Factomd_8php">Factomd.php</innerfile>

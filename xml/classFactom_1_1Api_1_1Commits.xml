@@ -17,14 +17,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/Commits.php" line="20" column="1" bodyfile="src/Factom/Api/Commits.php" bodystart="20" bodyend="33"/>
+        <location file="src/Factom/Api/Commits.php" line="20" column="1" bodyfile="src/Factom/Api/Commits.php" bodystart="20" bodyend="41"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Factom/Api/Commits.php" line="17" column="1" bodyfile="src/Factom/Api/Commits.php" bodystart="16" bodyend="34"/>
+    <location file="src/Factom/Api/Commits.php" line="17" column="1" bodyfile="src/Factom/Api/Commits.php" bodystart="16" bodyend="42"/>
     <listofallmembers>
       <member refid="classFactom_1_1Api_1_1Commits_1a5f9ff6a64ddc69e0935a962a26630d48" prot="public" virt="non-virtual"><scope>Factom::Api::Commits</scope><name>commitEntry</name></member>
     </listofallmembers>
