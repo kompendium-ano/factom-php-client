@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="21" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="21" bodyend="34"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="23" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="23" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1aa1d4686ab56d364c9a78f28330a29d01" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="38" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="38" bodyend="51"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="40" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="40" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1ad53cf871a4a7e89275dbd6ce9f15aeae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="55" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="55" bodyend="68"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="57" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="57" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1af58b60d02762487d619af51fad3d4b9e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="72" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="72" bodyend="86"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="74" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="74" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a2d6b22f5a2b3ece7f4a53565c40a7a17" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="91" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="91" bodyend="105"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="93" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="93" bodyend="107"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1acef40bf09d04ace13984a3f76c3e2cbe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="109" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="109" bodyend="122"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="111" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="111" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a051c9c28a45527a46b713077806ae8f9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="126" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="126" bodyend="139"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="133" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="133" bodyend="146"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a66356cd3adc32082e138742b047a8866" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="143" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="143" bodyend="156"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="150" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="150" bodyend="163"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a115f99e06a135222ccfac6b2e29e42e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="160" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="160" bodyend="173"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="167" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="167" bodyend="180"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1afcd4c00a827e4fe35917f0594ca83f60" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -179,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="177" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="177" bodyend="190"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="184" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="184" bodyend="197"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1ae5dc5b2c3fe1a3eaefbe2d5d1620d371" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -210,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="194" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="194" bodyend="207"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="201" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="201" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a14883aad2c36a2411ff8a0ef4d6d5c13" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="211" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="211" bodyend="225"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="218" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="218" bodyend="232"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1ad7d7a2669f457492ce0deb6e335b0fd7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -245,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="229" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="229" bodyend="242"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="236" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="236" bodyend="249"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a12b22453da0fe096d8dd668f4b7cfb8a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="246" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="246" bodyend="259"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="253" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="253" bodyend="266"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1afdd8a2ef938b8bb3bc748725cb1a99b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -277,7 +277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="263" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="263" bodyend="276"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="270" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="270" bodyend="283"/>
       </memberdef>
       <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1adaa89d87a7a0127c0b56d309133f4c99" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>static</type>
@@ -296,14 +296,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/Factom/Api/FactomWalletd.php" line="280" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="280" bodyend="294"/>
+        <location file="src/Factom/Api/FactomWalletd.php" line="287" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="287" bodyend="301"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/Factom/Api/FactomWalletd.php" line="17" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="16" bodyend="295"/>
+    <location file="src/Factom/Api/FactomWalletd.php" line="19" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="18" bodyend="302"/>
     <listofallmembers>
       <member refid="classFactom_1_1Api_1_1FactomWalletd_1a051c9c28a45527a46b713077806ae8f9" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>activeIdentityKeys</name></member>
       <member refid="classFactom_1_1Api_1_1FactomWalletd_1a66356cd3adc32082e138742b047a8866" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>allIdentityKeys</name></member>

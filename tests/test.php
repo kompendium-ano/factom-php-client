@@ -392,8 +392,8 @@ use Factom\Api\Security;
 
 // errrors
 
-// $errors = FactomWalletd::errors();
-// print_r($errors);
+$errors = FactomWalletd::errors();
+print_r($errors);
 
 // minute
 
@@ -483,3 +483,14 @@ use Factom\Api\Security;
 
 // $allTransactions = Transaction::AllTransactions();
 // print_r($allTransactions);
+
+// send transaction
+// $data = [
+//     "txname" => "test1234",
+//     "inputAddress" => "FA2jK2HcLnRdS94dEcU27rF3meoJfpUcZPSinpb7AwQvPRY6RL1Q",
+//     "inputAmount" => 1000012000,
+//     "outputAddress" => "FA2yeHMMJR6rpjRYGe3Q4ogThHUmByk3WLhTjQDvPrxDoTYF8BbC",
+//     "outputAmount" => 1000000000
+// ];
+// $transaction = Transaction::sendTransaction($data);
+// print_r($transaction);

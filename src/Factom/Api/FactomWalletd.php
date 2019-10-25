@@ -13,6 +13,8 @@ use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 
+use Factom\Api\Errorhandling;
+
 class FactomWalletd
 {
 
@@ -108,17 +110,36 @@ class FactomWalletd
 
     public static function errors()
     {
-        $client = new Client(walletHost);
-        $client->getResponseParser()->onPreParse()
-        ->add(Interceptor::createWith(function (ParserContainer $container) {
-            $response = $container->getValue();
-            $result = $response['result'];
-            $response['result'] = $response;
+        // $client = new Client(walletHost);
+        // $client->getResponseParser()->onPreParse()
+        // ->add(Interceptor::createWith(function (ParserContainer $container) {
+        //     $response = $container->getValue();
+        //     if(isset($response['result'])){
+               
+        //             $result = $response['result'];
+        //             $response['result'] = $response;            
             
-            return new ParserContainer($container->getParser(), $response);
-        }));
-        $result = $client->call('bad',[]);
-        return json_encode($result);
+        //             return new ParserContainer($container->getParser(), $response);
+                    
+        //     }else{                
+        //          $err = Errorhandling::checkError($response['error']['message']);
+                             
+        //     }
+        //     $result = $client->call('bad',[]);
+        //     return json_encode($result);
+
+        // }));
+
+        $client = new Client(walletHost);
+         $client->getResponseParser()->onPreParse()
+         ->add(Interceptor::createWith(function (ParserContainer $container) {
+             $response = $container->getValue();
+                $result = $response['result'];
+                $response['result'] = $response;                
+                return new ParserContainer($container->getParser(), $response);             
+         }));
+         $result = $client->call('bad', []);         
+         return json_encode($result);
     } 
 
      /* active-identity-keys */

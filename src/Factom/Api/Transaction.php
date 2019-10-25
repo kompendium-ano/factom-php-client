@@ -13,6 +13,8 @@ use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 
+use Factom\Api\Factoid;
+
 class Transaction
 {
     /* transaction */
@@ -286,4 +288,18 @@ class Transaction
 
     }
   
+    /* Send Transaction */
+
+    public static function sendTransaction($data){
+       
+        $newTx = self::newTransaction($data['txname']);
+        $input = self::addInput($data['txname'], $data['inputAddress'], $data['inputAmount']);
+        $output = self::addOutput($data['txname'], $data['outputAddress'], $data['outputAmount']);
+        $cpTx = self::composeTransaction($data['txname']);
+        $res = json_decode($cpTx, true);
+        $tx = Factoid::factoidSubmit($res['result']['params']['transaction']);
+       
+        return $tx;
+
+    }
 }

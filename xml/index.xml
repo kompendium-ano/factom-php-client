@@ -50,6 +50,9 @@
     <member refid="classFactom_1_1Api_1_1Entry_1a4e6edcaf5422946a91a18a53eed57950" kind="function"><name>revealEntry</name></member>
     <member refid="classFactom_1_1Api_1_1Entry_1a42abb618667c014be4aa0a4ee74639e5" kind="function"><name>composeEntry</name></member>
   </compound>
+  <compound refid="classFactom_1_1Api_1_1errorHandling" kind="class"><name>Factom::Api::errorHandling</name>
+    <member refid="classFactom_1_1Api_1_1errorHandling_1ae4e9513dfe4bab9ec8d270cdf0474b4b" kind="function"><name>checkError</name></member>
+  </compound>
   <compound refid="classFactom_1_1Api_1_1Factoid" kind="class"><name>Factom::Api::Factoid</name>
     <member refid="classFactom_1_1Api_1_1Factoid_1aeba86eb5636d009fca97261c0f2c1a49" kind="function"><name>factoidAck</name></member>
     <member refid="classFactom_1_1Api_1_1Factoid_1a6470cf1995b51e9fc5df6bb93a0709a5" kind="function"><name>factoidBalance</name></member>
@@ -128,10 +131,15 @@
     <member refid="classFactom_1_1Api_1_1Transaction_1aabcb1893905d01f65787d64366f96dd2" kind="function"><name>transactionsRetrievingByTxid</name></member>
     <member refid="classFactom_1_1Api_1_1Transaction_1a43e7b063dab88a962992e19c4d3b640a" kind="function"><name>transactionsRetrievingByAddress</name></member>
     <member refid="classFactom_1_1Api_1_1Transaction_1a7cab04e8ee9f0592dd209fa1686cc585" kind="function"><name>AllTransactions</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1a3bf5bfe70acfb09190948f8e0bf6caaf" kind="function"><name>sendTransaction</name></member>
   </compound>
   <compound refid="namespaceFactom" kind="namespace"><name>Factom</name>
   </compound>
   <compound refid="namespaceFactom_1_1Api" kind="namespace"><name>Factom::Api</name>
+  </compound>
+  <compound refid="namespaceFactom_1_1Api_1_1errorHandling" kind="namespace"><name>Factom::Api::errorHandling</name>
+  </compound>
+  <compound refid="namespaceFactom_1_1Api_1_1Factoid" kind="namespace"><name>Factom::Api::Factoid</name>
   </compound>
   <compound refid="namespacePhpJsonRpc_1_1Client" kind="namespace"><name>PhpJsonRpc::Client</name>
   </compound>
@@ -164,6 +172,8 @@
   <compound refid="Debug_8php" kind="file"><name>Debug.php</name>
   </compound>
   <compound refid="Entry_8php" kind="file"><name>Entry.php</name>
+  </compound>
+  <compound refid="errorHandling_8php" kind="file"><name>errorHandling.php</name>
   </compound>
   <compound refid="Factoid_8php" kind="file"><name>Factoid.php</name>
   </compound>
