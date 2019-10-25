@@ -1,0 +1,113 @@
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:17: warning: Compound Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factomd.php:17: warning: Compound Factom::Api::Factomd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/lib/jsonRpcClient.php:2: warning: Compound jsonRPCClient is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Security.php:17: warning: Compound Factom::Api::Security is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Chains.php:10: warning: Compound Factom::Api::Chains is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Pending.php:17: warning: Compound Factom::Api::Pending is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Entry.php:18: warning: Compound Factom::Api::Entry is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:17: warning: Compound Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Minute.php:17: warning: Compound Factom::Api::Minute is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Commits.php:17: warning: Compound Factom::Api::Commits is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:9: warning: Compound Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factoid.php:17: warning: Compound Factom::Api::Factoid is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomAddress.php:17: warning: Compound Factom::Api::FactomAddress is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:17: warning: Compound Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/lib/jsonRpcClient.php:30: warning: Member __construct($uri, $debug=false) (function) of class jsonRPCClient is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/lib/jsonRpcClient.php:43: warning: Member __call($method, $params) (function) of class jsonRPCClient is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/lib/jsonRpcClient.php:119: warning: Member setRPCNotification($notification) (function) of class jsonRPCClient is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/lib/jsonRpcClient.php:7: warning: Member $debug (variable) of class jsonRPCClient is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:12: warning: Member ablockByHeight() (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:29: warning: Member ack($hash, $chainid) (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:46: warning: Member adminBlock($keymr) (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:64: warning: Member dblockByHeight($height) (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:82: warning: Member directoryBlock($keymr) (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:101: warning: Member directoryBlockHead() (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:118: warning: Member ecblockByHeight() (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:135: warning: Member entryBlock($keymr) (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:152: warning: Member entryCreditBlock($keymr) (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:169: warning: Member factoidBlock($keymr) (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Blocks.php:186: warning: Member fblockByHeight($height) (function) of class Factom::Api::Blocks is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Chains.php:13: warning: Member chainHead($chainid) (function) of class Factom::Api::Chains is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Chains.php:31: warning: Member commitChain($message) (function) of class Factom::Api::Chains is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Chains.php:49: warning: Member revealChain($entry) (function) of class Factom::Api::Chains is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Chains.php:67: warning: Member composeChain($ecpub, $extids) (function) of class Factom::Api::Chains is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Chains.php:93: warning: Member sendRawMessage($message) (function) of class Factom::Api::Chains is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Commits.php:20: warning: Member commitEntry($message) (function) of class Factom::Api::Commits is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:20: warning: Member holdingQueue() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:38: warning: Member networkInfo() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:55: warning: Member predictiveFer() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:72: warning: Member auditServers() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:90: warning: Member federatedServers() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:107: warning: Member configuration() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:124: warning: Member processList() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:141: warning: Member authorities() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:159: warning: Member reloadConfiguration() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:176: warning: Member dropRate() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:193: warning: Member setDropRate($droprate) (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:210: warning: Member delay() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:227: warning: Member setDelay($delay) (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:244: warning: Member summary() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Debug.php:261: warning: Member messages() (function) of class Factom::Api::Debug is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Entry.php:21: warning: Member entry($hash) (function) of class Factom::Api::Entry is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Entry.php:38: warning: Member entryAck($txid) (function) of class Factom::Api::Entry is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Entry.php:55: warning: Member entryBlock($keymr) (function) of class Factom::Api::Entry is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Entry.php:73: warning: Member entryCreditBalance($address) (function) of class Factom::Api::Entry is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Entry.php:90: warning: Member entryCreditBlock($keymr) (function) of class Factom::Api::Entry is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Entry.php:108: warning: Member entryCreditRate() (function) of class Factom::Api::Entry is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Entry.php:125: warning: Member revealEntry($entry) (function) of class Factom::Api::Entry is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Entry.php:142: warning: Member composeEntry($chainId, $ecpub) (function) of class Factom::Api::Entry is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factoid.php:21: warning: Member factoidAck($txid) (function) of class Factom::Api::Factoid is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factoid.php:38: warning: Member factoidBalance($address) (function) of class Factom::Api::Factoid is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factoid.php:56: warning: Member factoidBlock($keymr) (function) of class Factom::Api::Factoid is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factoid.php:74: warning: Member factoidSubmit($transaction) (function) of class Factom::Api::Factoid is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomAddress.php:19: warning: Member address($address) (function) of class Factom::Api::FactomAddress is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomAddress.php:36: warning: Member allAddresses() (function) of class Factom::Api::FactomAddress is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomAddress.php:52: warning: Member generateEcAddress() (function) of class Factom::Api::FactomAddress is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomAddress.php:69: warning: Member generateFactoidAddress() (function) of class Factom::Api::FactomAddress is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomAddress.php:86: warning: Member importAddresses($secret) (function) of class Factom::Api::FactomAddress is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factomd.php:20: warning: Member heights() (function) of class Factom::Api::Factomd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factomd.php:40: warning: Member multipleEcBalances($addr1, $addr2) (function) of class Factom::Api::Factomd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factomd.php:57: warning: Member multipleFctBalances($addr1, $addr2) (function) of class Factom::Api::Factomd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factomd.php:74: warning: Member properties() (function) of class Factom::Api::Factomd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factomd.php:91: warning: Member rawData($hash) (function) of class Factom::Api::Factomd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factomd.php:109: warning: Member receipt($hash) (function) of class Factom::Api::Factomd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factomd.php:126: warning: Member anchors($hash) (function) of class Factom::Api::Factomd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Factomd.php:145: warning: Member diagnostics() (function) of class Factom::Api::Factomd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:21: warning: Member getHeight() (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:38: warning: Member importKoinify($words) (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:55: warning: Member properties() (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:72: warning: Member walletBackup() (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:91: warning: Member walletBalances() (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:109: warning: Member errors() (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:126: warning: Member activeIdentityKeys($chainid, $height) (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:143: warning: Member allIdentityKeys() (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:160: warning: Member composeIdentityAttribute($receiverchainid, $destinationchainid, $attributes, $signerkey, $signerchainid, $ecpub, $force) (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:177: warning: Member composeIdentityAttributeEndorsement($destinationchainid, $entryhash, $signerkey, $signerchainid, $ecpub, $force) (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:194: warning: Member composeIdentityKeyReplacement($chainid, $oldkey, $newkey, $signerkey, $ecpub, $force) (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:211: warning: Member importIdentityKeys($secretone, $secrettwo) (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:229: warning: Member removeAddress($address) (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:246: warning: Member removeIdentityKey($public) (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:263: warning: Member signData($signer) (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/FactomWalletd.php:280: warning: Member unlockWallet($passphrase, $timeout) (function) of class Factom::Api::FactomWalletd is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Minute.php:20: warning: Member currentMinute() (function) of class Factom::Api::Minute is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Pending.php:20: warning: Member pendingEntries() (function) of class Factom::Api::Pending is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Pending.php:37: warning: Member pendingTransactions($address) (function) of class Factom::Api::Pending is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Security.php:21: warning: Member securityEncryptedConnections() (function) of class Factom::Api::Security is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Security.php:38: warning: Member securityPasswordProtection() (function) of class Factom::Api::Security is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Security.php:56: warning: Member security‌CombinedPasswordAndEncryption() (function) of class Factom::Api::Security is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:20: warning: Member transaction($hash) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:37: warning: Member addEcOutput($txname, $address, $amount) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:56: warning: Member addFee($txname, $address) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:73: warning: Member addInput($txname, $address, $amount) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:90: warning: Member addOutput($txname, $address, $amount) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:108: warning: Member composeTransaction($txname) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:125: warning: Member deleteTransaction($txname) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:144: warning: Member newTransaction($txname) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:162: warning: Member signTransaction($txname) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:180: warning: Member subFee($txname, $address) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:199: warning: Member tmpTransactions() (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:217: warning: Member transactionsRetrieving($start, $end) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:237: warning: Member transactionsRetrievingByTxid($txid) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:255: warning: Member transactionsRetrievingByAddress($address) (function) of class Factom::Api::Transaction is not documented.
+/home/ftechiz/Documents/Neha/factom/factom-php (2)/src/Factom/Api/Transaction.php:273: warning: Member AllTransactions() (function) of class Factom::Api::Transaction is not documented.
+error: Problems running dot: exit code=127, command='dot', arguments='"/home/ftechiz/Documents/Neha/factom/factom-php (2)/html/graph_legend.dot" -Tpng -o "/home/ftechiz/Documents/Neha/factom/factom-php (2)/html/graph_legend.png"'

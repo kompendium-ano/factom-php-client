@@ -15,6 +15,8 @@ use PhpJsonRpc\Tests\Mock\Transport;
 
 class Transaction
 {
+    /* transaction */
+    
     public static function transaction($hash){
         
         $client = new Client(host);
@@ -230,6 +232,8 @@ class Transaction
 
     }
 
+    /* transactions Retrieving By Txid */
+
     public static function transactionsRetrievingByTxid($txid){
 
         $client = new Client(walletHost);
@@ -245,6 +249,8 @@ class Transaction
         return json_encode($result);
 
     }
+
+     /* transactions Retrieving By Address */
 
     public static function transactionsRetrievingByAddress($address){
 

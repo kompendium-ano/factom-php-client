@@ -17,13 +17,13 @@ use Factom\Api\Pending;
 use Factom\Api\Factomd;
 use Factom\Api\FactomWalletd;
 use Factom\Api\Debug;
-
+use Factom\Api\Security;
 
 /* Block */
 
 // get ablock by height
-$ablock = Blocks::ablockByHeight();
-echo $ablock;
+// $ablock = Blocks::ablockByHeight();
+// echo $ablock;
 
 // ack
 // $ack = Blocks::ack("e96cca381bf25f6dd4dfdf9f7009ff84ee6edaa3f47f9ccf06d2787482438f4b","f9164cd66af9d5773b4523a510b5eefb9a5e626480feeb6671ef2d17510ca300");
@@ -180,15 +180,15 @@ echo $ablock;
 // print_r($messages);
 
 // securityEncryptedConnections
-// $securityEncryptedConnections = Debug::securityEncryptedConnections();
+// $securityEncryptedConnections = Security::securityEncryptedConnections();
 // print_r($securityEncryptedConnections);
 
 // securityPasswordProtection
-// $securityPasswordProtection = Debug::securityPasswordProtection();
+// $securityPasswordProtection = Security::securityPasswordProtection();
 // print_r($securityPasswordProtection);
 
 // security‌CombinedPasswordAndEncryption
-//  $security‌CombinedPasswordAndEncryption = Debug::security‌CombinedPasswordAndEncryption();
+//  $security‌CombinedPasswordAndEncryption = Security::security‌CombinedPasswordAndEncryption();
 //  print_r($security‌CombinedPasswordAndEncryption);
 
 /* Entry */
@@ -282,6 +282,15 @@ echo $ablock;
 // $heights = Factomd::heights();
 // print_r($heights);
 
+// anchors
+// $anchors = Factomd::anchors("d55e74aa4b2ff09b4764f1d11f2161b503be7d4e96374b57d36090a5faedf7b6");
+// print_r($anchors);
+
+// diagnostics
+// $diagnostics = Factomd::diagnostics();
+// print_r($diagnostics);
+
+
 // multiple Ec Balances
 // $multipleEcBalances = Factomd::multipleEcBalances("EC293AbTn3VScgC2m86xTh2kFKAMNnkgoLdXgywpPa66Jacom5ya","EC3ExcVhmGRJmavCf1LCMu8YiHCyU2CWVh5DmXRz6jfPHMbzJSCz");
 // print_r($multipleEcBalances);
@@ -302,6 +311,7 @@ echo $ablock;
 // $receipt = Factomd::receipt("2413a0f67e7dd988728f77020905829eef62ad06c0b7bf8e52a7e1455d5f3fb6");
 // print_r($receipt);
 
+
 /* FactomWalletd */
 
 //get height
@@ -309,7 +319,57 @@ echo $ablock;
 // $getheight = FactomWalletd::getHeight();
 // print_r($getheight);
 
-// importKoinify
+
+//get height
+
+// $getheight = FactomWalletd::getHeight();
+// print_r($getheight);
+
+//  active-identity-keys
+
+// $activeIdentityKeys = FactomWalletd::activeIdentityKeys("3b69dabe22c014af9a9bc9dfa7917ce4602a03579597ddf184d8de56702512ae","101899");
+// print_r($activeIdentityKeys);
+
+//  allIdentityKeys
+
+// $allIdentityKeys = FactomWalletd::allIdentityKeys();
+// print_r($allIdentityKeys);
+
+// composeIdentityAttribute
+// $attributes = ["key"=>"email","value"=>"hello@factom.com"];
+// $composeIdentityAttribute = FactomWalletd::composeIdentityAttribute("3b69dabe22c014af9a9bc9dfa7917ce4602a03579597ddf184d8de56702512ae","3b69dabe22c014af9a9bc9dfa7917ce4602a03579597ddf184d8de56702512ae",$attributes,"idpub2cw4NS4JZowXTwhGeo2tTGNvnjc5n2QvHBURdvVFCKRDuLEnBh","3b69dabe22c014af9a9bc9dfa7917ce4602a03579597ddf184d8de56702512ae","EC2ZFTmTv5Fs7UyKZzxY8km4jF635VkhR5KKBMzNP4BK4fPKaVw4",false);
+// print_r($composeIdentityAttribute);
+
+// compose-identity-attribute-endorsement
+
+// $composeIdentityAttributeEndorsement = FactomWalletd::composeIdentityAttributeEndorsement("3b69dabe22c014af9a9bc9dfa7917ce4602a03579597ddf184d8de56702512ae","c07f1d89bb6c43e7e3166b9e53672110ff8077c367758fbe4265561c8b91e675","idpub2cw4NS4JZowXTwhGeo2tTGNvnjc5n2QvHBURdvVFCKRDuLEnBh","2321663B3B8A09CB4E701B84DEE49ABCE3C9D3EFDE867A9875E536D5ECEB653C","EC2ZFTmTv5Fs7UyKZzxY8km4jF635VkhR5KKBMzNP4BK4fPKaVw4","false");
+//  print_r($composeIdentityAttributeEndorsement);
+
+// compose-identity-key-replacement 
+
+// $composeIdentityKeyReplacement = FactomWalletd::composeIdentityKeyReplacement("3b69dabe22c014af9a9bc9dfa7917ce4602a03579597ddf184d8de56702512ae","idpub2GU1Pcax2PibH8hHZg58fKRiSJKQWQkWYkpmt7VH1jCXBgqp9w","idpub2cw4NS4JZowXTwhGeo2tTGNvnjc5n2QvHBURdvVFCKRDuLEnBh","idpub2GU1Pcax2PibH8hHZg58fKRiSJKQWQkWYkpmt7VH1jCXBgqp9w","EC2ZFTmTv5Fs7UyKZzxY8km4jF635VkhR5KKBMzNP4BK4fPKaVw4","false");
+//  print_r($composeIdentityKeyReplacement);
+
+ // importIdentityKeys
+//  $importIdentityKeys = FactomWalletd::importIdentityKeys("idsec2rWrfNTD1x9HPPesA3fz8dmMNZdjmSBULHx8VTXE1J4D9icmAK","idsec1iuqCFoiEfSZ1rU2FNpa7oFY3Kc29hHxP1R2PDyacJQEA8iShB");
+//  print_r($importIdentityKeys);
+
+// removeAddress
+// $removeAddress = FactomWalletd::removeAddress("EC3geo9QBmA1UGiwDApHHxoNQu5Xkc9rdBsk1XqPJP4ycDUGpooX");
+// print_r($removeAddress);
+
+// remove-identity-key
+// $removeIdentityKey = FactomWalletd::removeIdentityKey("idpub26PEBWuumVp19yUSpfGJ2HPrTrU7hgw5empU7FPiTHdCKoy5Ao");
+// print_r($removeIdentityKey);
+
+
+// sign-data  
+// $signData = FactomWalletd::signData("FA2jK2HcLnRdS94dEcU27rF3meoJfpUcZPSinpb7AwQvPRY6RL1Q");
+// print_r($signData);
+
+// unlock-wallet  
+// $unlockWallet = FactomWalletd::unlockWallet("opensesame",300);
+// print_r($unlockWallet);
 
 // $importKoinify = FactomWalletd::importKoinify("yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow yellow");
 // print_r($importKoinify);

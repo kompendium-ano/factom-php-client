@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classFactom_1_1Api_1_1Factoid" kind="class" language="PHP" prot="public">
+    <compoundname>Factom::Api::Factoid</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factoid_1aeba86eb5636d009fca97261c0f2c1a49" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factoid::factoidAck</definition>
+        <argsstring>($txid)</argsstring>
+        <name>factoidAck</name>
+        <param>
+          <declname>$txid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factoid.php" line="21" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="21" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factoid_1a6470cf1995b51e9fc5df6bb93a0709a5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factoid::factoidBalance</definition>
+        <argsstring>($address)</argsstring>
+        <name>factoidBalance</name>
+        <param>
+          <declname>$address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factoid.php" line="38" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="38" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factoid_1af6a5f5c5fefa6311f7b99f5b5c2bd18c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factoid::factoidBlock</definition>
+        <argsstring>($keymr)</argsstring>
+        <name>factoidBlock</name>
+        <param>
+          <declname>$keymr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factoid.php" line="56" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="56" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factoid_1a5854afdcba62a1c16451f1dc0ca5b553" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factoid::factoidSubmit</definition>
+        <argsstring>($transaction)</argsstring>
+        <name>factoidSubmit</name>
+        <param>
+          <declname>$transaction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factoid.php" line="74" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="74" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Factom/Api/Factoid.php" line="17" column="1" bodyfile="src/Factom/Api/Factoid.php" bodystart="16" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classFactom_1_1Api_1_1Factoid_1aeba86eb5636d009fca97261c0f2c1a49" prot="public" virt="non-virtual"><scope>Factom::Api::Factoid</scope><name>factoidAck</name></member>
+      <member refid="classFactom_1_1Api_1_1Factoid_1a6470cf1995b51e9fc5df6bb93a0709a5" prot="public" virt="non-virtual"><scope>Factom::Api::Factoid</scope><name>factoidBalance</name></member>
+      <member refid="classFactom_1_1Api_1_1Factoid_1af6a5f5c5fefa6311f7b99f5b5c2bd18c" prot="public" virt="non-virtual"><scope>Factom::Api::Factoid</scope><name>factoidBlock</name></member>
+      <member refid="classFactom_1_1Api_1_1Factoid_1a5854afdcba62a1c16451f1dc0ca5b553" prot="public" virt="non-virtual"><scope>Factom::Api::Factoid</scope><name>factoidSubmit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

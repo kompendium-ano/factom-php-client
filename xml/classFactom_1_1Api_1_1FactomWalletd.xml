@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classFactom_1_1Api_1_1FactomWalletd" kind="class" language="PHP" prot="public">
+    <compoundname>Factom::Api::FactomWalletd</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1ad203f565a1b2ccac8de6db972ef87b50" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::getHeight</definition>
+        <argsstring>()</argsstring>
+        <name>getHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="21" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="21" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1aa1d4686ab56d364c9a78f28330a29d01" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::importKoinify</definition>
+        <argsstring>($words)</argsstring>
+        <name>importKoinify</name>
+        <param>
+          <declname>$words</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="38" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="38" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1ad53cf871a4a7e89275dbd6ce9f15aeae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::properties</definition>
+        <argsstring>()</argsstring>
+        <name>properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="55" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="55" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1af58b60d02762487d619af51fad3d4b9e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::walletBackup</definition>
+        <argsstring>()</argsstring>
+        <name>walletBackup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="72" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="72" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a2d6b22f5a2b3ece7f4a53565c40a7a17" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::walletBalances</definition>
+        <argsstring>()</argsstring>
+        <name>walletBalances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="91" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="91" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1acef40bf09d04ace13984a3f76c3e2cbe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::errors</definition>
+        <argsstring>()</argsstring>
+        <name>errors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="109" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="109" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a051c9c28a45527a46b713077806ae8f9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::activeIdentityKeys</definition>
+        <argsstring>($chainid, $height)</argsstring>
+        <name>activeIdentityKeys</name>
+        <param>
+          <declname>$chainid</declname>
+        </param>
+        <param>
+          <declname>$height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="126" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="126" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a66356cd3adc32082e138742b047a8866" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::allIdentityKeys</definition>
+        <argsstring>()</argsstring>
+        <name>allIdentityKeys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="143" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="143" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a115f99e06a135222ccfac6b2e29e42e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::composeIdentityAttribute</definition>
+        <argsstring>($receiverchainid, $destinationchainid, $attributes, $signerkey, $signerchainid, $ecpub, $force)</argsstring>
+        <name>composeIdentityAttribute</name>
+        <param>
+          <declname>$receiverchainid</declname>
+        </param>
+        <param>
+          <declname>$destinationchainid</declname>
+        </param>
+        <param>
+          <declname>$attributes</declname>
+        </param>
+        <param>
+          <declname>$signerkey</declname>
+        </param>
+        <param>
+          <declname>$signerchainid</declname>
+        </param>
+        <param>
+          <declname>$ecpub</declname>
+        </param>
+        <param>
+          <declname>$force</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="160" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="160" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1afcd4c00a827e4fe35917f0594ca83f60" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::composeIdentityAttributeEndorsement</definition>
+        <argsstring>($destinationchainid, $entryhash, $signerkey, $signerchainid, $ecpub, $force)</argsstring>
+        <name>composeIdentityAttributeEndorsement</name>
+        <param>
+          <declname>$destinationchainid</declname>
+        </param>
+        <param>
+          <declname>$entryhash</declname>
+        </param>
+        <param>
+          <declname>$signerkey</declname>
+        </param>
+        <param>
+          <declname>$signerchainid</declname>
+        </param>
+        <param>
+          <declname>$ecpub</declname>
+        </param>
+        <param>
+          <declname>$force</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="177" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="177" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1ae5dc5b2c3fe1a3eaefbe2d5d1620d371" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::composeIdentityKeyReplacement</definition>
+        <argsstring>($chainid, $oldkey, $newkey, $signerkey, $ecpub, $force)</argsstring>
+        <name>composeIdentityKeyReplacement</name>
+        <param>
+          <declname>$chainid</declname>
+        </param>
+        <param>
+          <declname>$oldkey</declname>
+        </param>
+        <param>
+          <declname>$newkey</declname>
+        </param>
+        <param>
+          <declname>$signerkey</declname>
+        </param>
+        <param>
+          <declname>$ecpub</declname>
+        </param>
+        <param>
+          <declname>$force</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="194" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="194" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a14883aad2c36a2411ff8a0ef4d6d5c13" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::importIdentityKeys</definition>
+        <argsstring>($secretone, $secrettwo)</argsstring>
+        <name>importIdentityKeys</name>
+        <param>
+          <declname>$secretone</declname>
+        </param>
+        <param>
+          <declname>$secrettwo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="211" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="211" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1ad7d7a2669f457492ce0deb6e335b0fd7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::removeAddress</definition>
+        <argsstring>($address)</argsstring>
+        <name>removeAddress</name>
+        <param>
+          <declname>$address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="229" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="229" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1a12b22453da0fe096d8dd668f4b7cfb8a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::removeIdentityKey</definition>
+        <argsstring>($public)</argsstring>
+        <name>removeIdentityKey</name>
+        <param>
+          <declname>$public</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="246" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="246" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1afdd8a2ef938b8bb3bc748725cb1a99b7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::signData</definition>
+        <argsstring>($signer)</argsstring>
+        <name>signData</name>
+        <param>
+          <declname>$signer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="263" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="263" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1FactomWalletd_1adaa89d87a7a0127c0b56d309133f4c99" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\FactomWalletd::unlockWallet</definition>
+        <argsstring>($passphrase, $timeout)</argsstring>
+        <name>unlockWallet</name>
+        <param>
+          <declname>$passphrase</declname>
+        </param>
+        <param>
+          <declname>$timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/FactomWalletd.php" line="280" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="280" bodyend="294"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Factom/Api/FactomWalletd.php" line="17" column="1" bodyfile="src/Factom/Api/FactomWalletd.php" bodystart="16" bodyend="295"/>
+    <listofallmembers>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1a051c9c28a45527a46b713077806ae8f9" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>activeIdentityKeys</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1a66356cd3adc32082e138742b047a8866" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>allIdentityKeys</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1a115f99e06a135222ccfac6b2e29e42e1" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>composeIdentityAttribute</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1afcd4c00a827e4fe35917f0594ca83f60" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>composeIdentityAttributeEndorsement</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1ae5dc5b2c3fe1a3eaefbe2d5d1620d371" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>composeIdentityKeyReplacement</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1acef40bf09d04ace13984a3f76c3e2cbe" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>errors</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1ad203f565a1b2ccac8de6db972ef87b50" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>getHeight</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1a14883aad2c36a2411ff8a0ef4d6d5c13" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>importIdentityKeys</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1aa1d4686ab56d364c9a78f28330a29d01" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>importKoinify</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1ad53cf871a4a7e89275dbd6ce9f15aeae" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>properties</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1ad7d7a2669f457492ce0deb6e335b0fd7" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>removeAddress</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1a12b22453da0fe096d8dd668f4b7cfb8a" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>removeIdentityKey</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1afdd8a2ef938b8bb3bc748725cb1a99b7" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>signData</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1adaa89d87a7a0127c0b56d309133f4c99" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>unlockWallet</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1af58b60d02762487d619af51fad3d4b9e" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>walletBackup</name></member>
+      <member refid="classFactom_1_1Api_1_1FactomWalletd_1a2d6b22f5a2b3ece7f4a53565c40a7a17" prot="public" virt="non-virtual"><scope>Factom::Api::FactomWalletd</scope><name>walletBalances</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

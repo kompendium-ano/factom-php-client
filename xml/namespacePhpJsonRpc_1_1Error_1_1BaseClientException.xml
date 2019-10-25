@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespacePhpJsonRpc_1_1Error_1_1BaseClientException" kind="namespace" language="PHP">
+    <compoundname>PhpJsonRpc::Error::BaseClientException</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Factom/Api/Commits.php" line="1" column="1"/>
+  </compounddef>
+</doxygen>

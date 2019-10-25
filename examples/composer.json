@@ -1,0 +1,14 @@
+{
+    "name": "factom/demo",
+    "description": "This is a demo for usage of factom library",
+    "minimum-stability": "dev",    
+    "require": {
+        "php": ">=7.0",
+        "harishankar/factom-api-php": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "tests\\": "test/"
+        }
+    }
+}
