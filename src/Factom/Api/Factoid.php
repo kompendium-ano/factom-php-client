@@ -72,7 +72,7 @@ class Factoid
      /* factoid-submit */
 
      public static function factoidSubmit($transaction)
-     {      
+     {              
         $client = new Client(host);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
