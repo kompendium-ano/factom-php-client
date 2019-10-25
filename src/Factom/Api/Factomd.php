@@ -120,5 +120,43 @@ class Factomd
         $result = $client->call('receipt', ["hash"=> $hash]);
         return json_encode($result);
     }
+
+    /* anchors */
+
+    public static function anchors($hash)
+    {
+       
+       $client = new Client(host);
+       $client->getResponseParser()->onPreParse()
+       ->add(Interceptor::createWith(function (ParserContainer $container) {
+           $response = $container->getValue();
+           $result = $response['result'];
+           $response['result'] = $response;
+           
+           return new ParserContainer($container->getParser(), $response);
+       }));
+       $result = $client->call('anchors', ["hash"=> $hash]);
+       return json_encode($result);
+        
+    }
+
+    /* diagnostics */
+
+    public static function diagnostics()
+    {
+       
+       $client = new Client(host);
+       $client->getResponseParser()->onPreParse()
+       ->add(Interceptor::createWith(function (ParserContainer $container) {
+           $response = $container->getValue();
+           $result = $response['result'];
+           $response['result'] = $response;
+           
+           return new ParserContainer($container->getParser(), $response);
+       }));
+       $result = $client->call('diagnostics', []);
+       return json_encode($result);
+        
+    }
 }
 ?>

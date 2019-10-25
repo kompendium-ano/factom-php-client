@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classFactom_1_1Api_1_1Chains" kind="class" language="PHP" prot="public">
+    <compoundname>Factom::Api::Chains</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Chains_1aaa19d0d6c63ff303501e4109c0228a21" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Chains::chainHead</definition>
+        <argsstring>($chainid)</argsstring>
+        <name>chainHead</name>
+        <param>
+          <declname>$chainid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Chains.php" line="13" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="13" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Chains_1a9a166dd2ea06f78f2fc24f7b640c66f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Chains::commitChain</definition>
+        <argsstring>($message)</argsstring>
+        <name>commitChain</name>
+        <param>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Chains.php" line="31" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="31" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Chains_1afd4dd17b43d53c760851c3216b787bac" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Chains::revealChain</definition>
+        <argsstring>($entry)</argsstring>
+        <name>revealChain</name>
+        <param>
+          <declname>$entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Chains.php" line="49" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="49" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Chains_1afa23e3d810bd13c68b5857f1ea37c9df" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Chains::composeChain</definition>
+        <argsstring>($ecpub, $extids)</argsstring>
+        <name>composeChain</name>
+        <param>
+          <declname>$ecpub</declname>
+        </param>
+        <param>
+          <declname>$extids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Chains.php" line="67" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="67" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Chains_1a83e4fcfe75a0e420e992beebb2df7138" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Chains::sendRawMessage</definition>
+        <argsstring>($message)</argsstring>
+        <name>sendRawMessage</name>
+        <param>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Chains.php" line="93" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="93" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Factom/Api/Chains.php" line="10" column="1" bodyfile="src/Factom/Api/Chains.php" bodystart="9" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classFactom_1_1Api_1_1Chains_1aaa19d0d6c63ff303501e4109c0228a21" prot="public" virt="non-virtual"><scope>Factom::Api::Chains</scope><name>chainHead</name></member>
+      <member refid="classFactom_1_1Api_1_1Chains_1a9a166dd2ea06f78f2fc24f7b640c66f1" prot="public" virt="non-virtual"><scope>Factom::Api::Chains</scope><name>commitChain</name></member>
+      <member refid="classFactom_1_1Api_1_1Chains_1afa23e3d810bd13c68b5857f1ea37c9df" prot="public" virt="non-virtual"><scope>Factom::Api::Chains</scope><name>composeChain</name></member>
+      <member refid="classFactom_1_1Api_1_1Chains_1afd4dd17b43d53c760851c3216b787bac" prot="public" virt="non-virtual"><scope>Factom::Api::Chains</scope><name>revealChain</name></member>
+      <member refid="classFactom_1_1Api_1_1Chains_1a83e4fcfe75a0e420e992beebb2df7138" prot="public" virt="non-virtual"><scope>Factom::Api::Chains</scope><name>sendRawMessage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

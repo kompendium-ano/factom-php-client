@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classFactom_1_1Api_1_1Entry" kind="class" language="PHP" prot="public">
+    <compoundname>Factom::Api::Entry</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1ada71b45a906a9ce728b90b17936668af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Entry::entry</definition>
+        <argsstring>($hash)</argsstring>
+        <name>entry</name>
+        <param>
+          <declname>$hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Entry.php" line="21" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="21" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a488a849a0976a65b30f17ec06e565a60" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Entry::entryAck</definition>
+        <argsstring>($txid)</argsstring>
+        <name>entryAck</name>
+        <param>
+          <declname>$txid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Entry.php" line="38" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="38" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a8cc7459e88f4326724848f04454c42a9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Entry::entryBlock</definition>
+        <argsstring>($keymr)</argsstring>
+        <name>entryBlock</name>
+        <param>
+          <declname>$keymr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Entry.php" line="55" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="55" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1aee8b6faed1e97ab500595feb30875a8e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Entry::entryCreditBalance</definition>
+        <argsstring>($address)</argsstring>
+        <name>entryCreditBalance</name>
+        <param>
+          <declname>$address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Entry.php" line="73" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="73" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a548e6d54e42aecb468ed0d856776f573" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Entry::entryCreditBlock</definition>
+        <argsstring>($keymr)</argsstring>
+        <name>entryCreditBlock</name>
+        <param>
+          <declname>$keymr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Entry.php" line="90" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="90" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a0d2c5c0884bc2a860c9563914b116d4f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Entry::entryCreditRate</definition>
+        <argsstring>()</argsstring>
+        <name>entryCreditRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Entry.php" line="108" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="108" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a4e6edcaf5422946a91a18a53eed57950" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Entry::revealEntry</definition>
+        <argsstring>($entry)</argsstring>
+        <name>revealEntry</name>
+        <param>
+          <declname>$entry</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Entry.php" line="125" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="125" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Entry_1a42abb618667c014be4aa0a4ee74639e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Entry::composeEntry</definition>
+        <argsstring>($chainId, $ecpub)</argsstring>
+        <name>composeEntry</name>
+        <param>
+          <declname>$chainId</declname>
+        </param>
+        <param>
+          <declname>$ecpub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Entry.php" line="142" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="142" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Factom/Api/Entry.php" line="18" column="1" bodyfile="src/Factom/Api/Entry.php" bodystart="17" bodyend="158"/>
+    <listofallmembers>
+      <member refid="classFactom_1_1Api_1_1Entry_1a42abb618667c014be4aa0a4ee74639e5" prot="public" virt="non-virtual"><scope>Factom::Api::Entry</scope><name>composeEntry</name></member>
+      <member refid="classFactom_1_1Api_1_1Entry_1ada71b45a906a9ce728b90b17936668af" prot="public" virt="non-virtual"><scope>Factom::Api::Entry</scope><name>entry</name></member>
+      <member refid="classFactom_1_1Api_1_1Entry_1a488a849a0976a65b30f17ec06e565a60" prot="public" virt="non-virtual"><scope>Factom::Api::Entry</scope><name>entryAck</name></member>
+      <member refid="classFactom_1_1Api_1_1Entry_1a8cc7459e88f4326724848f04454c42a9" prot="public" virt="non-virtual"><scope>Factom::Api::Entry</scope><name>entryBlock</name></member>
+      <member refid="classFactom_1_1Api_1_1Entry_1aee8b6faed1e97ab500595feb30875a8e" prot="public" virt="non-virtual"><scope>Factom::Api::Entry</scope><name>entryCreditBalance</name></member>
+      <member refid="classFactom_1_1Api_1_1Entry_1a548e6d54e42aecb468ed0d856776f573" prot="public" virt="non-virtual"><scope>Factom::Api::Entry</scope><name>entryCreditBlock</name></member>
+      <member refid="classFactom_1_1Api_1_1Entry_1a0d2c5c0884bc2a860c9563914b116d4f" prot="public" virt="non-virtual"><scope>Factom::Api::Entry</scope><name>entryCreditRate</name></member>
+      <member refid="classFactom_1_1Api_1_1Entry_1a4e6edcaf5422946a91a18a53eed57950" prot="public" virt="non-virtual"><scope>Factom::Api::Entry</scope><name>revealEntry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

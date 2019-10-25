@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="classFactom_1_1Api_1_1Blocks" kind="class"><name>Factom::Api::Blocks</name>
+    <member refid="classFactom_1_1Api_1_1Blocks_1a3e625bf75b4b9a75abba50a413d1a862" kind="function"><name>ablockByHeight</name></member>
+    <member refid="classFactom_1_1Api_1_1Blocks_1a660b0387a8f399d076f45ab36c967349" kind="function"><name>ack</name></member>
+    <member refid="classFactom_1_1Api_1_1Blocks_1addd044eba43cbbd0215c86a86486496e" kind="function"><name>adminBlock</name></member>
+    <member refid="classFactom_1_1Api_1_1Blocks_1a99678e8d00c7182e6bb1c0a656e5214f" kind="function"><name>dblockByHeight</name></member>
+    <member refid="classFactom_1_1Api_1_1Blocks_1a310ace3edea99bf97c2a741ff5c6eed2" kind="function"><name>directoryBlock</name></member>
+    <member refid="classFactom_1_1Api_1_1Blocks_1a937de4052815e5f5d11851ed169d4090" kind="function"><name>directoryBlockHead</name></member>
+    <member refid="classFactom_1_1Api_1_1Blocks_1a796ca956ac0b2efacd1de245abbd9e21" kind="function"><name>ecblockByHeight</name></member>
+    <member refid="classFactom_1_1Api_1_1Blocks_1ae173e56f3d9f40a32cbb836f794064f5" kind="function"><name>entryBlock</name></member>
+    <member refid="classFactom_1_1Api_1_1Blocks_1aeb54a67b7c492e62e830e302ab7d8da2" kind="function"><name>entryCreditBlock</name></member>
+    <member refid="classFactom_1_1Api_1_1Blocks_1a1d3ba4e640ef336d1a68fee66ba2a33d" kind="function"><name>factoidBlock</name></member>
+    <member refid="classFactom_1_1Api_1_1Blocks_1a8be64d1fc6609fa31c2bbdde5f88f33d" kind="function"><name>fblockByHeight</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1Chains" kind="class"><name>Factom::Api::Chains</name>
+    <member refid="classFactom_1_1Api_1_1Chains_1aaa19d0d6c63ff303501e4109c0228a21" kind="function"><name>chainHead</name></member>
+    <member refid="classFactom_1_1Api_1_1Chains_1a9a166dd2ea06f78f2fc24f7b640c66f1" kind="function"><name>commitChain</name></member>
+    <member refid="classFactom_1_1Api_1_1Chains_1afd4dd17b43d53c760851c3216b787bac" kind="function"><name>revealChain</name></member>
+    <member refid="classFactom_1_1Api_1_1Chains_1afa23e3d810bd13c68b5857f1ea37c9df" kind="function"><name>composeChain</name></member>
+    <member refid="classFactom_1_1Api_1_1Chains_1a83e4fcfe75a0e420e992beebb2df7138" kind="function"><name>sendRawMessage</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1Commits" kind="class"><name>Factom::Api::Commits</name>
+    <member refid="classFactom_1_1Api_1_1Commits_1a5f9ff6a64ddc69e0935a962a26630d48" kind="function"><name>commitEntry</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1Debug" kind="class"><name>Factom::Api::Debug</name>
+    <member refid="classFactom_1_1Api_1_1Debug_1af963ee847a0877765f3fc680ad659507" kind="function"><name>holdingQueue</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1a406edcd56a587eea77d449945169f819" kind="function"><name>networkInfo</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1a6c214a8ac48e3280d5ea0e86ff070e46" kind="function"><name>predictiveFer</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1a7fb24845821bb0984c605b6fe2e46e9f" kind="function"><name>auditServers</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1a3a96159012fbf777b24b581476661ba0" kind="function"><name>federatedServers</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1a11e15a97eb943560a2010968a24ec260" kind="function"><name>configuration</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1a192c4a11207be64667f5e6223bb5ca43" kind="function"><name>processList</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1ab6c260219b82d5277abbf59a10e7c4bc" kind="function"><name>authorities</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1a93a948db39328f8c1c84a850d1835295" kind="function"><name>reloadConfiguration</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1a88d2b730c59d2f80af93e631598b9850" kind="function"><name>dropRate</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1abc819e3281ccf72a5e40b0c02ff3cc08" kind="function"><name>setDropRate</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1a8b071bee97a57d9390071d4e51322638" kind="function"><name>delay</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1aa855a84053d361c79444e0efb1fd045f" kind="function"><name>setDelay</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1aab79b2a5c6419d3588f293773ab038c1" kind="function"><name>summary</name></member>
+    <member refid="classFactom_1_1Api_1_1Debug_1a38a3474f4235bfbdcbd4d52fde724fb5" kind="function"><name>messages</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1Entry" kind="class"><name>Factom::Api::Entry</name>
+    <member refid="classFactom_1_1Api_1_1Entry_1ada71b45a906a9ce728b90b17936668af" kind="function"><name>entry</name></member>
+    <member refid="classFactom_1_1Api_1_1Entry_1a488a849a0976a65b30f17ec06e565a60" kind="function"><name>entryAck</name></member>
+    <member refid="classFactom_1_1Api_1_1Entry_1a8cc7459e88f4326724848f04454c42a9" kind="function"><name>entryBlock</name></member>
+    <member refid="classFactom_1_1Api_1_1Entry_1aee8b6faed1e97ab500595feb30875a8e" kind="function"><name>entryCreditBalance</name></member>
+    <member refid="classFactom_1_1Api_1_1Entry_1a548e6d54e42aecb468ed0d856776f573" kind="function"><name>entryCreditBlock</name></member>
+    <member refid="classFactom_1_1Api_1_1Entry_1a0d2c5c0884bc2a860c9563914b116d4f" kind="function"><name>entryCreditRate</name></member>
+    <member refid="classFactom_1_1Api_1_1Entry_1a4e6edcaf5422946a91a18a53eed57950" kind="function"><name>revealEntry</name></member>
+    <member refid="classFactom_1_1Api_1_1Entry_1a42abb618667c014be4aa0a4ee74639e5" kind="function"><name>composeEntry</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1Factoid" kind="class"><name>Factom::Api::Factoid</name>
+    <member refid="classFactom_1_1Api_1_1Factoid_1aeba86eb5636d009fca97261c0f2c1a49" kind="function"><name>factoidAck</name></member>
+    <member refid="classFactom_1_1Api_1_1Factoid_1a6470cf1995b51e9fc5df6bb93a0709a5" kind="function"><name>factoidBalance</name></member>
+    <member refid="classFactom_1_1Api_1_1Factoid_1af6a5f5c5fefa6311f7b99f5b5c2bd18c" kind="function"><name>factoidBlock</name></member>
+    <member refid="classFactom_1_1Api_1_1Factoid_1a5854afdcba62a1c16451f1dc0ca5b553" kind="function"><name>factoidSubmit</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1FactomAddress" kind="class"><name>Factom::Api::FactomAddress</name>
+    <member refid="classFactom_1_1Api_1_1FactomAddress_1a6f97ee7acccf507a54545742d70d624a" kind="function"><name>address</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomAddress_1a29daef2aa8c1e42d75760ccbf431b662" kind="function"><name>allAddresses</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomAddress_1ad4ea37ea1c67e18c9e964d4ede1d5fa3" kind="function"><name>generateEcAddress</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomAddress_1afd768bde0883cb51dce5088ae3a05d8f" kind="function"><name>generateFactoidAddress</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomAddress_1a63dd906db80080b0ae6c3c600e9f24a5" kind="function"><name>importAddresses</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1Factomd" kind="class"><name>Factom::Api::Factomd</name>
+    <member refid="classFactom_1_1Api_1_1Factomd_1aedc8ae00a36ebd0f5ad8ffa055430dd0" kind="function"><name>heights</name></member>
+    <member refid="classFactom_1_1Api_1_1Factomd_1a9650dc2ddea37ebb75e69a7a98fd2799" kind="function"><name>multipleEcBalances</name></member>
+    <member refid="classFactom_1_1Api_1_1Factomd_1ab0a552c897366d7c86f154fd3f710aea" kind="function"><name>multipleFctBalances</name></member>
+    <member refid="classFactom_1_1Api_1_1Factomd_1a54ce231ff2fc6e4e4786a01d2b66d9b6" kind="function"><name>properties</name></member>
+    <member refid="classFactom_1_1Api_1_1Factomd_1abc35da0c1842709164bcdc6b660a53ff" kind="function"><name>rawData</name></member>
+    <member refid="classFactom_1_1Api_1_1Factomd_1a97ef1b7fa622b8a6eed22084102f4755" kind="function"><name>receipt</name></member>
+    <member refid="classFactom_1_1Api_1_1Factomd_1adfa5db7f2fc479b0a4d53ec0cf8d5db0" kind="function"><name>anchors</name></member>
+    <member refid="classFactom_1_1Api_1_1Factomd_1a42ec4fb14c6f490dae720fc61dab2020" kind="function"><name>diagnostics</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1FactomWalletd" kind="class"><name>Factom::Api::FactomWalletd</name>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1ad203f565a1b2ccac8de6db972ef87b50" kind="function"><name>getHeight</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1aa1d4686ab56d364c9a78f28330a29d01" kind="function"><name>importKoinify</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1ad53cf871a4a7e89275dbd6ce9f15aeae" kind="function"><name>properties</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1af58b60d02762487d619af51fad3d4b9e" kind="function"><name>walletBackup</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1a2d6b22f5a2b3ece7f4a53565c40a7a17" kind="function"><name>walletBalances</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1acef40bf09d04ace13984a3f76c3e2cbe" kind="function"><name>errors</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1a051c9c28a45527a46b713077806ae8f9" kind="function"><name>activeIdentityKeys</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1a66356cd3adc32082e138742b047a8866" kind="function"><name>allIdentityKeys</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1a115f99e06a135222ccfac6b2e29e42e1" kind="function"><name>composeIdentityAttribute</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1afcd4c00a827e4fe35917f0594ca83f60" kind="function"><name>composeIdentityAttributeEndorsement</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1ae5dc5b2c3fe1a3eaefbe2d5d1620d371" kind="function"><name>composeIdentityKeyReplacement</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1a14883aad2c36a2411ff8a0ef4d6d5c13" kind="function"><name>importIdentityKeys</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1ad7d7a2669f457492ce0deb6e335b0fd7" kind="function"><name>removeAddress</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1a12b22453da0fe096d8dd668f4b7cfb8a" kind="function"><name>removeIdentityKey</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1afdd8a2ef938b8bb3bc748725cb1a99b7" kind="function"><name>signData</name></member>
+    <member refid="classFactom_1_1Api_1_1FactomWalletd_1adaa89d87a7a0127c0b56d309133f4c99" kind="function"><name>unlockWallet</name></member>
+  </compound>
+  <compound refid="classjsonRPCClient" kind="class"><name>jsonRPCClient</name>
+    <member refid="classjsonRPCClient_1a6aaa6ad0038dd85b5aeed0674a3b6e83" kind="variable"><name>$debug</name></member>
+    <member refid="classjsonRPCClient_1afa924904c47b8cc1ba1f801ca41d553f" kind="variable"><name>$uri</name></member>
+    <member refid="classjsonRPCClient_1a393b18802493a7c97f9779717f255a1e" kind="variable"><name>$id</name></member>
+    <member refid="classjsonRPCClient_1a2ed9d2bd425fe073b198ef8d1574994a" kind="variable"><name>$notification</name></member>
+    <member refid="classjsonRPCClient_1a442c03d6e1289ab8b84c5a93e5adcde1" kind="function"><name>__construct</name></member>
+    <member refid="classjsonRPCClient_1af90c23f33df17bdfd02db1ce9844cf01" kind="function"><name>__call</name></member>
+    <member refid="classjsonRPCClient_1a2ca2af0ec99e5a81b9ced5db20f120fe" kind="function"><name>setRPCNotification</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1Minute" kind="class"><name>Factom::Api::Minute</name>
+    <member refid="classFactom_1_1Api_1_1Minute_1a664f3c38062537f3f49054c5056c77c5" kind="function"><name>currentMinute</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1Pending" kind="class"><name>Factom::Api::Pending</name>
+    <member refid="classFactom_1_1Api_1_1Pending_1aa72cb4f79f5ef0d26fbdfb32a619eade" kind="function"><name>pendingEntries</name></member>
+    <member refid="classFactom_1_1Api_1_1Pending_1accf053bf47d8a3520db43e20035903ca" kind="function"><name>pendingTransactions</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1Security" kind="class"><name>Factom::Api::Security</name>
+    <member refid="classFactom_1_1Api_1_1Security_1aea2430268ad53ed26dd96d42147a2a92" kind="function"><name>securityEncryptedConnections</name></member>
+    <member refid="classFactom_1_1Api_1_1Security_1a17361b4739e533147ef1320a05b3c022" kind="function"><name>securityPasswordProtection</name></member>
+    <member refid="classFactom_1_1Api_1_1Security_1af3858a4961d04fa6161a084e481fe0bb" kind="function"><name>security‌CombinedPasswordAndEncryption</name></member>
+  </compound>
+  <compound refid="classFactom_1_1Api_1_1Transaction" kind="class"><name>Factom::Api::Transaction</name>
+    <member refid="classFactom_1_1Api_1_1Transaction_1aa16955b7829e7b415ca406a876bbe66a" kind="function"><name>transaction</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1ab89b7f27064b567a9eb78ae9e3cde992" kind="function"><name>addEcOutput</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1a9ef0f32724674bfb1c60e084b640c51c" kind="function"><name>addFee</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1a25cc24072305cc5298add99b6da7330f" kind="function"><name>addInput</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1a418ef24f2342900ae4f0cdd556b19b57" kind="function"><name>addOutput</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1a0a796282185c15522b8a5cf140cf55a9" kind="function"><name>composeTransaction</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1a42f9981d05b6bb3a81fe53de5af120b7" kind="function"><name>deleteTransaction</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1a2a33422fd63b0556b3dca86ca824f68d" kind="function"><name>newTransaction</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1a8256f23ab6c6308295868d1c3da18010" kind="function"><name>signTransaction</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1af9f1050a6003eebc01b3b70fade4b1fe" kind="function"><name>subFee</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1ad2d850b65a7ec242853c8c114ffb5c63" kind="function"><name>tmpTransactions</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1afa434488a28b6d73f0d69f4ce824fa05" kind="function"><name>transactionsRetrieving</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1aabcb1893905d01f65787d64366f96dd2" kind="function"><name>transactionsRetrievingByTxid</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1a43e7b063dab88a962992e19c4d3b640a" kind="function"><name>transactionsRetrievingByAddress</name></member>
+    <member refid="classFactom_1_1Api_1_1Transaction_1a7cab04e8ee9f0592dd209fa1686cc585" kind="function"><name>AllTransactions</name></member>
+  </compound>
+  <compound refid="namespaceFactom" kind="namespace"><name>Factom</name>
+  </compound>
+  <compound refid="namespaceFactom_1_1Api" kind="namespace"><name>Factom::Api</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Client" kind="namespace"><name>PhpJsonRpc::Client</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Client_1_1RequestBuilder_1_1BuilderContainer" kind="namespace"><name>PhpJsonRpc::Client::RequestBuilder::BuilderContainer</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Client_1_1ResponseParser_1_1ParserContainer" kind="namespace"><name>PhpJsonRpc::Client::ResponseParser::ParserContainer</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Client_1_1Transport_1_1TransportContainer" kind="namespace"><name>PhpJsonRpc::Client::Transport::TransportContainer</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Common_1_1Interceptor_1_1Interceptor" kind="namespace"><name>PhpJsonRpc::Common::Interceptor::Interceptor</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Core_1_1Invoke_1_1Invoke" kind="namespace"><name>PhpJsonRpc::Core::Invoke::Invoke</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Error_1_1BaseClientException" kind="namespace"><name>PhpJsonRpc::Error::BaseClientException</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Error_1_1InvalidResponseException" kind="namespace"><name>PhpJsonRpc::Error::InvalidResponseException</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Error_1_1MethodNotFoundException" kind="namespace"><name>PhpJsonRpc::Error::MethodNotFoundException</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Tests_1_1Mock_1_1IdGenerator" kind="namespace"><name>PhpJsonRpc::Tests::Mock::IdGenerator</name>
+  </compound>
+  <compound refid="namespacePhpJsonRpc_1_1Tests_1_1Mock_1_1Transport" kind="namespace"><name>PhpJsonRpc::Tests::Mock::Transport</name>
+  </compound>
+  <compound refid="Blocks_8php" kind="file"><name>Blocks.php</name>
+  </compound>
+  <compound refid="Chains_8php" kind="file"><name>Chains.php</name>
+  </compound>
+  <compound refid="Commits_8php" kind="file"><name>Commits.php</name>
+  </compound>
+  <compound refid="Debug_8php" kind="file"><name>Debug.php</name>
+  </compound>
+  <compound refid="Entry_8php" kind="file"><name>Entry.php</name>
+  </compound>
+  <compound refid="Factoid_8php" kind="file"><name>Factoid.php</name>
+  </compound>
+  <compound refid="FactomAddress_8php" kind="file"><name>FactomAddress.php</name>
+  </compound>
+  <compound refid="Factomd_8php" kind="file"><name>Factomd.php</name>
+  </compound>
+  <compound refid="FactomWalletd_8php" kind="file"><name>FactomWalletd.php</name>
+  </compound>
+  <compound refid="Minute_8php" kind="file"><name>Minute.php</name>
+  </compound>
+  <compound refid="Pending_8php" kind="file"><name>Pending.php</name>
+  </compound>
+  <compound refid="Security_8php" kind="file"><name>Security.php</name>
+  </compound>
+  <compound refid="Transaction_8php" kind="file"><name>Transaction.php</name>
+  </compound>
+  <compound refid="jsonRpcClient_8php" kind="file"><name>jsonRpcClient.php</name>
+  </compound>
+  <compound refid="dir_0de29bcb0894527160277595ac2368eb" kind="dir"><name>src/Factom/Api</name>
+  </compound>
+  <compound refid="dir_3c2823c6e6f45b5111ac58a8828c5965" kind="dir"><name>src/Factom</name>
+  </compound>
+  <compound refid="dir_c85d3e3c5052e9ad9ce18c6863244a25" kind="dir"><name>src/lib</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

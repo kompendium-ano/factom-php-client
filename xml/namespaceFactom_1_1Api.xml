@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="namespaceFactom_1_1Api" kind="namespace" language="PHP">
+    <compoundname>Factom::Api</compoundname>
+    <innerclass refid="classFactom_1_1Api_1_1Blocks" prot="public">Factom::Api::Blocks</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Chains" prot="public">Factom::Api::Chains</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Commits" prot="public">Factom::Api::Commits</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Debug" prot="public">Factom::Api::Debug</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Entry" prot="public">Factom::Api::Entry</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Factoid" prot="public">Factom::Api::Factoid</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1FactomAddress" prot="public">Factom::Api::FactomAddress</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Factomd" prot="public">Factom::Api::Factomd</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1FactomWalletd" prot="public">Factom::Api::FactomWalletd</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Minute" prot="public">Factom::Api::Minute</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Pending" prot="public">Factom::Api::Pending</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Security" prot="public">Factom::Api::Security</innerclass>
+    <innerclass refid="classFactom_1_1Api_1_1Transaction" prot="public">Factom::Api::Transaction</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Factom/Api/Blocks.php" line="2" column="1"/>
+  </compounddef>
+</doxygen>

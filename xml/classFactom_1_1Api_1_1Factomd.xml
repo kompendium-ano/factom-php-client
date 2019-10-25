@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="classFactom_1_1Api_1_1Factomd" kind="class" language="PHP" prot="public">
+    <compoundname>Factom::Api::Factomd</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factomd_1aedc8ae00a36ebd0f5ad8ffa055430dd0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factomd::heights</definition>
+        <argsstring>()</argsstring>
+        <name>heights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factomd.php" line="20" column="1" bodyfile="src/Factom/Api/Factomd.php" bodystart="20" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factomd_1a9650dc2ddea37ebb75e69a7a98fd2799" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factomd::multipleEcBalances</definition>
+        <argsstring>($addr1, $addr2)</argsstring>
+        <name>multipleEcBalances</name>
+        <param>
+          <declname>$addr1</declname>
+        </param>
+        <param>
+          <declname>$addr2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factomd.php" line="40" column="1" bodyfile="src/Factom/Api/Factomd.php" bodystart="40" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factomd_1ab0a552c897366d7c86f154fd3f710aea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factomd::multipleFctBalances</definition>
+        <argsstring>($addr1, $addr2)</argsstring>
+        <name>multipleFctBalances</name>
+        <param>
+          <declname>$addr1</declname>
+        </param>
+        <param>
+          <declname>$addr2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factomd.php" line="57" column="1" bodyfile="src/Factom/Api/Factomd.php" bodystart="57" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factomd_1a54ce231ff2fc6e4e4786a01d2b66d9b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factomd::properties</definition>
+        <argsstring>()</argsstring>
+        <name>properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factomd.php" line="74" column="1" bodyfile="src/Factom/Api/Factomd.php" bodystart="74" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factomd_1abc35da0c1842709164bcdc6b660a53ff" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factomd::rawData</definition>
+        <argsstring>($hash)</argsstring>
+        <name>rawData</name>
+        <param>
+          <declname>$hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factomd.php" line="91" column="1" bodyfile="src/Factom/Api/Factomd.php" bodystart="91" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factomd_1a97ef1b7fa622b8a6eed22084102f4755" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factomd::receipt</definition>
+        <argsstring>($hash)</argsstring>
+        <name>receipt</name>
+        <param>
+          <declname>$hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factomd.php" line="109" column="1" bodyfile="src/Factom/Api/Factomd.php" bodystart="109" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factomd_1adfa5db7f2fc479b0a4d53ec0cf8d5db0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factomd::anchors</definition>
+        <argsstring>($hash)</argsstring>
+        <name>anchors</name>
+        <param>
+          <declname>$hash</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factomd.php" line="126" column="1" bodyfile="src/Factom/Api/Factomd.php" bodystart="126" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classFactom_1_1Api_1_1Factomd_1a42ec4fb14c6f490dae720fc61dab2020" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Factom\Api\Factomd::diagnostics</definition>
+        <argsstring>()</argsstring>
+        <name>diagnostics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Factom/Api/Factomd.php" line="145" column="1" bodyfile="src/Factom/Api/Factomd.php" bodystart="145" bodyend="160"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Factom/Api/Factomd.php" line="17" column="1" bodyfile="src/Factom/Api/Factomd.php" bodystart="16" bodyend="161"/>
+    <listofallmembers>
+      <member refid="classFactom_1_1Api_1_1Factomd_1adfa5db7f2fc479b0a4d53ec0cf8d5db0" prot="public" virt="non-virtual"><scope>Factom::Api::Factomd</scope><name>anchors</name></member>
+      <member refid="classFactom_1_1Api_1_1Factomd_1a42ec4fb14c6f490dae720fc61dab2020" prot="public" virt="non-virtual"><scope>Factom::Api::Factomd</scope><name>diagnostics</name></member>
+      <member refid="classFactom_1_1Api_1_1Factomd_1aedc8ae00a36ebd0f5ad8ffa055430dd0" prot="public" virt="non-virtual"><scope>Factom::Api::Factomd</scope><name>heights</name></member>
+      <member refid="classFactom_1_1Api_1_1Factomd_1a9650dc2ddea37ebb75e69a7a98fd2799" prot="public" virt="non-virtual"><scope>Factom::Api::Factomd</scope><name>multipleEcBalances</name></member>
+      <member refid="classFactom_1_1Api_1_1Factomd_1ab0a552c897366d7c86f154fd3f710aea" prot="public" virt="non-virtual"><scope>Factom::Api::Factomd</scope><name>multipleFctBalances</name></member>
+      <member refid="classFactom_1_1Api_1_1Factomd_1a54ce231ff2fc6e4e4786a01d2b66d9b6" prot="public" virt="non-virtual"><scope>Factom::Api::Factomd</scope><name>properties</name></member>
+      <member refid="classFactom_1_1Api_1_1Factomd_1abc35da0c1842709164bcdc6b660a53ff" prot="public" virt="non-virtual"><scope>Factom::Api::Factomd</scope><name>rawData</name></member>
+      <member refid="classFactom_1_1Api_1_1Factomd_1a97ef1b7fa622b8a6eed22084102f4755" prot="public" virt="non-virtual"><scope>Factom::Api::Factomd</scope><name>receipt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
