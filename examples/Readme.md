@@ -1,43 +1,42 @@
-# factom-php
+# Factom-Php Examples
 
-# How to run
-Open a command console in your project directory an drun the following command
+In your project directory:
 
-To test blocks API
-php tests/blocks.php
+#### Blocks
+`php tests/blocks.php`
 
-To test chains API
-php tests/chain.php
+#### Chains
+`php tests/chain.php`
 
-To test commits API
-php tests/commits.php
+#### Commits
+`php tests/commits.php`
 
-To test debug API
-php tests/debug.php
+#### Debug
+`php tests/debug.php`
 
-To test entry API
-php tests/entry.php
+#### Entry
+`php tests/entry.php`
 
-To test factoid API
-php tests/factoid.php
+#### Factoid
+`php tests/factoid.php`
 
-To test factom Address API
-php tests/factomaddrress.php
+#### Addresses
+`php tests/factomaddrress.php`
 
-To test factomd API
-php tests/factomd.php
+#### Factomd
+`php tests/factomd.php`
 
-To test factomwalletd API
-php tests/factomwalletd.php
+#### Factom-Walletd
+`php tests/factomwalletd.php`
 
-To test minute API
-php tests/minute.php
+#### Current Minute
+`php tests/minute.php`
 
-To test pending API
-php tests/pending.php
+#### Pending
+`php tests/pending.php`
 
-To test security API
-php tests/security.php
+#### Security
+`php tests/security.php`
 
-To test transaction API
-php tests/tansaction.php
+#### Transactions
+`php tests/tansaction.php`
