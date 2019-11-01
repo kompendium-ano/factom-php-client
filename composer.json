@@ -9,10 +9,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3.0",
-        "datto/json-rpc-http": "dev-master",
-        "hernandev/light-rpc": "dev-master",
-        "jalle19/simple-json-rpc-client": "dev-master",
+        "php": ">=7.0.0",
         "vaderangry/php-json-rpc": "dev-master"
     },
     "autoload": {
