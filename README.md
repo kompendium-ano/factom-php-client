@@ -21,6 +21,16 @@ composer require kompendium/factom-api-php
 git clone  https://github.com/kompendium-llc/factom-php.git
 ```
 
+# Config
+    You can change default node url or ports
+    Add this lines after this -
+    require_once __DIR__ . '/../vendor/autoload.php';
+
+    
+    // Set Custom host of node
+    define('walletHost', 'https://dev.factomd.net/v2');
+    define('host', 'https://dev.factomd.net/v2');
+    define('debugHost', 'http://localhost:8088/debug');
 
 # Usage
 
@@ -34,78 +44,95 @@ use Factom\Api\Blocks;
 #### Retreiving a balance
 
 ```php
-# factomd -> Get EC Balance
-# address: EC2dTBH2Nc9t9Y7RFD3FYMN5ottoPeHdk6xqUWEc6eHVoBPj6CmH
-
+use Factom\Api\Factoid;
+result = Factoid::factoidBalance("EC2dTBH2Nc9t9Y7RFD3FYMN5ottoPeHdk6xqUWEc6eHVoBPj6CmH");
+print_r(result); 
 
 ```
 
 #### Reading Entry Data
 ```php
 # factomd -> entry api
+use Factom\Api\Entry;
+result = Entry::entry("61b3d3175f211f3b23b455bb8710fdbcf545cb40da397d9e20b26eca31c389a6");
+print_r(result);
 ```
 
 #### Writing an Entry
 *Note: Ensure data in the entry fields is hex-encoded. This includes the content section.*
 
 ```php
-# walletd -> compose entry -> ( <COMMIT>, <REVEAL>)
-# chainid: 48e0c94d00bf14d89ab10044075a370e1f55bcb28b2ff16206d865e192827645
-# ext-ids: [ "cd90", "90cd"]
-# content: "abcdef"
-# ec-pub: "EC2DKSYyRcNWf7RS963VFYgMExo1824HVeCfQ9PGPmNzwrcmgm2r"
+use Factom\Api\Entry;
+$composeEntry = Entry::composeEntry("48e0c94d00bf14d89ab10044075a370e1f55bcb28b2ff16206d865e192827645","EC2DKSYyRcNWf7RS963VFYgMExo1824HVeCfQ9PGPmNzwrcmgm2r");
+print_r($composeEntry);
 
-# factomd -> commit entry
-# params: <COMMIT>
+use Factom\Api\Commits;
+$commitEntry = Commits::commitEntry("00015507C1024BF5C956749FC3EBA4ACC60FD485FB100E601070A44FCCE54FF358D60669854734013B6A27BCCEB6A42D62A3A8D02A6F0D73653215771DE243A63AC048A18B59DA29F4CBD953E6EBE684D693FDCA270CE231783E8ECC62D630F983CD59E559C6253F84D1F54C8E8D8665D493F7B4A4C1864751E3CDEC885A64C2144E0938BF648A00");
+print_r($commitEntry);
 
-# factomd -> reveal entry
-#params: <REVEAL>
+use Factom\Api\Entry;
+$revealEntry = Entry::revealEntry("007E18CCC911F057FB111C7570778F6FDC51E189F35A6E6DA683EC2A264443531F000E0005746573745A0005746573745A48656C6C6F20466163746F6D21");
+print_r($revealEntry);
 ```
 
 #### Block Height and Current Minute
 ```php
 # factomd -> Get Height
+use Factom\Api\FactomWalletd;
+$getheight = FactomWalletd::getHeight();
+print_r($getheight);
 
 # factomd -> current minute
+use Factom\Api\Minute;
+$currentMinute = Minute::currentMinute();
+print_r($currentMinute);
 ```
 
 
 
 #### Sending A Transaction
 ```php
-# walletd -> new-transaction
-# tx-name: "MyTx"
-
-# walletd -> add Input
-# tx-name: "MyTx"
-# amount: 10000
-# address: FA2jK2HcLnRdS94dEcU27rF3meoJfpUcZPSinpb7AwQvPRY6RL1Q
-
-# walletd -> add Output
-# tx-name: "MyTx"
-# amount: 10000
-# address: FA2H7gecy8Nr7cxF7ngtByW23PxvrysuzYMAiAhbRTddCWZTLs4P
-
-# walletd -> add Fee
-# tx-name: "MyTx"
-# address: FA2jK2HcLnRdS94dEcU27rF3meoJfpUcZPSinpb7AwQvPRY6RL1Q
-
-# walletd -> Sign Transaction
-# tx-name: "MyTx"
-
-# walletd -> Compose Transaction -> <TX HEX STRING>
-# tx-name: "MyTx"
-
-# factomd -> factoidSubmit
-#transaction: <TX HEX STRING>
+# send transaction
+use Factom\Api\Transaction;
+$data = [
+    "txname" => "test1234",
+    "inputAddress" => "FA2jK2HcLnRdS94dEcU27rF3meoJfpUcZPSinpb7AwQvPRY6RL1Q",
+    "inputAmount" => 1000012000,
+    "outputAddress" => "FA2yeHMMJR6rpjRYGe3Q4ogThHUmByk3WLhTjQDvPrxDoTYF8BbC",
+    "outputAmount" => 1000000000
+];
+$transaction = Transaction::sendTransaction($data);
+print_r($transaction);
 ```
 
 ## Testing
 
 ```bash
-<SHOW HOW TO RUN THE TESTS>
+php tests/blocks.php
 
-php tests/test.php
+php tests/chains.php
+
+php tests/commits.php
+
+php tests/debug.php
+
+php tests/entry.php
+
+php tests/factoid.php
+
+php tests/factomaddress.php
+
+php tests/factomd.php
+
+php tests/factomwalletd.php
+
+php tests/minute.php
+
+php tests/pending.php
+
+php tests/security.php
+
+php tests/transaction.php
 ```
 
 ## Support
