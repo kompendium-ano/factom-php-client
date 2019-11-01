@@ -1,3 +1,5 @@
 vendor
-html
-xml
+addresses.txt
+Doxyfile
+warnings.log
+conposer.lock
