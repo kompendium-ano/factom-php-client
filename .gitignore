@@ -1,1 +1,5 @@
 vendor
+addresses.txt
+Doxyfile
+warnings.log
+conposer.lock
