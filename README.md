@@ -1,7 +1,7 @@
 # Factom RPC PHP client
 
-[![Build Status](https://travis-ci.com/kompendium-llc/factom-php.svg?branch=master)](https://travis-ci.com/kompendium-llc/factom-php)
-[![codecov](https://codecov.io/gh/kompendium-llc/factom-php/branch/master/graph/badge.svg)](https://codecov.io/gh/kompendium-llc/factom-php)
+[![Build Status](https://travis-ci.com/kompendium-llc/factom-php-client.svg?branch=master)](https://travis-ci.com/kompendium-llc/factom-php-client)
+[![codecov](https://codecov.io/gh/kompendium-llc/factom-php/branch/master/graph/badge.svg)](https://codecov.io/gh/kompendium-llc/factom-php-client)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kompendium-llc/factom-php/blob/master/LICENSE)
 [![Discord](https://img.shields.io/discord/419201548372017163.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/mYmcQM2)
 
