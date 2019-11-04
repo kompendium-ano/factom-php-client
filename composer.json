@@ -1,10 +1,10 @@
 {
-    "name": "harishankar/factom-api",
-    "description": "factom-library",
+    "name": "sigrlami/factom-api",
+    "description": "Factom protocol RPC library",
     "authors": [
         {
-            "name": "harishankar joshi",
-            "email": "harijoshiftechiz@gmail.com"
+            "name": "Sergey Bushnyak",
+            "email": "sergey@kompendium.co"
         }
     ],
     "minimum-stability": "dev",
