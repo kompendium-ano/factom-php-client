@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b5a1f6e9e0072647c011cc9b76d19804",
+    "packages": [
+        {
+            "name": "vaderangry/php-json-rpc",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vaderangry/PhpJsonRpc.git",
+                "reference": "47573950c06fc14f9da8babfd3d8122370ae4c77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vaderangry/PhpJsonRpc/zipball/47573950c06fc14f9da8babfd3d8122370ae4c77",
+                "reference": "47573950c06fc14f9da8babfd3d8122370ae4c77",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpJsonRpc\\": "src/PhpJsonRpc"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pakhomov D.",
+                    "email": "vaderangry@gmail.com"
+                }
+            ],
+            "description": "Flexible JSON-RPC2 server/client implementation for PHP7",
+            "homepage": "https://github.com/vaderangry/PhpJsonRpc",
+            "keywords": [
+                "json",
+                "json-rpc2",
+                "rpc"
+            ],
+            "time": "2018-03-02 13:10:29"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "vaderangry/php-json-rpc": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.0.0"
+    },
+    "platform-dev": []
+}

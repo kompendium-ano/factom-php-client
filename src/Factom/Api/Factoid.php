@@ -12,6 +12,7 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
+use Factom\Api\Response;
 
 class Factoid
 { 
@@ -38,7 +39,8 @@ class Factoid
              }
         }));
         $result = $client->call('factoid-ack',["txid"=>$txid]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
     
      /* factoid-balance */
@@ -63,7 +65,8 @@ class Factoid
              }
         }));
         $result = $client->call('factoid-balance',["address"=>$address]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
          
      }
 
@@ -89,7 +92,8 @@ class Factoid
              }
         }));
         $result = $client->call('factoid-block',["keymr"=>$keymr]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
          
      }
 
@@ -115,7 +119,8 @@ class Factoid
              }
         }));
         $result = $client->call('factoid-submit',["transaction"=>$transaction]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
          
      }
 }

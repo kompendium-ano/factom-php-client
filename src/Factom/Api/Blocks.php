@@ -4,6 +4,7 @@ namespace Factom\Api;
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\ResponseParser\ParserContainer;
 use PhpJsonRpc\Common\Interceptor\Interceptor;
+use Factom\Api\Response;
 
 class Blocks
 {
@@ -29,7 +30,8 @@ class Blocks
              }
         }));
         $result = $client->call('ablock-by-height', ["height"=> 1]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
     
     /* ack */
@@ -54,7 +56,8 @@ class Blocks
              }
         }));
         $result = $client->call('ack', ["hash"=>$hash, "chainid"=>$chainid, "fulltransaction"=>""]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     } 
 
     /* admin block */
@@ -80,7 +83,8 @@ class Blocks
              }
         }));
         $result = $client->call('admin-block', ["keymr"=>$keymr]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* dblock by height */
@@ -106,7 +110,8 @@ class Blocks
              }
         }));
         $result = $client->call('dblock-by-height', ["height"=>$height]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* directoryBlock  */
@@ -133,7 +138,8 @@ class Blocks
              }
         }));
         $result = $client->call('directory-block', ["keymr"=>$keymr]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* directory block head */
@@ -158,7 +164,8 @@ class Blocks
              }
         }));
         $result = $client->call('directory-block-head',['']);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* ecblock by height */
@@ -183,7 +190,8 @@ class Blocks
              }
         }));
         $result = $client->call('ecblock-by-height',["height" => 10000]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* entry block */
@@ -208,7 +216,8 @@ class Blocks
              }
         }));
         $result = $client->call('entry-block',["keymr" => $keymr]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* entry credit block */
@@ -233,7 +242,8 @@ class Blocks
              }
         }));
         $result = $client->call('entrycredit-block',["keymr" => $keymr]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* factoid block */
@@ -258,7 +268,8 @@ class Blocks
              }
         }));
         $result = $client->call('factoid-block',["keymr" => $keymr]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* fblock by height */
@@ -283,7 +294,8 @@ class Blocks
              }
         }));
         $result = $client->call('fblock-by-height', ["height"=> $height]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
 }

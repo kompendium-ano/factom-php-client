@@ -12,6 +12,7 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
+use Factom\Api\Response;
 
 class Factomd
 {
@@ -38,7 +39,8 @@ class Factomd
              }
         }));
         $result = $client->call('heights', []);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
          
      }
 
@@ -65,7 +67,8 @@ class Factomd
              }
         }));
         $result = $client->call('multiple-ec-balances', ["addresses" => [$addr1,$addr2]]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* multiple-fct-balances */
@@ -90,7 +93,8 @@ class Factomd
              }
         }));
         $result = $client->call('multiple-fct-balances', ["addresses" => [$addr1,$addr2]]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* properties */
@@ -115,7 +119,8 @@ class Factomd
              }
         }));
         $result = $client->call('properties', []);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* raw-data */
@@ -140,7 +145,8 @@ class Factomd
              }
         }));
         $result = $client->call('raw-data', ["hash"=> $hash]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
      
 
@@ -166,7 +172,8 @@ class Factomd
              }
         }));
         $result = $client->call('receipt', ["hash"=> $hash]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* anchors */
@@ -192,7 +199,8 @@ class Factomd
              }
        }));
        $result = $client->call('anchors', ["hash"=> $hash]);
-       return json_encode($result);
+       $getresponse = Response::response($result);
+       return $getresponse;
         
     }
 
@@ -219,7 +227,8 @@ class Factomd
              }
        }));
        $result = $client->call('diagnostics', []);
-       return json_encode($result);
+       $getresponse = Response::response($result);
+       return $getresponse;
         
     }
 }

@@ -12,7 +12,7 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
-
+use Factom\Api\Response;
 
 class Entry
 {
@@ -38,7 +38,8 @@ class Entry
              }
         }));
         $result = $client->call('entry',["hash"=>$hash]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* entry-ack */
@@ -63,7 +64,8 @@ class Entry
              }
         }));
         $result = $client->call('entry-ack',["txid"=>$txid]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }  
 
     /* entry-block */
@@ -88,7 +90,8 @@ class Entry
              }
         }));
         $result = $client->call('entry-block',["keymr"=>$keymr]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
         
     }  
 
@@ -114,7 +117,8 @@ class Entry
              }
         }));
         $result = $client->call('entry-credit-balance',["address"=>$address]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* entrycredit-block */
@@ -140,7 +144,8 @@ class Entry
              }
         }));
         $result = $client->call('entrycredit-block',["keymr"=>$keymr]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* entry-credit-rate*/
@@ -165,7 +170,8 @@ class Entry
              }
         }));
         $result = $client->call('entry-credit-rate',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
      
      /* reveal-entry */
@@ -190,7 +196,8 @@ class Entry
              }
         }));
         $result = $client->call('reveal-entry',["entry" => $entry]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* compose-entry */
@@ -217,7 +224,8 @@ class Entry
          $data = '{ "entry":  {"chainid":"'.$chainId.'",  "extids":["cd90", "90cd"], "content":"abcdef"}, "ecpub":"'.$ecpub.'"}';
          $data = json_decode($data, true);
          $result = $client->call('compose-entry', $data);
-         return json_encode($result);
+         $getresponse = Response::response($result);
+         return $getresponse;
      }
 }
 

@@ -4,7 +4,7 @@ namespace Factom\Api;
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\ResponseParser\ParserContainer;
 use PhpJsonRpc\Common\Interceptor\Interceptor;
-
+use Factom\Api\Response;
 
 class Chains
 {
@@ -31,7 +31,8 @@ class Chains
              }
         }));
         $result = $client->call('chain-head', ["chainid"=> $chainid]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* commit-chain */
@@ -57,7 +58,8 @@ class Chains
              }
         }));
         $result = $client->call('commit-chain', ["message"=> $message]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* reveal-chain */
@@ -83,7 +85,8 @@ class Chains
              }
         }));
         $result = $client->call('reveal-chain', ["entry"=> $entry]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* compose-chain */
@@ -117,7 +120,8 @@ class Chains
         $obj = json_decode($obj, true);
         print_r($myObj);
         $result = $client->call('compose-chain', $obj);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
    // send-raw-message
@@ -143,7 +147,8 @@ class Chains
              }
         }));
         $result = $client->call('send-raw-message',["message" => $message]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 }
 

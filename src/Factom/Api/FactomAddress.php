@@ -12,6 +12,7 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
+use Factom\Api\Response;
 
 class FactomAddress
 {
@@ -36,7 +37,8 @@ class FactomAddress
              }
         }));
         $result = $client->call('address',["address" => $address]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* all addresses */
@@ -61,7 +63,8 @@ class FactomAddress
              }
         }));
         $result = $client->call('all-addresses',['']);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     } 
 
      /* generateEcAddress */
@@ -85,7 +88,8 @@ class FactomAddress
              }
         }));
         $result = $client->call('generate-ec-address',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* generateFactoidAddress */
@@ -110,7 +114,8 @@ class FactomAddress
              }
         }));
         $result = $client->call('generate-ec-address',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* import-addresses */
@@ -135,7 +140,8 @@ class FactomAddress
              }
         }));
         $result = $client->call('generate-ec-address',["addresses" => ["secret" => $secret]]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
     
 }

@@ -14,6 +14,8 @@ use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 
 use Factom\Api\Factoid;
+use Factom\Api\Response;
+
 
 class Transaction
 {
@@ -39,7 +41,8 @@ class Transaction
              }
         }));
         $result = $client->call('transaction', ["hash"=>$hash]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
     }
 
     /* add-ec-output */
@@ -65,7 +68,8 @@ class Transaction
              }
         }));
         $result = $client->call('add-ec-output', ["tx-name"=> $txname , "address"=>$address , "amount" => $amount]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
     
     }
 
@@ -91,7 +95,8 @@ class Transaction
              }
         }));
         $result = $client->call('add-fee', ["tx-name"=> $txname , "address"=>$address]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
     }
 
     /* add-input */
@@ -116,7 +121,8 @@ class Transaction
              }
         }));
         $result = $client->call('add-input', ["tx-name"=> $txname , "address"=>$address , "amount"=> $amount]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
     }
 
     /* add-output */
@@ -142,7 +148,8 @@ class Transaction
              }
         }));
         $result = $client->call('add-output', ["tx-name"=> $txname , "address"=>$address , "amount"=> $amount]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
     }
 
     /* compose-transaction */
@@ -167,7 +174,8 @@ class Transaction
              }
         }));
         $result = $client->call('compose-transaction', ["tx-name"=> $txname]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
     }
 
     /* delete-transaction */
@@ -193,7 +201,8 @@ class Transaction
              }
         }));
         $result = $client->call('delete-transaction', ["tx-name"=> $txname]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
 
     }
 
@@ -219,8 +228,8 @@ class Transaction
              }
         }));
         $result = $client->call('new-transaction', ["tx-name"=> $txname]);
-        return json_encode($result);
-
+        $getresponse = Response::response($result);
+        return $getresponse; 
     }
 
     /* sign-transaction */
@@ -245,7 +254,8 @@ class Transaction
              }
         }));
         $result = $client->call('sign-transaction', ["tx-name"=> $txname]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
 
     }
 
@@ -271,7 +281,8 @@ class Transaction
              }
         }));
         $result = $client->call('sub-fee',  ["tx-name"=> $txname , "address"=>$address]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
 
 
     }
@@ -298,7 +309,8 @@ class Transaction
              }
         }));
         $result = $client->call('tmp-transactions',  []);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
 
     }
 
@@ -325,7 +337,8 @@ class Transaction
              }
         }));
         $result = $client->call('transactions',  [ "range" => [ "start" => $start , "end" => $end ] ]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
 
 
     }
@@ -352,7 +365,8 @@ class Transaction
              }
         }));
         $result = $client->call('transactions',  [ "txid" => $txid ]);
-        return json_encode($result);
+       $getresponse = Response::response($result);
+        return $getresponse; 
 
     }
 
@@ -378,7 +392,8 @@ class Transaction
              }
         }));
         $result = $client->call('transactions',  [ "address" => $address ]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
 
     }
 
@@ -404,7 +419,8 @@ class Transaction
              }
         }));
         $result = $client->call('transactions',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse; 
 
     }
   

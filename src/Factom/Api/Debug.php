@@ -12,6 +12,7 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
+use Factom\Api\Response;
 
 class Debug
 {
@@ -37,7 +38,8 @@ class Debug
              }
         }));
         $result = $client->call('holding-queue',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
     
 
@@ -63,7 +65,8 @@ class Debug
              }
         }));
         $result = $client->call('network-info',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* predictive-fer */
@@ -88,7 +91,8 @@ class Debug
              }
         }));
         $result = $client->call('predictive-fer',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* audit-servers */
@@ -114,7 +118,8 @@ class Debug
              }
         }));
         $result = $client->call('audit-servers',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* federated-servers */
@@ -139,7 +144,8 @@ class Debug
              }
         }));
         $result = $client->call('federated-servers',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* configuration */
@@ -164,7 +170,8 @@ class Debug
              }
         }));
         $result = $client->call('configuration',[]);
-        return json_encode($result);        
+        $getresponse = Response::response($result);
+        return $getresponse;       
     }
 
      /* process-list */
@@ -189,7 +196,8 @@ class Debug
              }
         }));
         $result = $client->call('process-list',[]);
-        return json_encode($result); 
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* authorities */
@@ -214,7 +222,8 @@ class Debug
              }
         }));
         $result = $client->call('authorities',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
     
@@ -240,7 +249,8 @@ class Debug
              }
         }));
         $result = $client->call('reload-configuration',[]);
-        return json_encode($result);        
+        $getresponse = Response::response($result);
+        return $getresponse;      
      }
 
      /* drop-rate */
@@ -265,7 +275,8 @@ class Debug
              }
         }));
         $result = $client->call('drop-rate',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* set-drop-rate */
@@ -290,7 +301,8 @@ class Debug
              }
         }));
         $result = $client->call('set-drop-rate',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* delay */
@@ -315,7 +327,8 @@ class Debug
              }
         }));
         $result = $client->call('delay',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* set-delay */
@@ -340,7 +353,8 @@ class Debug
              }
         }));
         $result = $client->call('set-delay',["Delay" => $delay]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* summary */
@@ -365,7 +379,8 @@ class Debug
              }
         }));
         $result = $client->call('summary',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 
      /* messages */
@@ -390,6 +405,7 @@ class Debug
              }
         }));
         $result = $client->call('messages',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 }    
