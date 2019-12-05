@@ -13,6 +13,14 @@ use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 use Factom\Api\Response;
+use Factom\Api\Responses\Entry\EntryResponse;
+use Factom\Api\Responses\Entry\EntryAckResponse;
+use Factom\Api\Responses\Entry\EntryBlockResponse;
+use Factom\Api\Responses\Entry\EntryCreditBalanceResponse;
+use Factom\Api\Responses\Entry\EntryCreditBlockResponse;
+use Factom\Api\Responses\Entry\EntryCreditRateResponse;
+use Factom\Api\Responses\Entry\RevealEntryResponse;
+use Factom\Api\Responses\Entry\ComposeEntryResponse;
 
 class Entry
 {
@@ -39,7 +47,7 @@ class Entry
         }));
         $result = $client->call('entry',["hash"=>$hash]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new EntryResponse($getresponse);
     }
 
     /* entry-ack */
@@ -65,7 +73,7 @@ class Entry
         }));
         $result = $client->call('entry-ack',["txid"=>$txid]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new EntryAckResponse($getresponse);
     }  
 
     /* entry-block */
@@ -91,7 +99,8 @@ class Entry
         }));
         $result = $client->call('entry-block',["keymr"=>$keymr]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new EntryBlockResponse($getresponse);
+        // return $getresponse;
         
     }  
 
@@ -118,7 +127,7 @@ class Entry
         }));
         $result = $client->call('entry-credit-balance',["address"=>$address]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new EntryCreditBalanceResponse($getresponse);
      }
 
      /* entrycredit-block */
@@ -145,7 +154,7 @@ class Entry
         }));
         $result = $client->call('entrycredit-block',["keymr"=>$keymr]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new EntryCreditBlockResponse($getresponse);
      }
 
      /* entry-credit-rate*/
@@ -171,7 +180,7 @@ class Entry
         }));
         $result = $client->call('entry-credit-rate',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new EntryCreditRateResponse($getresponse);
      }
      
      /* reveal-entry */
@@ -197,7 +206,7 @@ class Entry
         }));
         $result = $client->call('reveal-entry',["entry" => $entry]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new RevealEntryResponse($getresponse);
      }
 
      /* compose-entry */
@@ -225,7 +234,7 @@ class Entry
          $data = json_decode($data, true);
          $result = $client->call('compose-entry', $data);
          $getresponse = Response::response($result);
-         return $getresponse;
+         return new ComposeEntryResponse($getresponse);
      }
 }
 

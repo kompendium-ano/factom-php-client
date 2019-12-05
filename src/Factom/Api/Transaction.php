@@ -12,9 +12,14 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
-
 use Factom\Api\Factoid;
 use Factom\Api\Response;
+use Factom\Api\Responses\Transaction\TransactionResponse;
+use Factom\Api\Responses\Transaction\AddEcOutputResponse;
+use Factom\Api\Responses\Transaction\ComposeTransactionResponse;
+use Factom\Api\Responses\Transaction\DeleteTransactionResponse;
+use Factom\Api\Responses\Transaction\AddInputResponse;
+use Factom\Api\Responses\Transaction\TransactionsResponse;
 
 
 class Transaction
@@ -42,7 +47,7 @@ class Transaction
         }));
         $result = $client->call('transaction', ["hash"=>$hash]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new TransactionResponse($getresponse); 
     }
 
     /* add-ec-output */
@@ -69,7 +74,7 @@ class Transaction
         }));
         $result = $client->call('add-ec-output', ["tx-name"=> $txname , "address"=>$address , "amount" => $amount]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new AddEcOutputResponse($getresponse); 
     
     }
 
@@ -96,7 +101,7 @@ class Transaction
         }));
         $result = $client->call('add-fee', ["tx-name"=> $txname , "address"=>$address]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new AddInputResponse($getresponse);
     }
 
     /* add-input */
@@ -122,7 +127,7 @@ class Transaction
         }));
         $result = $client->call('add-input', ["tx-name"=> $txname , "address"=>$address , "amount"=> $amount]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new AddInputResponse($getresponse);
     }
 
     /* add-output */
@@ -149,7 +154,7 @@ class Transaction
         }));
         $result = $client->call('add-output', ["tx-name"=> $txname , "address"=>$address , "amount"=> $amount]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new AddInputResponse($getresponse);
     }
 
     /* compose-transaction */
@@ -175,7 +180,7 @@ class Transaction
         }));
         $result = $client->call('compose-transaction', ["tx-name"=> $txname]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new ComposeTransactionResponse($getresponse); 
     }
 
     /* delete-transaction */
@@ -202,7 +207,7 @@ class Transaction
         }));
         $result = $client->call('delete-transaction', ["tx-name"=> $txname]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new DeleteTransactionResponse($getresponse); 
 
     }
 
@@ -229,7 +234,7 @@ class Transaction
         }));
         $result = $client->call('new-transaction', ["tx-name"=> $txname]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new AddEcOutputResponse($getresponse);
     }
 
     /* sign-transaction */
@@ -255,7 +260,7 @@ class Transaction
         }));
         $result = $client->call('sign-transaction', ["tx-name"=> $txname]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new AddInputResponse($getresponse);
 
     }
 
@@ -282,7 +287,7 @@ class Transaction
         }));
         $result = $client->call('sub-fee',  ["tx-name"=> $txname , "address"=>$address]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new AddInputResponse($getresponse);
 
 
     }
@@ -310,15 +315,13 @@ class Transaction
         }));
         $result = $client->call('tmp-transactions',  []);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new TransactionsResponse($getresponse); 
 
     }
 
     /* transactions (Retrieving) */
 
     public static function transactionsRetrieving($start,$end){
-
-
         $client = new Client(walletHost);
         $client->getResponseParser()->onPreParse()
         ->add(Interceptor::createWith(function (ParserContainer $container) {
@@ -338,7 +341,7 @@ class Transaction
         }));
         $result = $client->call('transactions',  [ "range" => [ "start" => $start , "end" => $end ] ]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new TransactionsResponse($getresponse);
 
 
     }
@@ -365,8 +368,8 @@ class Transaction
              }
         }));
         $result = $client->call('transactions',  [ "txid" => $txid ]);
-       $getresponse = Response::response($result);
-        return $getresponse; 
+        $getresponse = Response::response($result);
+        return new TransactionsResponse($getresponse);
 
     }
 
@@ -393,7 +396,7 @@ class Transaction
         }));
         $result = $client->call('transactions',  [ "address" => $address ]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new TransactionsResponse($getresponse);
 
     }
 
@@ -420,7 +423,7 @@ class Transaction
         }));
         $result = $client->call('transactions',[]);
         $getresponse = Response::response($result);
-        return $getresponse; 
+        return new TransactionsResponse($getresponse);
 
     }
   
@@ -432,8 +435,7 @@ class Transaction
         $input = self::addInput($data['txname'], $data['inputAddress'], $data['inputAmount']);
         $output = self::addOutput($data['txname'], $data['outputAddress'], $data['outputAmount']);
         $cpTx = self::composeTransaction($data['txname']);
-        $res = json_decode($cpTx, true);
-        $tx = Factoid::factoidSubmit($res['result']['params']['transaction']);
+        $tx = Factoid::factoidSubmit($cpTx->params['transaction']);
        
         return $tx;
 

@@ -13,6 +13,17 @@ use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 use Factom\Api\Response;
+use Factom\Api\Responses\Debug\HoldingQueueResponse;
+use Factom\Api\Responses\Debug\NetworkInfoResponse;
+use Factom\Api\Responses\Debug\PredictiveFerResponse;
+use Factom\Api\Responses\Debug\AuditServersResponse;
+use Factom\Api\Responses\Debug\FederatedServersResponse;
+use Factom\Api\Responses\Debug\ConfigurationResponse;
+use Factom\Api\Responses\Debug\AuthoritiesResponse;
+use Factom\Api\Responses\Debug\DropRateResponse;
+use Factom\Api\Responses\Debug\DelayResponse;
+use Factom\Api\Responses\Debug\SummaryResponse;
+use Factom\Api\Responses\Debug\MessagesResponse;
 
 class Debug
 {
@@ -39,7 +50,7 @@ class Debug
         }));
         $result = $client->call('holding-queue',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new HoldingQueueResponse($getresponse);
     }
     
 
@@ -66,7 +77,7 @@ class Debug
         }));
         $result = $client->call('network-info',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new NetworkInfoResponse($getresponse);
     }
 
     /* predictive-fer */
@@ -92,7 +103,7 @@ class Debug
         }));
         $result = $client->call('predictive-fer',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new PredictiveFerResponse($getresponse);
     }
 
     /* audit-servers */
@@ -119,7 +130,7 @@ class Debug
         }));
         $result = $client->call('audit-servers',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new AuditServersResponse($getresponse);
     }
 
     /* federated-servers */
@@ -145,7 +156,7 @@ class Debug
         }));
         $result = $client->call('federated-servers',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new FederatedServersResponse($getresponse);
     }
 
     /* configuration */
@@ -171,7 +182,7 @@ class Debug
         }));
         $result = $client->call('configuration',[]);
         $getresponse = Response::response($result);
-        return $getresponse;       
+        return new ConfigurationResponse($getresponse);       
     }
 
      /* process-list */
@@ -223,7 +234,7 @@ class Debug
         }));
         $result = $client->call('authorities',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new AuthoritiesResponse($getresponse);
      }
 
     
@@ -250,7 +261,7 @@ class Debug
         }));
         $result = $client->call('reload-configuration',[]);
         $getresponse = Response::response($result);
-        return $getresponse;      
+        return new ConfigurationResponse($getresponse);
      }
 
      /* drop-rate */
@@ -276,7 +287,7 @@ class Debug
         }));
         $result = $client->call('drop-rate',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new DropRateResponse($getresponse);
      }
 
      /* set-drop-rate */
@@ -302,7 +313,7 @@ class Debug
         }));
         $result = $client->call('set-drop-rate',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new DropRateResponse($getresponse);
      }
 
      /* delay */
@@ -328,7 +339,7 @@ class Debug
         }));
         $result = $client->call('delay',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new DelayResponse($getresponse);
      }
 
      /* set-delay */
@@ -354,7 +365,7 @@ class Debug
         }));
         $result = $client->call('set-delay',["Delay" => $delay]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new DelayResponse($getresponse);
      }
 
      /* summary */
@@ -380,7 +391,7 @@ class Debug
         }));
         $result = $client->call('summary',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new SummaryResponse($getresponse);
      }
 
      /* messages */
@@ -406,6 +417,6 @@ class Debug
         }));
         $result = $client->call('messages',[]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new MessagesResponse($getresponse);
      }
 }    

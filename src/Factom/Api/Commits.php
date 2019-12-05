@@ -13,6 +13,7 @@ use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
 use Factom\Api\Response;
+use Factom\Api\Responses\Entry\CommitEntryResponse;
 
 class Commits
 {
@@ -39,7 +40,7 @@ class Commits
         }));
         $result = $client->call('commit-entry', ["message"=> $message]);
         $getresponse = Response::response($result);
-        return $getresponse;
+        return new CommitEntryResponse($getresponse);
     }
 }
 
