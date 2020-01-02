@@ -135,6 +135,18 @@ php tests/security.php
 php tests/transaction.php
 ```
 
+## Response parser class 
+
+Response parser class is converting the result in proper json format to access the result directly through key name.
+
+## How to fetch response by key
+```
+$ablock = Blocks::ablockByHeight();
+
+echo $ablock->result->ablock->header->prevbackrefhash;
+
+You can access all the keys like above mentioned for all the apis.
+```
 ## Support
 
 Additional support for the Factom Protocol or library usage can be found on [discord](https://discord.gg/mYmcQM2)

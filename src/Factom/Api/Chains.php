@@ -4,7 +4,12 @@ namespace Factom\Api;
 use PhpJsonRpc\Client;
 use PhpJsonRpc\Client\ResponseParser\ParserContainer;
 use PhpJsonRpc\Common\Interceptor\Interceptor;
-
+use Factom\Api\Response;
+use Factom\Api\Responses\Chains\ChainHeadResponse;
+use Factom\Api\Responses\Chains\CommitChainResponse;
+use Factom\Api\Responses\Chains\RevealChainResponse;
+use Factom\Api\Responses\Chains\ComposeChainResponse;
+use Factom\Api\Responses\Chains\SendRawMessageResponse;
 
 class Chains
 {
@@ -31,7 +36,8 @@ class Chains
              }
         }));
         $result = $client->call('chain-head', ["chainid"=> $chainid]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new ChainHeadResponse($getresponse);
     }
 
     /* commit-chain */
@@ -57,7 +63,8 @@ class Chains
              }
         }));
         $result = $client->call('commit-chain', ["message"=> $message]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new CommitChainResponse($getresponse);
     }
 
     /* reveal-chain */
@@ -83,7 +90,8 @@ class Chains
              }
         }));
         $result = $client->call('reveal-chain', ["entry"=> $entry]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new RevealChainResponse($getresponse);
     }
 
     /* compose-chain */
@@ -117,7 +125,8 @@ class Chains
         $obj = json_decode($obj, true);
         print_r($myObj);
         $result = $client->call('compose-chain', $obj);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new ComposeChainResponse($getresponse);
     }
 
    // send-raw-message
@@ -143,7 +152,8 @@ class Chains
              }
         }));
         $result = $client->call('send-raw-message',["message" => $message]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new SendRawMessageResponse($getresponse);
     }
 }
 
