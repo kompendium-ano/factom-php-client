@@ -12,6 +12,8 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
+use Factom\Api\Response;
+use Factom\Api\Responses\Others\CurrentMinuteResponse;
 
 class Minute
 {
@@ -38,7 +40,8 @@ class Minute
              }
         }));
         $result = $client->call('current-minute',['']);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new CurrentMinuteResponse($getresponse);
     }
 }
 

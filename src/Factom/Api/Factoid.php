@@ -12,6 +12,11 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
+use Factom\Api\Response;
+use Factom\Api\Responses\Factoid\FactoidAckResponse;
+use Factom\Api\Responses\Factoid\FactoidBalanceResponse;
+use Factom\Api\Responses\Block\FactoidBlockResponse;
+use Factom\Api\Responses\Factoid\FactoidSubmitResponse;
 
 class Factoid
 { 
@@ -38,7 +43,8 @@ class Factoid
              }
         }));
         $result = $client->call('factoid-ack',["txid"=>$txid]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new FactoidAckResponse($getresponse);
     }
     
      /* factoid-balance */
@@ -58,12 +64,12 @@ class Factoid
                 $response['error']['message'] = $err;
                 $response['result'] = $response;
                 // print_r($response);
-                return new ParserContainer($container->getParser(), $response);               
-               
+                return new ParserContainer($container->getParser(), $response);
              }
         }));
         $result = $client->call('factoid-balance',["address"=>$address]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new FactoidBalanceResponse($getresponse);
          
      }
 
@@ -89,8 +95,8 @@ class Factoid
              }
         }));
         $result = $client->call('factoid-block',["keymr"=>$keymr]);
-        return json_encode($result);
-         
+        $getresponse = Response::response($result);
+        return new FactoidBlockResponse($getresponse);
      }
 
      /* factoid-submit */
@@ -115,7 +121,7 @@ class Factoid
              }
         }));
         $result = $client->call('factoid-submit',["transaction"=>$transaction]);
-        return json_encode($result);
-         
+        $getresponse = Response::response($result);
+        return new FactoidSubmitResponse($getresponse);
      }
 }

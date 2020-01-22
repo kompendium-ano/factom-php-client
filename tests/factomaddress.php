@@ -20,3 +20,8 @@ print_r($address);
 
 $address = FactomAddress::generateFactoidAddress();
 print_r($address);
+
+// import Address
+
+$address = FactomAddress::importAddresses("Es44bBoCe2cai2LTcpnARmuSGxd92bSymHY6LUxn9Aijw8HLLBgs");
+print_r($address);

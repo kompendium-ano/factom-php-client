@@ -12,6 +12,7 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
+use Factom\Api\Response;
 
 class Pending
 {
@@ -37,7 +38,8 @@ class Pending
              }
         }));
         $result = $client->call('pending-entries', []);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 
     /* pending-transactions */
@@ -63,6 +65,7 @@ class Pending
              }
         }));
         $result = $client->call('pending-transactions', ["address" => $address]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return $getresponse;
     }
 }

@@ -12,6 +12,7 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
+use Factom\Api\Response;
 
 class Security
 {
@@ -37,8 +38,8 @@ class Security
                
              }
         }));
-        $result = $client->call('properties',[]);
-        return json_encode($result);        
+        $getresponse = Response::response($result);
+        return $getresponse;       
      }
 
      /* security Password Protection */
@@ -64,7 +65,8 @@ class Security
              }
          }));
          $result = $client->call('properties',[]);
-         return json_encode($result);
+         $getresponse = Response::response($result);
+         return $getresponse;
      }
 
      /* security ‌Combined Password and Encryption */
@@ -89,8 +91,8 @@ class Security
              }
         }));
         $result = $client->call('properties',[]);
-        return json_encode($result);
-
+        $getresponse = Response::response($result);
+        return $getresponse;
      }
 }
 
