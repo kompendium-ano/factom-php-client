@@ -1,6 +1,16 @@
 {
     "name": "kompendium-llc/factom-php-client",
     "description": "client library to access Factom blockchain",
+    "homepage": "https://github.com/kompendium-llc/factom-php-client",
+    "license": "MIT",
+    "keywords": [
+        "factom",
+        "factomd",
+        "factom-walletd",
+	"pegnet",
+        "Php",
+        "Api"
+    ],
     "authors": [
         {
             "name": "Sergey Bushnyak",
