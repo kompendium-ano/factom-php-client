@@ -44,7 +44,7 @@ print_r($deleteTransaction);
 
 //new Transaction
  
-$newTransaction = Transaction::newTransaction("TX_NAME");
+$newTransaction = Transaction::newTransaction("harry");
 print_r($newTransaction);
 
 //sign-transaction

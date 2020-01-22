@@ -4,7 +4,6 @@ require_once __DIR__."/../config.php";
 
 use Factom\Api\Chains;
 
-
 // chain id
 
 $chainHead = Chains::chainHead("000000000000000000000000000000000000000000000000000000000000000f");

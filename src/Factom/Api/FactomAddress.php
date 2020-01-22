@@ -12,6 +12,9 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
+use Factom\Api\Response;
+use Factom\Api\Responses\FactomAddress\AddressResponse;
+use Factom\Api\Responses\FactomAddress\AllAddressResponse;
 
 class FactomAddress
 {
@@ -36,7 +39,8 @@ class FactomAddress
              }
         }));
         $result = $client->call('address',["address" => $address]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new AddressResponse($getresponse);
     }
 
     /* all addresses */
@@ -61,7 +65,8 @@ class FactomAddress
              }
         }));
         $result = $client->call('all-addresses',['']);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new AllAddressResponse($getresponse);
     } 
 
      /* generateEcAddress */
@@ -85,7 +90,8 @@ class FactomAddress
              }
         }));
         $result = $client->call('generate-ec-address',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new AddressResponse($getresponse);
     }
 
     /* generateFactoidAddress */
@@ -101,7 +107,7 @@ class FactomAddress
                 $response['result'] = $response;                
                 return new ParserContainer($container->getParser(), $response);
              }else{
-                $err = Errorhandling::checkError($response['error']['message'], "generate-ec-address");
+                $err = Errorhandling::checkError($response['error']['message'], "generate-factoid-address");
                 $response['error']['message'] = $err;
                 $response['result'] = $response;
                 // print_r($response);
@@ -109,8 +115,9 @@ class FactomAddress
                
              }
         }));
-        $result = $client->call('generate-ec-address',[]);
-        return json_encode($result);
+        $result = $client->call('generate-factoid-address',[]);
+        $getresponse = Response::response($result);
+        return new AddressResponse($getresponse);
     }
 
     /* import-addresses */
@@ -126,7 +133,7 @@ class FactomAddress
                 $response['result'] = $response;                
                 return new ParserContainer($container->getParser(), $response);
              }else{
-                $err = Errorhandling::checkError($response['error']['message'], "generate-ec-address");
+                $err = Errorhandling::checkError($response['error']['message'], "import-addresses");
                 $response['error']['message'] = $err;
                 $response['result'] = $response;
                 // print_r($response);
@@ -134,8 +141,12 @@ class FactomAddress
                
              }
         }));
-        $result = $client->call('generate-ec-address',["addresses" => ["secret" => $secret]]);
-        return json_encode($result);
+        $obj = [
+            0=>["secret" => $secret]
+        ];
+        $result = $client->call('import-addresses',["addresses" => $obj]);
+        $getresponse = Response::response($result);
+        return new AllAddressResponse($getresponse);
     }
     
 }

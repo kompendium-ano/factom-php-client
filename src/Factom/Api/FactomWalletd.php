@@ -12,8 +12,20 @@ use PhpJsonRpc\Error\InvalidResponseException;
 use PhpJsonRpc\Error\MethodNotFoundException;
 use PhpJsonRpc\Tests\Mock\IdGenerator;
 use PhpJsonRpc\Tests\Mock\Transport;
-
 use Factom\Api\Errorhandling;
+use Factom\Api\Response;
+use Factom\Api\Responses\FactomWalletd\GetHeightResponse;
+use Factom\Api\Responses\FactomWalletd\ActiveIdentityKeysResponse;
+use Factom\Api\Responses\FactomWalletd\AllIdentityKeysResponse;
+use Factom\Api\Responses\Entry\ComposeEntryResponse;
+use Factom\Api\Responses\FactomWalletd\RemoveAddressResponse;
+use Factom\Api\Responses\FactomWalletd\SignDataResponse;
+use Factom\Api\Responses\FactomWalletd\UnlockWalletResponse;
+use Factom\Api\Responses\FactomAddress\AddressResponse;
+use Factom\Api\Responses\Factomd\PropertiesResponse;
+use Factom\Api\Responses\FactomWalletd\WalletBackupResponse;
+use Factom\Api\Responses\FactomWalletd\WalletBalancesResponse;
+use Factom\Api\Responses\FactomWalletd\ErrorsResponse;
 
 class FactomWalletd
 {
@@ -40,7 +52,8 @@ class FactomWalletd
              }
         }));
         $result = $client->call('get-height', []);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new GetHeightResponse($getresponse);
     }
 
     /* import-koinify */
@@ -65,7 +78,8 @@ class FactomWalletd
              }
         }));
         $result = $client->call('import-koinify',["words" => $words]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new AddressResponse($getresponse);
     }
 
     /* properties */
@@ -90,7 +104,8 @@ class FactomWalletd
              }
         }));
         $result = $client->call('properties',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new PropertiesResponse($getresponse);
     }
 
     /* wallet-backup */
@@ -116,7 +131,8 @@ class FactomWalletd
              }
         }));
         $result = $client->call('wallet-backup',[]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new WalletBackupResponse($getresponse);
     } 
     
 
@@ -143,33 +159,14 @@ class FactomWalletd
              }
             }));
             $result = $client->call('wallet-balances',[]);
-            return json_encode($result);
+            $getresponse = Response::response($result);
+            return new WalletBalancesResponse($getresponse);
     }
 
     /* errors */
 
     public static function errors()
     {
-        // $client = new Client(walletHost);
-        // $client->getResponseParser()->onPreParse()
-        // ->add(Interceptor::createWith(function (ParserContainer $container) {
-        //     $response = $container->getValue();
-        //     if(isset($response['result'])){
-               
-        //             $result = $response['result'];
-        //             $response['result'] = $response;            
-            
-        //             return new ParserContainer($container->getParser(), $response);
-                    
-        //     }else{                
-        //          $err = Errorhandling::checkError($response['error']['message']);
-                             
-        //     }
-        //     $result = $client->call('bad',[]);
-        //     return json_encode($result);
-
-        // }));
-
         $client = new Client(walletHost);
          $client->getResponseParser()->onPreParse()
          ->add(Interceptor::createWith(function (ParserContainer $container) {
@@ -189,8 +186,8 @@ class FactomWalletd
              
          }));
          $result = $client->call('bad', []);         
-         return json_encode($result);     
-         
+         $getresponse = Response::response($result);
+         return new ErrorsResponse($getresponse); 
                   
     } 
 
@@ -216,7 +213,8 @@ class FactomWalletd
              }
          }));
          $result = $client->call('active-identity-keys', ["chainid"=>$chainid, "height"=> $height]);
-         return json_encode($result);
+         $getresponse = Response::response($result);
+         return new ActiveIdentityKeysResponse($getresponse);
      }
 
      /* all-identity-keys */
@@ -241,7 +239,8 @@ class FactomWalletd
              }
          }));
          $result = $client->call('all-identity-keys', []);
-         return json_encode($result);
+         $getresponse = Response::response($result);
+         return new AllIdentityKeysResponse($getresponse);
      }
 
      /* compose-identity-attribute */
@@ -266,7 +265,8 @@ class FactomWalletd
              }
          }));
          $result = $client->call('compose-identity-attribute', ["receiver-chainid"=>$receiverchainid,"destination-chainid"=>$destinationchainid,"attributes"=>$attributes,"signerkey"=>$signerkey,"signer-chainid"=>$signerchainid,"ecpub"=>$ecpub,"force"=>$force]);
-         return json_encode($result);
+         $getresponse = Response::response($result);
+         return new ComposeEntryResponse($getresponse);
      }   
 
      /* compose-identity-attribute-endorsement */
@@ -291,7 +291,8 @@ class FactomWalletd
              }
          }));
          $result = $client->call('compose-identity-attribute-endorsement', ["destination-chainid"=>$destinationchainid,"entry-hash"=>$entryhash,"signerkey"=>$signerkey,"signer-chainid"=>$signerchainid,"ecpub"=>$ecpub,"force"=>$force]);
-         return json_encode($result);
+         $getresponse = Response::response($result);
+         return new ComposeEntryResponse($getresponse);
      }   
 
      /* compose-identity-key-replacement */
@@ -316,7 +317,8 @@ class FactomWalletd
              }
          }));
          $result = $client->call('compose-identity-key-replacement', ["chainid"=>$chainid,"oldkey"=>$oldkey,"newkey"=>$newkey,"signerkey"=>$signerkey,"ecpub"=>$ecpub,"force"=>$force]);
-         return json_encode($result);
+         $getresponse = Response::response($result);
+         return new ComposeEntryResponse($getresponse);
      }
      
      /* import-identity-keys */ 
@@ -342,7 +344,8 @@ class FactomWalletd
         }));
         $result = $client->call('import-identity-keys', ["secret"=>$secretone,
         "secret"=>$secrettwo]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new AllIdentityKeysResponse($getresponse);
      }   
 
      /* remove-address */ 
@@ -367,7 +370,8 @@ class FactomWalletd
              }
         }));
         $result = $client->call('remove-address', ["address"=>$address]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new RemoveAddressResponse($getresponse);
      }  
      
      /* remove-identity-key */ 
@@ -392,7 +396,8 @@ class FactomWalletd
              }
         }));
         $result = $client->call('remove-identity-key', ["public"=>$public]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new RemoveAddressResponse($getresponse);
      }
 
      /* sign-data */ 
@@ -417,7 +422,8 @@ class FactomWalletd
              }
         }));
         $result = $client->call('sign-data', ["signer"=>$signer]);
-        return json_encode($result);
+        $getresponse = Response::response($result);
+        return new SignDataResponse($getresponse);
      }  
 
      /* unlock-wallet */
@@ -442,7 +448,7 @@ class FactomWalletd
              }
         }));
         $result = $client->call('unlock-wallet', ["passphrase"=>$passphrase,"timeout"=>$timeout]);
-        return json_encode($result);
-
+        $getresponse = Response::response($result);
+        return new UnlockWalletResponse($getresponse);
      }   
 }
