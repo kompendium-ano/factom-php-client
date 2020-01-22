@@ -2,9 +2,8 @@
 [![Build Status](https://travis-ci.com/kompendium-llc/factom-php-client.svg?branch=master)](https://travis-ci.com/kompendium-llc/factom-php-client)
 [![Coverage Status](https://camo.githubusercontent.com/275ed9ffa38cbe3b7080582a63b11457161071ec/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6769746875622f6464696d617269612f6b6f612d747970657363726970742d737461727465722f62616467652e7376673f6272616e63683d646576656c6f70)](https://coveralls.io/github/kompendium-llc/factom-ruby-client?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kompendium-llc/factom-php/blob/master/LICENSE)
-[![Discord](https://img.shields.io/discord/419201548372017163.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/mYmcQM2)
 
-A JSON-RPC Php client for the Factom protocol. Each response has unique type that automatically converted from JSON response and suitable for further usage in business logic. All responses are available in [Response](https://github.com/kompendium-llc/factom-php-client/tree/master/lib/Response) directory along with convinient converters.
+A JSON-RPC Php client for the Factom protocol. Each response has unique type that automatically converted from JSON response and suitable for further usage in business logic. All responses are available in [Response](https://github.com/kompendium-llc/factom-php-client/tree/master/src/Factom/Api/Responses) directory along with convinient converters.
 
 ## Installation
    
@@ -103,32 +102,22 @@ print_r($transaction);
 ## Testing
 
 ```bash
-php tests/blocks.php
-
-php tests/chains.php
-
-php tests/commits.php
-
-php tests/debug.php
-
-php tests/entry.php
-
-php tests/factoid.php
-
-php tests/factomaddress.php
-
-php tests/factomd.php
-
-php tests/factomwalletd.php
-
-php tests/minute.php
-
-php tests/pending.php
-
-php tests/security.php
-
-php tests/transaction.php
+$ php tests/blocks.php
+$ php tests/chains.php
+$ php tests/commits.php
+$ php tests/debug.php
+$ php tests/entry.php
+$ php tests/factoid.php
+$ php tests/factomaddress.php
+$ php tests/factomd.php
+$ php tests/factomwalletd.php
+$ php tests/minute.php
+$ php tests/pending.php
+$ php tests/security.php
+$ php tests/transaction.php
 ```
+
+Additionally, tests are executed by Travis CI with config pointing at Factom's Open Node (https://factomd.net).
 
 ### Examples
 
@@ -140,7 +129,7 @@ Additional support for the Factom Protocol or library usage can be found on [dis
 
 ## Development
 
-To contribute to the `factom-ruby-client` library, clone the repository, create a feature branch and submit a PRfor review.
+To contribute to the `factom-php-client` library, clone the repository, create a feature branch and submit a PRfor review.
 
 ## Contributions
 
@@ -148,3 +137,7 @@ Please, feel free to contribute, fork the repo and submit PR.
 
 Say thanks, send a tip:
 
+- `btc`: 39oVXpsgsyW8ZgzsnX3sV7HLdtXWfT96qN
+- `fct`: FA38cwer93mmPw1HxjScLmK1yF9iJTu5P87T2vdkbuLovm2YXyss
+- `eth`: 0x9cDBA6bb44772259B3A3fb89cf233A147a720f34
+- `xlm`: GD2FROTYXYSNOQQREYXHCXVOYWV556EM6PAHMVUHJNJEUYTUXUSNUZQ3

@@ -1,10 +1,10 @@
 {
-    "name": "harishankar/factom-api",
-    "description": "factom-library",
+    "name": "kompendium-llc/factom-php-client",
+    "description": "client library to access Factom blockchain",
     "authors": [
         {
-            "name": "harishankar joshi",
-            "email": "harijoshiftechiz@gmail.com"
+            "name": "Sergey Bushnyak",
+            "email": "sergey@kompendium.co"
         }
     ],
     "minimum-stability": "dev",

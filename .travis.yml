@@ -1,0 +1,7 @@
+language: php
+
+# list any PHP version you want to test against
+php:
+  - 5.6
+
+script: phpunit --version
