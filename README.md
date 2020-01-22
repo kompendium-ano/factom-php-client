@@ -1,15 +1,12 @@
-[![Build Status](https://travis-ci.com/kompendium-llc/factom-php.svg?branch=master)](https://travis-ci.com/kompendium-llc/factom-php)
-[![codecov](https://codecov.io/gh/kompendium-llc/factom-php/branch/master/graph/badge.svg)](https://codecov.io/gh/kompendium-llc/factom-php)
+# PHP JSON-RPC client for Factom API
+[![Build Status](https://travis-ci.com/kompendium-llc/factom-php-client.svg?branch=master)](https://travis-ci.com/kompendium-llc/factom-php-client)
+[![Coverage Status](https://camo.githubusercontent.com/275ed9ffa38cbe3b7080582a63b11457161071ec/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6769746875622f6464696d617269612f6b6f612d747970657363726970742d737461727465722f62616467652e7376673f6272616e63683d646576656c6f70)](https://coveralls.io/github/kompendium-llc/factom-ruby-client?branch=master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kompendium-llc/factom-php/blob/master/LICENSE)
 [![Discord](https://img.shields.io/discord/419201548372017163.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/mYmcQM2)
 
-# Factom-Php
+A JSON-RPC Php client for the Factom protocol. Each response has unique type that automatically converted from JSON response and suitable for further usage in business logic. All responses are available in [Response](https://github.com/kompendium-llc/factom-php-client/tree/master/lib/Response) directory along with convinient converters.
 
-## [Documentation](kompendium-llc.github.io/factom-php)
-
-A json-rpc client for the Factom protocol. 
-
-# Installation
+## Installation
    
 **Composer**:
 ```bash
@@ -21,7 +18,7 @@ composer require kompendium/factom-api-php
 git clone  https://github.com/kompendium-llc/factom-php.git
 ```
 
-# Config
+## Config
     You can change default node url or ports
     Add this lines after this -
     require_once __DIR__ . '/../vendor/autoload.php';
@@ -32,7 +29,7 @@ git clone  https://github.com/kompendium-llc/factom-php.git
     define('host', 'https://dev.factomd.net/v2');
     define('debugHost', 'http://localhost:8088/debug');
 
-# Usage
+## Usage
 
 ```php
 require_once __DIR__ . '/../vendor/autoload.php';;
@@ -41,7 +38,7 @@ require_once __DIR__.'/../vendor/kompendium/factom-api-php/config.php';
 use Factom\Api\Blocks;
 ```
 
-#### Retreiving a balance
+### Retreiving a balance
 
 ```php
 use Factom\Api\Factoid;
@@ -50,7 +47,7 @@ print_r(result);
 
 ```
 
-#### Reading Entry Data
+### Reading Entry Data
 ```php
 # factomd -> entry api
 use Factom\Api\Entry;
@@ -58,7 +55,7 @@ result = Entry::entry("61b3d3175f211f3b23b455bb8710fdbcf545cb40da397d9e20b26eca3
 print_r(result);
 ```
 
-#### Writing an Entry
+### Writing an Entry
 *Note: Ensure data in the entry fields is hex-encoded. This includes the content section.*
 
 ```php
@@ -75,7 +72,7 @@ $revealEntry = Entry::revealEntry("007E18CCC911F057FB111C7570778F6FDC51E189F35A6
 print_r($revealEntry);
 ```
 
-#### Block Height and Current Minute
+### Block Height and Current Minute
 ```php
 # factomd -> Get Height
 use Factom\Api\FactomWalletd;
@@ -88,9 +85,7 @@ $currentMinute = Minute::currentMinute();
 print_r($currentMinute);
 ```
 
-
-
-#### Sending A Transaction
+### Sending A Transaction
 ```php
 # send transaction
 use Factom\Api\Transaction;
@@ -135,16 +130,25 @@ php tests/security.php
 php tests/transaction.php
 ```
 
+### Examples
+
+Found in the [examples]("examples/Readme.md") folder
+
 ## Support
 
 Additional support for the Factom Protocol or library usage can be found on [discord](https://discord.gg/mYmcQM2)
 
 ## Development
 
-To contribute to the factom-php library, clone the repository, create a feature branch and submit a PR to the develop branch.
+To contribute to the `factom-ruby-client` library, clone the repository, create a feature branch and submit a PRfor review.
 
-# Examples
+## Contributions
 
-Found in the [examples]("examples/Readme.md") folder
+Please, feel free to contribute, fork the repo and submit PR.
 
+Say thanks, send a tip:
 
+- `btc`: 39oVXpsgsyW8ZgzsnX3sV7HLdtXWfT96qN
+- `fct`: FA38cwer93mmPw1HxjScLmK1yF9iJTu5P87T2vdkbuLovm2YXyss
+- `eth`: 0x9cDBA6bb44772259B3A3fb89cf233A147a720f34
+- `xlm`: GD2FROTYXYSNOQQREYXHCXVOYWV556EM6PAHMVUHJNJEUYTUXUSNUZQ3
