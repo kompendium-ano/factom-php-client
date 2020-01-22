@@ -1,6 +1,7 @@
 # PHP JSON-RPC client for Factom API
 [![Build Status](https://travis-ci.com/kompendium-llc/factom-php-client.svg?branch=master)](https://travis-ci.com/kompendium-llc/factom-php-client)
 [![Coverage Status](https://camo.githubusercontent.com/275ed9ffa38cbe3b7080582a63b11457161071ec/68747470733a2f2f636f766572616c6c732e696f2f7265706f732f6769746875622f6464696d617269612f6b6f612d747970657363726970742d737461727465722f62616467652e7376673f6272616e63683d646576656c6f70)](https://coveralls.io/github/kompendium-llc/factom-ruby-client?branch=master)
+![Packagist Version](https://img.shields.io/packagist/v/kompendium-llc/factom-php-client)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/kompendium-llc/factom-php/blob/master/LICENSE)
 
 A JSON-RPC Php client for the Factom protocol. Each response has unique type that automatically converted from JSON response and suitable for further usage in business logic. All responses are available in [Response](https://github.com/kompendium-llc/factom-php-client/tree/master/src/Factom/Api/Responses) directory along with convinient converters.
