@@ -10,12 +10,12 @@ A JSON-RPC Php client for the Factom protocol. Each response has unique type tha
    
 **Composer**:
 ```bash
-composer require kompendium/factom-api-php
+composer require kompendium-llc/factom-php-client
 ```
 
 **Git**:
 ```bash
-git clone  https://github.com/kompendium-llc/factom-php.git
+git clone https://github.com/kompendium-llc/factom-php-client.git
 ```
 
 ## Config
