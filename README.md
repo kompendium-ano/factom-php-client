@@ -133,6 +133,10 @@ Additional support for the Factom Protocol or library usage can be found on [dis
 
 To contribute to the `factom-php-client` library, clone the repository, create a feature branch and submit a PRfor review.
 
+## Learn
+- [Accessing the Factom blockchain from different programming languages](https://medium.com/kompendium-developments/accessing-factom-blockchain-from-different-programming-languages-7f09030efe16)
+- [Building simple blockchain game with Factom](https://medium.com/kompendium-developments/accessing-factom-blockchain-from-different-programming-languages-7f09030efe16)
+
 ## Contributions
 
 Please, feel free to contribute, fork the repo and submit PR.
